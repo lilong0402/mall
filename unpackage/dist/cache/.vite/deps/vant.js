@@ -1,3 +1,5 @@
+import "./chunk-CSAU5B4Q.js";
+
 // ../../../../../../Data/Demo/mall/mallfront/node_modules/vant/es/utils/basic.mjs
 function noop() {
 }

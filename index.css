@@ -1,0 +1,43 @@
+element{
+  --main-bg-color-white: white
+}
+.bg-color-white{
+	background-color: var(--main-bg-color-white);
+}
+.image_center{
+	text-align: center;
+}
+
+.mt-10b{
+	margin-top: 10%;
+}
+.mt-15b{
+	margin-top: 15%;
+}
+.mt-20b{
+	margin-top: 20%;
+}
+.mt-25b{
+	margin-top: 25%;
+}
+.mt-30b{
+	margin-top: 30%;
+}
+.mt-35b{
+	margin-top: 35%;
+}
+.mt-40b{
+	margin-top: 45%;
+}
+.mt-45b{
+	margin-top: 45%;
+}
+.mt-50b{
+	margin-top: 50%;
+}
+.mt-55b{
+	margin-top: 55%;
+}
+.mt-60b{
+	margin-top: 60%;
+}

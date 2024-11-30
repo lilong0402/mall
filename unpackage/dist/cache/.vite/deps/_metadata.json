@@ -1,15 +1,25 @@
 {
-  "hash": "8abd1cf0",
+  "hash": "13c7f132",
   "configHash": "25ce6fbe",
-  "lockfileHash": "d7a1ad03",
-  "browserHash": "292e57f3",
+  "lockfileHash": "64dca335",
+  "browserHash": "8352658a",
   "optimized": {
     "vant": {
       "src": "../../../../../node_modules/vant/es/index.mjs",
       "file": "vant.js",
-      "fileHash": "e265a1dd",
+      "fileHash": "e890b512",
+      "needsInterop": false
+    },
+    "axios": {
+      "src": "../../../../../node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "fcc1fbb6",
       "needsInterop": false
     }
   },
-  "chunks": {}
+  "chunks": {
+    "chunk-CSAU5B4Q": {
+      "file": "chunk-CSAU5B4Q.js"
+    }
+  }
 }
