@@ -8,7 +8,9 @@
 			@search="onSearch"
 			/>
 		</view>
-		
+		<view>
+			<TabBottom></TabBottom>
+		</view>
 	</view>
 </template>
 
