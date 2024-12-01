@@ -20,7 +20,6 @@ import top.lilong.mall.util.ResultData;
 public class TestController {
 
     @GetMapping(value = "/test")
-    @Tag(name="测试模块",description = "初始测试")
     public ResultData<String> Hello(){
         return ResultData.success("Hello");
     }
