@@ -2,9 +2,12 @@ package top.lilong.mall.controller;
 
 
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import top.lilong.mall.util.ResultData;
 
 /**
  * @author Lilong
@@ -12,12 +15,13 @@ import org.springframework.web.bind.annotation.RestController;
  * @version 1.0
  */
 @RestController
-@RequestMapping("/test")
+@EnableAutoConfiguration
+@RequestMapping(value="/test")
 public class TestController {
 
-    @GetMapping("/test")
+    @GetMapping(value = "/test")
     @Tag(name="测试模块",description = "初始测试")
-    public String Hello(){
-        return "Hello World";
+    public ResultData<String> Hello(){
+        return ResultData.success("Hello");
     }
 }
