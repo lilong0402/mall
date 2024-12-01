@@ -50,6 +50,16 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+<!--        集成Swagger3-->
+        <!-- https://mvnrepository.com/artifact/cn.hchub/springdoc-swagger3-starter -->
+        <!-- 引入Swagger3依赖 -->
+        <!-- https://mvnrepository.com/artifact/cn.hchub/springdoc-swagger3-starter -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
