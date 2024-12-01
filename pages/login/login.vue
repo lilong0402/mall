@@ -30,9 +30,9 @@
 			  </van-cell-group>
 			  <view class="px-3 mt-2">
 				  <van-switch v-model="checked" >
-						  自动登陆?
+						  
 				  </van-switch>
-				  <text>没有账号?</text>
+				  <!-- <text>自动登陆?没有账号?</text> -->
 			  </view>
 			  <view style="margin: 16px;">
 			    <van-button round block type="primary" native-type="submit">
