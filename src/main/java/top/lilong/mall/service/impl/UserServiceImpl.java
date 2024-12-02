@@ -36,18 +36,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
         User user = userDao.selectUserByUsernameAndPassword(username, newPassword);
         if (user==null) {
-<<<<<<< HEAD
             sysLogDao.insert(username,"用户"+username + "进行登陆操作，但可能用户名或者密码输入错误",behavior);
             return null;
         }
-
         sysLogDao.insert(username,"用户"+username+"登陆成功",behavior);
-=======
-            sysLogDao.insert("用户"+username + "进行登陆操作，但可能用户名或者密码输入错误");
-            return null;
-        }
-        sysLogDao.insert("用户"+username+"登陆成功");
->>>>>>> 4b3243338c10c184184f16128b1630d23b0436e4
         //我们设置以1/10的几率来修改盐值
         int number = (int)(Math.random()*10)+1;
         if (number == 5){
@@ -55,19 +47,13 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             String newsalt = UUID.randomUUID().toString();
             System.out.println(newsalt);
             passwordAndSaltDao.updateSalt(newsalt, username);
-<<<<<<< HEAD
             behavior = "修改盐值";
             sysLogDao.insert(username,"用户"+username+"的盐值由"+salt +"改为" + newsalt,behavior);
             String userPassword = MD5config.md5(newsalt,password);
             userDao.updatePassword(username, userPassword);
             behavior = "修改密码";
             sysLogDao.insert(username,"用户"+username+"由于修改了盐值密码由"+newPassword +"改为" + userPassword,behavior);
-=======
-            sysLogDao.insert("用户"+username+"的盐值由"+salt +"改为" + newsalt);
-            String userPassword = MD5config.md5(newsalt,password);
-            userDao.updatePassword(username, userPassword);
-            sysLogDao.insert("用户"+username+"由于修改了盐值密码由"+newPassword +"改为" + userPassword);
->>>>>>> 4b3243338c10c184184f16128b1630d23b0436e4
+
         }
         return user;
     }

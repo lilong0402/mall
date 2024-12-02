@@ -6,10 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
-<<<<<<< HEAD:src/main/java/top/lilong/mall/mapper/UserMapper.java
-=======
-import org.springframework.stereotype.Repository;
->>>>>>> 4b3243338c10c184184f16128b1630d23b0436e4:src/main/java/top/lilong/mall/dao/UserDao.java
+
 import top.lilong.mall.domain.User;
 
 /**
