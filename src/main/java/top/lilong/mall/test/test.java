@@ -17,10 +17,13 @@ public class test {
 
 
     public   static void main(String[] args) {
-        String password = "123456";
-        String salt = UUID.randomUUID().toString();
-        System.out.println(salt);
-        String md5 = DigestUtils.md5DigestAsHex((password+salt).getBytes());
-        System.out.println(md5);
+//        String password = "123456";
+//        String salt = "e885686e-98ef-44a9-8f29-5478dc977d27";
+//        System.out.println(salt);
+//        String md5 = DigestUtils.md5DigestAsHex((password+salt).getBytes());
+//        System.out.println(md5);
+        for (int i = 0; i < 9; i++) {
+            System.out.println((int)(Math.random()*10)+1);
+        }
     }
 }

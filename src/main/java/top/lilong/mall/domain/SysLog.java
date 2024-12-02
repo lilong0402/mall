@@ -6,7 +6,9 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Builder;
 import lombok.Data;
+import net.sf.jsqlparser.expression.DateTimeLiteralExpression;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 /**
@@ -23,6 +25,6 @@ public class SysLog {
     private String username;
     private Integer logState;
     private String content;
-    private Date createTime;
-    private Date deleteTime;
+    private Timestamp createTime;
+    private Timestamp deleteTime;
 }
