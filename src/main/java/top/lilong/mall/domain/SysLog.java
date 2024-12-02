@@ -24,6 +24,11 @@ public class SysLog {
     private Long id;
     private String username;
     private String content;
+<<<<<<< HEAD
     private String behavior;
     private Timestamp createTime;
+=======
+    private Timestamp createTime;
+    private Timestamp deleteTime;
+>>>>>>> 4b3243338c10c184184f16128b1630d23b0436e4
 }
