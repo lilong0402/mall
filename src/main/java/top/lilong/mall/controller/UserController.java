@@ -24,6 +24,8 @@ public class UserController {
 
     @PostMapping("/login")
     public ResultData<User> login(String username, String password) {
-        return ResultData.success(userService.selectUserByUsernameAndPassword(username,password));
+        User user = userService.selectUserByUsernameAndPassword(username, password);
+        if (user == null) {return ResultData.fail("无此用户");}
+        return ResultData.success(user);
     }
 }

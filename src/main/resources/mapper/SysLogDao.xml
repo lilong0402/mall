@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.lilong.mall.dao.SysLogDao">
+
+    <insert id="insert" parameterType="String">
+        insert into sys_log(content,create_time) values (#{content},NOW())
+    </insert>
+</mapper>

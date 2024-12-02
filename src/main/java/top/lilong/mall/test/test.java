@@ -1,11 +1,9 @@
 package top.lilong.mall.test;
 
 
-import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.util.DigestUtils;
-import top.lilong.mall.service.PasswordAndSaleService;
 
 import java.util.UUID;
 
@@ -17,8 +15,6 @@ import java.util.UUID;
 @SpringBootTest
 public class test {
 
-    @Autowired
-    private PasswordAndSaleService passwordAndSaleService;
 
     public   static void main(String[] args) {
         String password = "123456";

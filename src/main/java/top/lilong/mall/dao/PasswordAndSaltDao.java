@@ -12,7 +12,7 @@ import top.lilong.mall.domain.PasswordAndSalt;
  * @version 1.0
  */
 @Mapper
-public interface PasswordAndSaltDao extends BaseMapper<PasswordAndSalt> {
+public interface PasswordAndSaltDao {
 
     @Select("select salt from password_salt where user_name = #{username}")
     String selectSaltByUsername(String username);

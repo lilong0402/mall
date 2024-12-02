@@ -31,8 +31,8 @@ public class ResultData<T> {
     public static <T> ResultData success(T data) {
         return  ResultData.builder().code(200).msg("success").data(data).timestamp(System.currentTimeMillis()).build();
     }
-    public static <T> ResultData fail(int code) {
-        return  ResultData.builder().code(200).msg("error").data(null).timestamp(System.currentTimeMillis()).build();
+    public static <T> ResultData fail(String msg) {
+        return  ResultData.builder().code(200).msg(msg).data(null).timestamp(System.currentTimeMillis()).build();
     }
 }
 
