@@ -15,7 +15,6 @@ import top.lilong.mall.util.ResultData;
  * @version 1.0
  */
 @RestController
-@EnableAutoConfiguration
 @RequestMapping(value="/test")
 public class TestController {
 

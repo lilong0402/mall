@@ -15,6 +15,6 @@ import top.lilong.mall.domain.User;
  */
 @Mapper
 public interface UserDao extends BaseMapper<User> {
-    @Select("select * from user_information where user_name=#{username} and user_password = #{password}")
-    Integer selectUserByUsername(@Param("user_name") String username, @Param("user_password") String password);
+    @Select("select * from user_information where user_name=#{username} and user_password = #{newPassword}")
+    User selectUserByUsernameAndPassword(@Param("username") String username, @Param("newPassword") String newPassword);
 }

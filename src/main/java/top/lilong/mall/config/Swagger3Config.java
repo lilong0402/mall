@@ -16,7 +16,12 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class Swagger3Config {
     @Bean
-    public GroupedOpenApi payApi() {
+    public GroupedOpenApi userApi() {
+        return GroupedOpenApi.builder().group("用户模块").pathsToMatch("/user/**").build();
+    }
+
+    @Bean
+    public GroupedOpenApi testApi() {
         return GroupedOpenApi.builder().group("测试模块").pathsToMatch("/test/**").build();
     }
 

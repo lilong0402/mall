@@ -17,13 +17,13 @@ import top.lilong.mall.util.ResultData;
  */
 @RestController
 @RequestMapping("/user")
-@Tag(name="用户模块",description = "用户操作")
+//@Tag(name="用户模块",description = "用户操作")
 public class UserController {
     @Autowired
     private UserService userService;
 
     @PostMapping("/login")
     public ResultData<User> login(String username, String password) {
-        return ResultData.success(userService.selectUserByUsername(username,password));
+        return ResultData.success(userService.selectUserByUsernameAndPassword(username,password));
     }
 }

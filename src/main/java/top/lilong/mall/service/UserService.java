@@ -13,5 +13,5 @@ import top.lilong.mall.domain.User;
  */
 
 public interface UserService extends IService<User> {
-    Integer selectUserByUsername(String username,String password);
+    User selectUserByUsernameAndPassword(String username,String password);
 }
