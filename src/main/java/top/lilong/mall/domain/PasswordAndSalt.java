@@ -6,7 +6,9 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Builder;
 import lombok.Data;
+import net.sf.jsqlparser.expression.DateTimeLiteralExpression;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 /**
@@ -25,7 +27,7 @@ public class PasswordAndSalt {
     private String userName;
     private String adminName;
     private String salt;
-    private Date createTime;
-    private Date updateTime;
-    private Date deleteTime;
+    private Timestamp createTime;
+    private Timestamp updateTime;
+    private Timestamp deleteTime;
 }

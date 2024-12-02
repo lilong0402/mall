@@ -3,6 +3,7 @@ package top.lilong.mall.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import io.swagger.v3.oas.annotations.servers.Server;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
 import top.lilong.mall.domain.User;
 
@@ -14,4 +15,5 @@ import top.lilong.mall.domain.User;
 
 public interface UserService extends IService<User> {
     User selectUserByUsernameAndPassword(String username,String password);
+
 }
