@@ -22,7 +22,7 @@ public class Swagger3Config {
 
     @Bean
     public GroupedOpenApi testApi() {
-        return GroupedOpenApi.builder().group("测试模块").pathsToMatch("/test/**").build();
+        return GroupedOpenApi.builder().group("商品模块").pathsToMatch("/shopping/**").build();
     }
 
     @Bean

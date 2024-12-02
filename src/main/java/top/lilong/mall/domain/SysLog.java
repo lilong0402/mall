@@ -23,8 +23,7 @@ public class SysLog {
     @TableId(type = IdType.AUTO)
     private Long id;
     private String username;
-    private Integer logState;
     private String content;
+    private String behavior;
     private Timestamp createTime;
-    private Timestamp deleteTime;
 }

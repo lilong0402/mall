@@ -8,5 +8,7 @@ spring:
     url: jdbc:mysql://47.121.219.94:4306/mall?characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
     username: root
     password: root
-  mybatis-plus:
+mybatis-plus:
     mapper-locations: classpath:mapper/*.xml
+    configuration:
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志

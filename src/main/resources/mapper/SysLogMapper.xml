@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="top.lilong.mall.dao.SysLogDao">
+<mapper namespace="top.lilong.mall.mapper.SysLogMapper">
 
     <insert id="insert" parameterType="String">
-        insert into sys_log(content,create_time) values (#{content},NOW())
+        insert into sys_log(user_name,content,behavior,create_time) values (#{username},#{content},#{behavior},NOW())
     </insert>
 </mapper>

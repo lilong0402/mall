@@ -2,13 +2,12 @@ package top.lilong.mall.service.impl;
 
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import io.swagger.v3.oas.annotations.servers.Server;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import top.lilong.mall.common.MD5config;
-import top.lilong.mall.dao.PasswordAndSaltDao;
-import top.lilong.mall.dao.SysLogDao;
-import top.lilong.mall.dao.UserDao;
+import top.lilong.mall.mapper.PasswordAndSaltMapper;
+import top.lilong.mall.mapper.SysLogMapper;
+import top.lilong.mall.mapper.UserMapper;
 import top.lilong.mall.domain.User;
 import top.lilong.mall.service.UserService;
 
@@ -20,26 +19,28 @@ import java.util.UUID;
  * @version 1.0
  */
 @Service
-public class UserServiceImpl extends ServiceImpl<UserDao, User> implements UserService {
+public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
     @Autowired
-    private UserDao userDao;
+    private UserMapper userDao;
     @Autowired
-    private PasswordAndSaltDao passwordAndSaltDao;
+    private PasswordAndSaltMapper passwordAndSaltDao;
     @Autowired
-    private SysLogDao sysLogDao;
+    private SysLogMapper sysLogDao;
     @Override
     public User selectUserByUsernameAndPassword(String username,String password) {
         //查找盐值
         String salt = passwordAndSaltDao.selectSaltByUsername(username);
         //md5加密
         String newPassword = MD5config.md5(salt,password);
+        String behavior = "登陆";
 
         User user = userDao.selectUserByUsernameAndPassword(username, newPassword);
         if (user==null) {
-            sysLogDao.insert("用户"+username + "进行登陆操作，但可能用户名或者密码输入错误");
+            sysLogDao.insert(username,"用户"+username + "进行登陆操作，但可能用户名或者密码输入错误",behavior);
             return null;
         }
-        sysLogDao.insert("用户"+username+"登陆成功");
+
+        sysLogDao.insert(username,"用户"+username+"登陆成功",behavior);
         //我们设置以1/10的几率来修改盐值
         int number = (int)(Math.random()*10)+1;
         if (number == 5){
@@ -47,10 +48,12 @@ public class UserServiceImpl extends ServiceImpl<UserDao, User> implements UserS
             String newsalt = UUID.randomUUID().toString();
             System.out.println(newsalt);
             passwordAndSaltDao.updateSalt(newsalt, username);
-            sysLogDao.insert("用户"+username+"的盐值由"+salt +"改为" + newsalt);
+            behavior = "修改盐值";
+            sysLogDao.insert(username,"用户"+username+"的盐值由"+salt +"改为" + newsalt,behavior);
             String userPassword = MD5config.md5(newsalt,password);
             userDao.updatePassword(username, userPassword);
-            sysLogDao.insert("用户"+username+"由于修改了盐值密码由"+newPassword +"改为" + userPassword);
+            behavior = "修改密码";
+            sysLogDao.insert(username,"用户"+username+"由于修改了盐值密码由"+newPassword +"改为" + userPassword,behavior);
         }
         return user;
     }

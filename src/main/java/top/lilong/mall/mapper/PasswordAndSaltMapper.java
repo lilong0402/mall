@@ -1,12 +1,10 @@
-package top.lilong.mall.dao;
+package top.lilong.mall.mapper;
 
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
-import top.lilong.mall.domain.PasswordAndSalt;
 
 /**
  * @author Lilong
@@ -14,7 +12,7 @@ import top.lilong.mall.domain.PasswordAndSalt;
  * @version 1.0
  */
 @Mapper
-public interface PasswordAndSaltDao {
+public interface PasswordAndSaltMapper {
 
     @Select("select salt from password_salt where user_name = #{username}")
     String selectSaltByUsername(String username);

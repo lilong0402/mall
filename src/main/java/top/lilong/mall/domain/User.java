@@ -29,7 +29,7 @@ public class User {
     private String account;
     private String QQ;
     private String wechat;
-    private String useName;
+    private String userName;
     private String userPassword;
     private String userAvatar;
     private int sex;
