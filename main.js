@@ -4,12 +4,13 @@
 // #ifdef VUE3
 import { createSSRApp } from 'vue'
 import App from './App.vue'
-import {Button, Search, Image as VanImage, Form, Field, CellGroup,Switch, Tab, Tabs, Tabbar, TabbarItem, Col, Row, Card, Lazyload  } from 'vant'
+import {Button, Search, Image as VanImage, Form, Field, CellGroup,Switch, Tab, Tabs, Tabbar, TabbarItem, Col, Row, Card, Lazyload , PullRefresh } from 'vant'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'vant/lib/index.css'
 import './index.css'
 import {createPinia} from 'pinia'
 import tabBottom from './components/tabBottom'
+import {useStore} from './store/index.js';
 // import router from './router'
 
 export function createApp() {
@@ -31,8 +32,11 @@ export function createApp() {
   app.use(TabbarItem)
   app.use(Card)
   app.use(Lazyload)
+  app.use(PullRefresh)
   
   app.use(pinia)
+  app.use(useStore())
+  
   
   app.component('TabBottom',tabBottom)
   return {

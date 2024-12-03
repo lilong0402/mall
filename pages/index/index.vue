@@ -75,7 +75,9 @@
 				<commodity />
 			</van-col>
 		</van-row>
-
+		<van-pull-refresh v-model="loading" @refresh="onRefresh">
+		  <p>刷新次数: {{ count }}</p>
+		</van-pull-refresh>
 		<view>
 			<TabBottom></TabBottom>
 		</view>
@@ -83,14 +85,58 @@
 </template>
 
 <script setup>
+	import axios from 'axios';
 	import commodity from '../../components/commodity.vue'
-	import {ref} from 'vue'
-	const commodityList = ref(['sss','ddd','sss','ddd','sss','ddd','ddd','sss','ddd'])
+	import {onMounted, ref, reactive} from 'vue'
+	import { useStore } from '../../store';
+	const commodityList = ref([])
 	const value = ref('')
+	const loading = ref(false)
+	const param=reactive({
+		//设置页码
+		currentPage: 0,
+		//设置每页显示数量
+		pageSize : 5
+	})
+	const store = useStore()
+
 	// 用于处理搜索后的操作
 	const onSearch = (val) => {
 		console.log(val)
 	};
+	
+	const onRefresh = ()=>{
+		setTimeout(() => {
+			showToast('刷新成功');
+		    loading.value = false;
+		    count.value++;
+		}, 1000);
+		getAllCommodity()
+	} 
+	
+	const getAllCommodity = ()=>{
+		if (store.IsIndexOne == 0)
+			param.currentPage = 0 ;
+		else 
+			param.currentPage = commodityList.length / param.pageSize + 1
+		var x
+		axios.get(store.BASEURL+"shopping/selectAllCommodity?currentpage="+param.currentPage+"&pageSize="+param.pageSize)
+		.then(response => {
+			const data = response.data.data;
+			console.log(data[0])
+			for(x in data) {
+			    commodityList.value.push(x)
+			}
+			console.log(commodityList)
+		})
+	}
+	/**
+	 * 通过onMounted实现预加载
+	 */
+	onMounted(()=>{
+		getAllCommodity();
+		store.IsIndexOne = 1
+	})
 </script>
 
 
