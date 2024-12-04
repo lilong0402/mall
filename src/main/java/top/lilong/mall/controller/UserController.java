@@ -2,10 +2,13 @@ package top.lilong.mall.controller;
 
 
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import top.lilong.mall.VO.LoginVO;
 import top.lilong.mall.domain.User;
 import top.lilong.mall.service.UserService;
 import top.lilong.mall.util.ResultData;
@@ -23,8 +26,8 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/login")
-    public ResultData<User> login(String username, String password) {
-        User user = userService.selectUserByUsernameAndPassword(username, password);
+    public ResultData<User> login(@Valid @RequestBody LoginVO loginVO) {
+        User user = userService.selectUserByUsernameAndPassword(loginVO.getUsername(), loginVO.getPassword());
         if (user == null) {return ResultData.fail("无此用户");}
         return ResultData.success(user);
     }

@@ -21,8 +21,13 @@ public class Swagger3Config {
     }
 
     @Bean
-    public GroupedOpenApi testApi() {
+    public GroupedOpenApi shoppingApi() {
         return GroupedOpenApi.builder().group("商品模块").pathsToMatch("/shopping/**").build();
+    }
+
+    @Bean
+    public GroupedOpenApi orderApi() {
+        return GroupedOpenApi.builder().group("订单模块").pathsToMatch("/order/**").build();
     }
 
     @Bean
