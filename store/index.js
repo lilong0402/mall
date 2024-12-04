@@ -5,7 +5,7 @@ export const useStore = defineStore('mall', {
 	state: () => {
 	  return {
 	    BASEURL: "http://localhost:8080/",
-		IsIndexOne: 0
+		// IsIndexOne: 0
 	  }
 	}
 })

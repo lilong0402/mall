@@ -47,16 +47,18 @@
 <script setup>
 	import { ref } from 'vue';
 	import axios from 'axios';
-	// import {useStore} from '../../store/index.js';
+import { useStore } from '../../store';
+
 	
 	const userName = ref('');
 	const userPassword = ref('');
 	const checked = ref('')
+	const store = useStore()
 	const onSubmit = (values) => {
-		const store = useStore()
+		console.log(userName.value)
 		axios.post(store.BASEURL+"user/login",{
-			"username" : userName,
-			"password" : userPassword
+			"username" : userName.value,
+			"password" : userPassword.value
 		}).then(Response => {
 			console.log(Response.data);
 		}, error => {

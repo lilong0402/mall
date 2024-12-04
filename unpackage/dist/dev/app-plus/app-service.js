@@ -38,243 +38,6 @@ if (uni.restoreGlobal) {
       console[type].apply(console, [...args, filename]);
     }
   }
-  const _imports_0 = "/static/commodity/mobile.jpg";
-  const _export_sfc = (sfc, props) => {
-    const target = sfc.__vccOpts || sfc;
-    for (const [key, val] of props) {
-      target[key] = val;
-    }
-    return target;
-  };
-  const _sfc_main$4 = {};
-  function _sfc_render$4(_ctx, _cache) {
-    return vue.openBlock(), vue.createElementBlock("view", { class: "card" }, [
-      vue.createElementVNode("img", {
-        src: _imports_0,
-        class: "card-img-top",
-        alt: "..."
-      }),
-      vue.createElementVNode("view", { class: "mx-1" }, [
-        vue.createElementVNode("view", { class: "font_size_16" }, "商品名称"),
-        vue.createElementVNode("view", null, [
-          vue.createElementVNode("text", { class: "font_size_16 mt-" }, "商品价格"),
-          vue.createElementVNode("text", { class: "font_size_14" }, "多少人付款")
-        ])
-      ])
-    ]);
-  }
-  const commodity = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$4], ["__file", "D:/Data/Demo/mall/mallfront/components/commodity.vue"]]);
-  const _sfc_main$3 = {
-    __name: "index",
-    setup(__props, { expose: __expose }) {
-      __expose();
-      const commodityList = vue.ref(["sss", "ddd", "sss", "ddd", "sss", "ddd", "ddd", "sss", "ddd"]);
-      const value = vue.ref("");
-      const onSearch = (val) => {
-        formatAppLog("log", "at pages/index/index.vue:92", val);
-      };
-      const __returned__ = { commodityList, value, onSearch, commodity, ref: vue.ref };
-      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
-      return __returned__;
-    }
-  };
-  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_van_search = vue.resolveComponent("van-search");
-    const _component_van_image = vue.resolveComponent("van-image");
-    const _component_van_col = vue.resolveComponent("van-col");
-    const _component_van_row = vue.resolveComponent("van-row");
-    const _component_TabBottom = vue.resolveComponent("TabBottom");
-    const _directive_lazy = vue.resolveDirective("lazy");
-    return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
-      vue.createElementVNode("view", { class: "mt-0" }, [
-        vue.createVNode(_component_van_search, {
-          modelValue: $setup.value,
-          "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.value = $event),
-          placeholder: "请输入搜索关键词",
-          background: "#4fc08d",
-          shape: "round",
-          onSearch: $setup.onSearch
-        }, null, 8, ["modelValue"])
-      ]),
-      vue.createVNode(_component_van_row, { class: "font_size_12" }, {
-        default: vue.withCtx(() => [
-          vue.createVNode(_component_van_col, { span: "5" }, {
-            default: vue.withCtx(() => [
-              vue.createVNode(_component_van_row, null, {
-                default: vue.withCtx(() => [
-                  vue.createVNode(_component_van_col, { span: "24" }, {
-                    default: vue.withCtx(() => [
-                      vue.createVNode(_component_van_image, {
-                        width: "50",
-                        height: "50",
-                        src: "../../static/index/seckkill.png"
-                      })
-                    ]),
-                    _: 1
-                    /* STABLE */
-                  }),
-                  vue.createElementVNode("text", { class: "mx-2" }, "秒杀")
-                ]),
-                _: 1
-                /* STABLE */
-              })
-            ]),
-            _: 1
-            /* STABLE */
-          }),
-          vue.createVNode(_component_van_col, {
-            span: "5",
-            class: "mt-1"
-          }, {
-            default: vue.withCtx(() => [
-              vue.createVNode(_component_van_row, null, {
-                default: vue.withCtx(() => [
-                  vue.createVNode(_component_van_col, { span: "24" }, {
-                    default: vue.withCtx(() => [
-                      vue.createVNode(_component_van_image, {
-                        width: "45",
-                        height: "45",
-                        src: "../../static/index/loan.png"
-                      })
-                    ]),
-                    _: 1
-                    /* STABLE */
-                  }),
-                  vue.createElementVNode("text", { class: "mx-2" }, "借款")
-                ]),
-                _: 1
-                /* STABLE */
-              })
-            ]),
-            _: 1
-            /* STABLE */
-          }),
-          vue.createVNode(_component_van_col, {
-            span: "5",
-            class: "mt-1"
-          }, {
-            default: vue.withCtx(() => [
-              vue.createVNode(_component_van_row, null, {
-                default: vue.withCtx(() => [
-                  vue.createVNode(_component_van_col, {
-                    span: "24",
-                    class: "mt-1"
-                  }, {
-                    default: vue.withCtx(() => [
-                      vue.createVNode(_component_van_image, {
-                        width: "42",
-                        height: "42",
-                        src: "../../static/index/auction.png"
-                      })
-                    ]),
-                    _: 1
-                    /* STABLE */
-                  }),
-                  vue.createElementVNode("text", { class: "mx-2" }, "拍卖")
-                ]),
-                _: 1
-                /* STABLE */
-              })
-            ]),
-            _: 1
-            /* STABLE */
-          }),
-          vue.createVNode(_component_van_col, {
-            span: "5",
-            class: "mt-1"
-          }, {
-            default: vue.withCtx(() => [
-              vue.createVNode(_component_van_row, null, {
-                default: vue.withCtx(() => [
-                  vue.createVNode(_component_van_col, { span: "24" }, {
-                    default: vue.withCtx(() => [
-                      vue.createVNode(_component_van_image, {
-                        width: "50",
-                        height: "50",
-                        src: "../../static/index/second-hand.png"
-                      })
-                    ]),
-                    _: 1
-                    /* STABLE */
-                  }),
-                  vue.createElementVNode("text", { class: "mx-2" }, "二手交易")
-                ]),
-                _: 1
-                /* STABLE */
-              })
-            ]),
-            _: 1
-            /* STABLE */
-          }),
-          vue.createVNode(_component_van_col, {
-            span: "4",
-            class: "mt-1"
-          }, {
-            default: vue.withCtx(() => [
-              vue.createVNode(_component_van_row, null, {
-                default: vue.withCtx(() => [
-                  vue.createVNode(_component_van_col, { span: "24" }, {
-                    default: vue.withCtx(() => [
-                      vue.createVNode(_component_van_image, {
-                        width: "45",
-                        height: "45",
-                        src: "../../static/index/digimon.png"
-                      })
-                    ]),
-                    _: 1
-                    /* STABLE */
-                  }),
-                  vue.createElementVNode("text", { class: "mx-2" }, "数码")
-                ]),
-                _: 1
-                /* STABLE */
-              })
-            ]),
-            _: 1
-            /* STABLE */
-          })
-        ]),
-        _: 1
-        /* STABLE */
-      }),
-      vue.createVNode(_component_van_row, null, {
-        default: vue.withCtx(() => [
-          (vue.openBlock(true), vue.createElementBlock(
-            vue.Fragment,
-            null,
-            vue.renderList($setup.commodityList, (commodity2) => {
-              return vue.withDirectives((vue.openBlock(), vue.createBlock(
-                _component_van_col,
-                {
-                  span: "11",
-                  class: "mx-1 mt-2"
-                },
-                {
-                  default: vue.withCtx(() => [
-                    vue.createVNode($setup["commodity"])
-                  ]),
-                  _: 2
-                  /* DYNAMIC */
-                },
-                1024
-                /* DYNAMIC_SLOTS */
-              )), [
-                [_directive_lazy, commodity2]
-              ]);
-            }),
-            256
-            /* UNKEYED_FRAGMENT */
-          ))
-        ]),
-        _: 1
-        /* STABLE */
-      }),
-      vue.createElementVNode("view", null, [
-        vue.createVNode(_component_TabBottom)
-      ])
-    ]);
-  }
-  const Index = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$3], ["__file", "D:/Data/Demo/mall/mallfront/pages/index/index.vue"]]);
   function bind(fn, thisArg) {
     return function wrap() {
       return fn.apply(thisArg, arguments);
@@ -291,7 +54,7 @@ if (uni.restoreGlobal) {
     return (thing) => kindOf(thing) === type;
   };
   const typeOfTest = (type) => (thing) => typeof thing === type;
-  const { isArray: isArray$1 } = Array;
+  const { isArray } = Array;
   const isUndefined = typeOfTest("undefined");
   function isBuffer(val) {
     return val !== null && !isUndefined(val) && val.constructor !== null && !isUndefined(val.constructor) && isFunction$1(val.constructor.isBuffer) && val.constructor.isBuffer(val);
@@ -340,7 +103,7 @@ if (uni.restoreGlobal) {
     if (typeof obj !== "object") {
       obj = [obj];
     }
-    if (isArray$1(obj)) {
+    if (isArray(obj)) {
       for (i = 0, l = obj.length; i < l; i++) {
         fn.call(null, obj[i], i, obj);
       }
@@ -382,7 +145,7 @@ if (uni.restoreGlobal) {
         result[targetKey] = merge(result[targetKey], val);
       } else if (isPlainObject$1(val)) {
         result[targetKey] = merge({}, val);
-      } else if (isArray$1(val)) {
+      } else if (isArray(val)) {
         result[targetKey] = val.slice();
       } else {
         result[targetKey] = val;
@@ -451,7 +214,7 @@ if (uni.restoreGlobal) {
   const toArray$1 = (thing) => {
     if (!thing)
       return null;
-    if (isArray$1(thing))
+    if (isArray(thing))
       return thing;
     let i = thing.length;
     if (!isNumber(i))
@@ -533,10 +296,10 @@ if (uni.restoreGlobal) {
         obj[value] = true;
       });
     };
-    isArray$1(arrayOrString) ? define(arrayOrString) : define(String(arrayOrString).split(delimiter));
+    isArray(arrayOrString) ? define(arrayOrString) : define(String(arrayOrString).split(delimiter));
     return obj;
   };
-  const noop$3 = () => {
+  const noop$2 = () => {
   };
   const toFiniteNumber = (value, defaultValue) => {
     return value != null && Number.isFinite(value = +value) ? value : defaultValue;
@@ -568,7 +331,7 @@ if (uni.restoreGlobal) {
         }
         if (!("toJSON" in source)) {
           stack[i] = source;
-          const target = isArray$1(source) ? [] : {};
+          const target = isArray(source) ? [] : {};
           forEach(source, (value, key) => {
             const reducedValue = visit(value, i + 1);
             !isUndefined(reducedValue) && (target[key] = reducedValue);
@@ -604,7 +367,7 @@ if (uni.restoreGlobal) {
   );
   const asap = typeof queueMicrotask !== "undefined" ? queueMicrotask.bind(_global$1) : typeof process !== "undefined" && process.nextTick || _setImmediate;
   const utils$1 = {
-    isArray: isArray$1,
+    isArray,
     isArrayBuffer,
     isBuffer,
     isFormData,
@@ -649,7 +412,7 @@ if (uni.restoreGlobal) {
     freezeMethods,
     toObjectSet,
     toCamelCase,
-    noop: noop$3,
+    noop: noop$2,
     toFiniteNumber,
     findKey,
     global: _global$1,
@@ -2658,7 +2421,32 @@ if (uni.restoreGlobal) {
   axios.getAdapter = adapters.getAdapter;
   axios.HttpStatusCode = HttpStatusCode$1;
   axios.default = axios;
-  const axios$1 = axios;
+  const _imports_0 = "/static/commodity/mobile.jpg";
+  const _export_sfc = (sfc, props) => {
+    const target = sfc.__vccOpts || sfc;
+    for (const [key, val] of props) {
+      target[key] = val;
+    }
+    return target;
+  };
+  const _sfc_main$4 = {};
+  function _sfc_render$4(_ctx, _cache) {
+    return vue.openBlock(), vue.createElementBlock("view", { class: "card" }, [
+      vue.createElementVNode("img", {
+        src: _imports_0,
+        class: "card-img-top",
+        alt: "..."
+      }),
+      vue.createElementVNode("view", { class: "mx-1" }, [
+        vue.createElementVNode("view", { class: "font_size_16" }, "商品名称"),
+        vue.createElementVNode("view", null, [
+          vue.createElementVNode("text", { class: "font_size_16 mt-" }, "商品价格"),
+          vue.createElementVNode("text", { class: "font_size_14" }, "多少人付款")
+        ])
+      ])
+    ]);
+  }
+  const commodity = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$4], ["__file", "D:/Data/Demo/mall/mallfront/components/commodity.vue"]]);
   var isVue2 = false;
   function set(target, key, val) {
     if (Array.isArray(target)) {
@@ -2676,37 +2464,37 @@ if (uni.restoreGlobal) {
     }
     delete target[key];
   }
-  function getDevtoolsGlobalHook$1() {
-    return getTarget$1().__VUE_DEVTOOLS_GLOBAL_HOOK__;
+  function getDevtoolsGlobalHook() {
+    return getTarget().__VUE_DEVTOOLS_GLOBAL_HOOK__;
   }
-  function getTarget$1() {
+  function getTarget() {
     return typeof navigator !== "undefined" && typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : {};
   }
-  const isProxyAvailable$1 = typeof Proxy === "function";
-  const HOOK_SETUP$1 = "devtools-plugin:setup";
-  const HOOK_PLUGIN_SETTINGS_SET$1 = "plugin:settings:set";
-  let supported$1;
-  let perf$1;
-  function isPerformanceSupported$1() {
+  const isProxyAvailable = typeof Proxy === "function";
+  const HOOK_SETUP = "devtools-plugin:setup";
+  const HOOK_PLUGIN_SETTINGS_SET = "plugin:settings:set";
+  let supported;
+  let perf;
+  function isPerformanceSupported() {
     var _a;
-    if (supported$1 !== void 0) {
-      return supported$1;
+    if (supported !== void 0) {
+      return supported;
     }
     if (typeof window !== "undefined" && window.performance) {
-      supported$1 = true;
-      perf$1 = window.performance;
+      supported = true;
+      perf = window.performance;
     } else if (typeof global !== "undefined" && ((_a = global.perf_hooks) === null || _a === void 0 ? void 0 : _a.performance)) {
-      supported$1 = true;
-      perf$1 = global.perf_hooks.performance;
+      supported = true;
+      perf = global.perf_hooks.performance;
     } else {
-      supported$1 = false;
+      supported = false;
     }
-    return supported$1;
+    return supported;
   }
-  function now$1() {
-    return isPerformanceSupported$1() ? perf$1.now() : Date.now();
+  function now() {
+    return isPerformanceSupported() ? perf.now() : Date.now();
   }
-  let ApiProxy$1 = class ApiProxy {
+  class ApiProxy {
     constructor(plugin, hook) {
       this.target = null;
       this.targetQueue = [];
@@ -2740,11 +2528,11 @@ if (uni.restoreGlobal) {
           currentSettings = value;
         },
         now() {
-          return now$1();
+          return now();
         }
       };
       if (hook) {
-        hook.on(HOOK_PLUGIN_SETTINGS_SET$1, (pluginId, value) => {
+        hook.on(HOOK_PLUGIN_SETTINGS_SET, (pluginId, value) => {
           if (pluginId === this.plugin.id) {
             this.fallbacks.setSettings(value);
           }
@@ -2803,16 +2591,16 @@ if (uni.restoreGlobal) {
         item.resolve(await this.target[item.method](...item.args));
       }
     }
-  };
-  function setupDevtoolsPlugin$1(pluginDescriptor, setupFn) {
+  }
+  function setupDevtoolsPlugin(pluginDescriptor, setupFn) {
     const descriptor = pluginDescriptor;
-    const target = getTarget$1();
-    const hook = getDevtoolsGlobalHook$1();
-    const enableProxy = isProxyAvailable$1 && descriptor.enableEarlyProxy;
+    const target = getTarget();
+    const hook = getDevtoolsGlobalHook();
+    const enableProxy = isProxyAvailable && descriptor.enableEarlyProxy;
     if (hook && (target.__VUE_DEVTOOLS_PLUGIN_API_AVAILABLE__ || !enableProxy)) {
-      hook.emit(HOOK_SETUP$1, pluginDescriptor, setupFn);
+      hook.emit(HOOK_SETUP, pluginDescriptor, setupFn);
     } else {
-      const proxy = enableProxy ? new ApiProxy$1(descriptor, hook) : null;
+      const proxy = enableProxy ? new ApiProxy(descriptor, hook) : null;
       const list = target.__VUE_DEVTOOLS_PLUGINS__ = target.__VUE_DEVTOOLS_PLUGINS__ || [];
       list.push({
         pluginDescriptor: descriptor,
@@ -3086,7 +2874,7 @@ if (uni.restoreGlobal) {
       }
     }
   }
-  function formatDisplay$1(display) {
+  function formatDisplay(display) {
     return {
       _custom: {
         display
@@ -3169,8 +2957,8 @@ if (uni.restoreGlobal) {
       });
     } else {
       return {
-        operation: formatDisplay$1(events.type),
-        key: formatDisplay$1(events.key),
+        operation: formatDisplay(events.type),
+        key: formatDisplay(events.key),
         oldValue: events.oldValue,
         newValue: events.newValue
       };
@@ -3195,7 +2983,7 @@ if (uni.restoreGlobal) {
   const { assign: assign$1 } = Object;
   const getStoreType = (id) => "🍍 " + id;
   function registerPiniaDevtools(app, pinia) {
-    setupDevtoolsPlugin$1({
+    setupDevtoolsPlugin({
       id: "dev.esm.pinia",
       label: "Pinia 🍍",
       logo: "https://pinia.vuejs.org/logo.svg",
@@ -3377,7 +3165,7 @@ Only state can be modified.`);
     if (!componentStateTypes.includes(getStoreType(store.$id))) {
       componentStateTypes.push(getStoreType(store.$id));
     }
-    setupDevtoolsPlugin$1({
+    setupDevtoolsPlugin({
       id: "dev.esm.pinia",
       label: "Pinia 🍍",
       logo: "https://pinia.vuejs.org/logo.svg",
@@ -3408,8 +3196,8 @@ Only state can be modified.`);
             title: "🛫 " + name2,
             subtitle: "start",
             data: {
-              store: formatDisplay$1(store.$id),
-              action: formatDisplay$1(name2),
+              store: formatDisplay(store.$id),
+              action: formatDisplay(name2),
               args
             },
             groupId
@@ -3424,8 +3212,8 @@ Only state can be modified.`);
               title: "🛬 " + name2,
               subtitle: "end",
               data: {
-                store: formatDisplay$1(store.$id),
-                action: formatDisplay$1(name2),
+                store: formatDisplay(store.$id),
+                action: formatDisplay(name2),
                 args,
                 result
               },
@@ -3443,8 +3231,8 @@ Only state can be modified.`);
               title: "💥 " + name2,
               subtitle: "end",
               data: {
-                store: formatDisplay$1(store.$id),
-                action: formatDisplay$1(name2),
+                store: formatDisplay(store.$id),
+                action: formatDisplay(name2),
                 args,
                 error
               },
@@ -3482,7 +3270,7 @@ Only state can be modified.`);
         const eventData = {
           time: now2(),
           title: formatMutationType(type),
-          data: assign$1({ store: formatDisplay$1(store.$id) }, formatEventData(events)),
+          data: assign$1({ store: formatDisplay(store.$id) }, formatEventData(events)),
           groupId: activeAction
         };
         if (type === MutationType.patchFunction) {
@@ -3517,8 +3305,8 @@ Only state can be modified.`);
             title: "🔥 " + store.$id,
             subtitle: "HMR update",
             data: {
-              store: formatDisplay$1(store.$id),
-              info: formatDisplay$1(`HMR update`)
+              store: formatDisplay(store.$id),
+              info: formatDisplay(`HMR update`)
             }
           }
         });
@@ -3641,9 +3429,9 @@ Only state can be modified.`);
     }
     return newState;
   }
-  const noop$2 = () => {
+  const noop$1 = () => {
   };
-  function addSubscription(subscriptions, callback, detached, onCleanup = noop$2) {
+  function addSubscription(subscriptions, callback, detached, onCleanup = noop$1) {
     subscriptions.push(callback);
     const removeSubscription = () => {
       const idx = subscriptions.indexOf(callback);
@@ -3687,7 +3475,7 @@ Only state can be modified.`);
   function shouldHydrate(obj) {
     return !isPlainObject(obj) || !obj.hasOwnProperty(skipHydrateSymbol);
   }
-  const { assign: assign$2 } = Object;
+  const { assign } = Object;
   function isComputed(o) {
     return !!(vue.isRef(o) && o.effect);
   }
@@ -3705,7 +3493,7 @@ Only state can be modified.`);
         // use ref() to unwrap refs inside state TODO: check if this is still necessary
         vue.toRefs(vue.ref(state ? state() : {}).value)
       ) : vue.toRefs(pinia.state.value[id]);
-      return assign$2(localState, actions, Object.keys(getters || {}).reduce((computedGetters, name2) => {
+      return assign(localState, actions, Object.keys(getters || {}).reduce((computedGetters, name2) => {
         if (name2 in localState) {
           console.warn(`[🍍]: A getter cannot have the same name as another state property. Rename one of them. Found with "${name2}" in store "${id}".`);
         }
@@ -3722,7 +3510,7 @@ Only state can be modified.`);
   }
   function createSetupStore($id, setup, options = {}, pinia, hot, isOptionsStore) {
     let scope;
-    const optionsForPlugin = assign$2({ actions: {} }, options);
+    const optionsForPlugin = assign({ actions: {} }, options);
     if (!pinia._e.active) {
       throw new Error("Pinia destroyed");
     }
@@ -3791,7 +3579,7 @@ Only state can be modified.`);
       const { state } = options;
       const newState = state ? state() : {};
       this.$patch(($state) => {
-        assign$2($state, newState);
+        assign($state, newState);
       });
     } : (
       /* istanbul ignore next */
@@ -3867,12 +3655,12 @@ Only state can be modified.`);
               events: debuggerEvents
             }, state);
           }
-        }, assign$2({}, $subscribeOptions, options2)));
+        }, assign({}, $subscribeOptions, options2)));
         return removeSubscription;
       },
       $dispose
     };
-    const store = vue.reactive(assign$2(
+    const store = vue.reactive(assign(
       {
         _hmrPayload,
         _customProperties: vue.markRaw(/* @__PURE__ */ new Set())
@@ -3929,8 +3717,8 @@ Only state can be modified.`);
       }
     }
     {
-      assign$2(store, setupStore);
-      assign$2(vue.toRaw(store), setupStore);
+      assign(store, setupStore);
+      assign(vue.toRaw(store), setupStore);
     }
     Object.defineProperty(store, "$state", {
       get: () => hot ? hotState.value : pinia.state.value[$id],
@@ -3939,7 +3727,7 @@ Only state can be modified.`);
           throw new Error("cannot set hotState");
         }
         $patch(($state) => {
-          assign$2($state, state);
+          assign($state, state);
         });
       }
     });
@@ -4008,7 +3796,7 @@ Only state can be modified.`);
         enumerable: false
       };
       ["_p", "_hmrPayload", "_getters", "_customProperties"].forEach((p) => {
-        Object.defineProperty(store, p, assign$2({ value: store[p] }, nonEnumerable));
+        Object.defineProperty(store, p, assign({ value: store[p] }, nonEnumerable));
       });
     }
     pinia._p.forEach((extender) => {
@@ -4020,9 +3808,9 @@ Only state can be modified.`);
           options: optionsForPlugin
         }));
         Object.keys(extensions || {}).forEach((key) => store._customProperties.add(key));
-        assign$2(store, extensions);
+        assign(store, extensions);
       } else {
-        assign$2(store, scope.run(() => extender({
+        assign(store, scope.run(() => extender({
           store,
           app: pinia._a,
           pinia,
@@ -4082,7 +3870,7 @@ This will fail in production.`);
       const store = pinia._s.get(id);
       if (hot) {
         const hotId = "__hot:" + id;
-        const newStore = isSetupStore ? createSetupStore(hotId, setup, options, pinia, true) : createOptionsStore(hotId, assign$2({}, options), pinia, true);
+        const newStore = isSetupStore ? createSetupStore(hotId, setup, options, pinia, true) : createOptionsStore(hotId, assign({}, options), pinia, true);
         hot._hotUpdate(newStore);
         delete pinia.state.value[hotId];
         pinia._s.delete(hotId);
@@ -4104,10 +3892,265 @@ This will fail in production.`);
   const useStore = defineStore("mall", {
     state: () => {
       return {
-        BASEURL: "http://localhost:8080/"
+        BASEURL: "http://localhost:8080/",
+        IsIndexOne: 0
       };
     }
   });
+  const _sfc_main$3 = {
+    __name: "index",
+    setup(__props, { expose: __expose }) {
+      __expose();
+      const commodityList = vue.ref([]);
+      const value = vue.ref("");
+      const loading = vue.ref(false);
+      const param = vue.reactive({
+        //设置页码
+        currentPage: 0,
+        //设置每页显示数量
+        pageSize: 5
+      });
+      const store = useStore();
+      const onSearch = (val) => {
+        formatAppLog("log", "at pages/index/index.vue:105", val);
+      };
+      const getAllCommodity = () => {
+        if (store.IsIndexOne == 0)
+          param.currentPage = 0;
+        else
+          param.currentPage = commodityList.length / param.pageSize + 1;
+        var x;
+        axios.get(store.BASEURL + "shopping/selectAllCommodity?currentpage=" + param.currentPage + "&pageSize=" + param.pageSize).then((response) => {
+          const data = response.data.data;
+          formatAppLog("log", "at pages/index/index.vue:117", data[0]);
+          for (x in data) {
+            commodityList.value.push(x);
+          }
+          formatAppLog("log", "at pages/index/index.vue:121", commodityList);
+        });
+      };
+      const handelLower = () => {
+        formatAppLog("log", "at pages/index/index.vue:125", "下拉操作");
+        getAllCommodity();
+      };
+      vue.onMounted(() => {
+        getAllCommodity();
+        store.IsIndexOne = 1;
+      });
+      const __returned__ = { commodityList, value, loading, param, store, onSearch, getAllCommodity, handelLower, get axios() {
+        return axios;
+      }, commodity, onMounted: vue.onMounted, ref: vue.ref, reactive: vue.reactive, get useStore() {
+        return useStore;
+      } };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_van_search = vue.resolveComponent("van-search");
+    const _component_van_image = vue.resolveComponent("van-image");
+    const _component_van_col = vue.resolveComponent("van-col");
+    const _component_van_row = vue.resolveComponent("van-row");
+    const _component_TabBottom = vue.resolveComponent("TabBottom");
+    const _directive_lazy = vue.resolveDirective("lazy");
+    return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
+      vue.createElementVNode("view", { class: "mt-0" }, [
+        vue.createVNode(_component_van_search, {
+          modelValue: $setup.value,
+          "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.value = $event),
+          placeholder: "请输入搜索关键词",
+          background: "#4fc08d",
+          shape: "round",
+          onSearch: $setup.onSearch
+        }, null, 8, ["modelValue"])
+      ]),
+      vue.createVNode(_component_van_row, { class: "font_size_12" }, {
+        default: vue.withCtx(() => [
+          vue.createVNode(_component_van_col, { span: "5" }, {
+            default: vue.withCtx(() => [
+              vue.createVNode(_component_van_row, null, {
+                default: vue.withCtx(() => [
+                  vue.createVNode(_component_van_col, { span: "24" }, {
+                    default: vue.withCtx(() => [
+                      vue.createVNode(_component_van_image, {
+                        width: "50",
+                        height: "50",
+                        src: "../../static/index/seckkill.png"
+                      })
+                    ]),
+                    _: 1
+                    /* STABLE */
+                  }),
+                  vue.createElementVNode("text", { class: "mx-2" }, "秒杀")
+                ]),
+                _: 1
+                /* STABLE */
+              })
+            ]),
+            _: 1
+            /* STABLE */
+          }),
+          vue.createVNode(_component_van_col, {
+            span: "5",
+            class: "mt-1"
+          }, {
+            default: vue.withCtx(() => [
+              vue.createVNode(_component_van_row, null, {
+                default: vue.withCtx(() => [
+                  vue.createVNode(_component_van_col, { span: "24" }, {
+                    default: vue.withCtx(() => [
+                      vue.createVNode(_component_van_image, {
+                        width: "45",
+                        height: "45",
+                        src: "../../static/index/loan.png"
+                      })
+                    ]),
+                    _: 1
+                    /* STABLE */
+                  }),
+                  vue.createElementVNode("text", { class: "mx-2" }, "借款")
+                ]),
+                _: 1
+                /* STABLE */
+              })
+            ]),
+            _: 1
+            /* STABLE */
+          }),
+          vue.createVNode(_component_van_col, {
+            span: "5",
+            class: "mt-1"
+          }, {
+            default: vue.withCtx(() => [
+              vue.createVNode(_component_van_row, null, {
+                default: vue.withCtx(() => [
+                  vue.createVNode(_component_van_col, {
+                    span: "24",
+                    class: "mt-1"
+                  }, {
+                    default: vue.withCtx(() => [
+                      vue.createVNode(_component_van_image, {
+                        width: "42",
+                        height: "42",
+                        src: "../../static/index/auction.png"
+                      })
+                    ]),
+                    _: 1
+                    /* STABLE */
+                  }),
+                  vue.createElementVNode("text", { class: "mx-2" }, "拍卖")
+                ]),
+                _: 1
+                /* STABLE */
+              })
+            ]),
+            _: 1
+            /* STABLE */
+          }),
+          vue.createVNode(_component_van_col, {
+            span: "5",
+            class: "mt-1"
+          }, {
+            default: vue.withCtx(() => [
+              vue.createVNode(_component_van_row, null, {
+                default: vue.withCtx(() => [
+                  vue.createVNode(_component_van_col, { span: "24" }, {
+                    default: vue.withCtx(() => [
+                      vue.createVNode(_component_van_image, {
+                        width: "50",
+                        height: "50",
+                        src: "../../static/index/second-hand.png"
+                      })
+                    ]),
+                    _: 1
+                    /* STABLE */
+                  }),
+                  vue.createElementVNode("text", { class: "mx-2" }, "二手交易")
+                ]),
+                _: 1
+                /* STABLE */
+              })
+            ]),
+            _: 1
+            /* STABLE */
+          }),
+          vue.createVNode(_component_van_col, {
+            span: "4",
+            class: "mt-1"
+          }, {
+            default: vue.withCtx(() => [
+              vue.createVNode(_component_van_row, null, {
+                default: vue.withCtx(() => [
+                  vue.createVNode(_component_van_col, { span: "24" }, {
+                    default: vue.withCtx(() => [
+                      vue.createVNode(_component_van_image, {
+                        width: "45",
+                        height: "45",
+                        src: "../../static/index/digimon.png"
+                      })
+                    ]),
+                    _: 1
+                    /* STABLE */
+                  }),
+                  vue.createElementVNode("text", { class: "mx-2" }, "数码")
+                ]),
+                _: 1
+                /* STABLE */
+              })
+            ]),
+            _: 1
+            /* STABLE */
+          })
+        ]),
+        _: 1
+        /* STABLE */
+      }),
+      vue.createElementVNode(
+        "scroll-view",
+        { onScrolltolower: $setup.handelLower },
+        [
+          vue.createVNode(_component_van_row, null, {
+            default: vue.withCtx(() => [
+              (vue.openBlock(true), vue.createElementBlock(
+                vue.Fragment,
+                null,
+                vue.renderList($setup.commodityList, (commodity2) => {
+                  return vue.withDirectives((vue.openBlock(), vue.createBlock(
+                    _component_van_col,
+                    {
+                      span: "11",
+                      class: "mx-1 mt-2"
+                    },
+                    {
+                      default: vue.withCtx(() => [
+                        vue.createVNode($setup["commodity"])
+                      ]),
+                      _: 2
+                      /* DYNAMIC */
+                    },
+                    1024
+                    /* DYNAMIC_SLOTS */
+                  )), [
+                    [_directive_lazy, commodity2]
+                  ]);
+                }),
+                256
+                /* UNKEYED_FRAGMENT */
+              ))
+            ]),
+            _: 1
+            /* STABLE */
+          })
+        ],
+        32
+        /* NEED_HYDRATION */
+      ),
+      vue.createElementVNode("view", null, [
+        vue.createVNode(_component_TabBottom)
+      ])
+    ]);
+  }
+  const PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$3], ["__file", "D:/Data/Demo/mall/mallfront/pages/index/index.vue"]]);
   const _sfc_main$2 = {
     __name: "login",
     setup(__props, { expose: __expose }) {
@@ -4117,18 +4160,18 @@ This will fail in production.`);
       const checked = vue.ref("");
       const onSubmit = (values) => {
         const store = useStore();
-        axios$1.post(store.BASEURL + "user/login", {
+        axios.post(store.BASEURL + "user/login", {
           "username": userName,
           "password": userPassword
         }).then((Response2) => {
-          formatAppLog("log", "at pages/login/login.vue:61", Response2.data);
+          formatAppLog("log", "at pages/login/login.vue:62", Response2.data);
         }, (error) => {
-          formatAppLog("log", "at pages/login/login.vue:63", "错误", error.message);
+          formatAppLog("log", "at pages/login/login.vue:64", "错误", error.message);
         });
         console.log();
       };
       const __returned__ = { userName, userPassword, checked, onSubmit, ref: vue.ref, get axios() {
-        return axios$1;
+        return axios;
       }, get useStore() {
         return useStore;
       } };
@@ -4207,9 +4250,9 @@ This will fail in production.`);
       ])
     ]);
   }
-  const Login = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$2], ["__file", "D:/Data/Demo/mall/mallfront/pages/login/login.vue"]]);
-  __definePage("pages/index/index", Index);
-  __definePage("pages/login/login", Login);
+  const PagesLoginLogin = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$2], ["__file", "D:/Data/Demo/mall/mallfront/pages/login/login.vue"]]);
+  __definePage("pages/index/index", PagesIndexIndex);
+  __definePage("pages/login/login", PagesLoginLogin);
   const _sfc_main$1 = {
     __name: "App",
     setup(__props, { expose: __expose }) {
@@ -4223,7 +4266,7 @@ This will fail in production.`);
     return vue.createCommentVNode(" <router-view></router-view> ");
   }
   const App = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render$1], ["__file", "D:/Data/Demo/mall/mallfront/App.vue"]]);
-  function noop$1() {
+  function noop() {
   }
   const extend = Object.assign;
   const inBrowser$1 = typeof window !== "undefined";
@@ -4693,7 +4736,7 @@ This will fail in production.`);
     });
     return to;
   }
-  var stdin_default$r = {
+  var stdin_default$s = {
     name: "姓名",
     tel: "电话",
     save: "保存",
@@ -4757,7 +4800,7 @@ This will fail in production.`);
   };
   const lang = vue.ref("zh-CN");
   const messages = vue.reactive({
-    "zh-CN": stdin_default$r
+    "zh-CN": stdin_default$s
   });
   const Locale = {
     messages() {
@@ -4771,11 +4814,11 @@ This will fail in production.`);
       deepAssign(messages, newMessages);
     }
   };
-  var stdin_default$q = Locale;
+  var stdin_default$r = Locale;
   function createTranslate(name2) {
     const prefix = camelize(name2) + ".";
     return (path, ...args) => {
-      const messages2 = stdin_default$q.messages();
+      const messages2 = stdin_default$r.messages();
       const message = get(messages2, prefix + path) || get(messages2, path);
       return isFunction(message) ? message(...args) : message;
     };
@@ -4837,7 +4880,7 @@ This will fail in production.`);
           } else if (canceled) {
             canceled();
           }
-        }).catch(error || noop$1);
+        }).catch(error || noop);
       } else if (returnVal) {
         done();
       } else if (canceled) {
@@ -4909,10 +4952,10 @@ This will fail in production.`);
     to,
     url,
     replace,
-    $router: router2
+    $router: router
   }) {
-    if (to && router2) {
-      router2[replace ? "replace" : "push"](to);
+    if (to && router) {
+      router[replace ? "replace" : "push"](to);
     } else if (url) {
       replace ? location.replace(url) : location.href = url;
     }
@@ -4921,7 +4964,7 @@ This will fail in production.`);
     const vm = vue.getCurrentInstance().proxy;
     return () => route(vm);
   }
-  const [name$o, bem$o] = createNamespace("badge");
+  const [name$p, bem$p] = createNamespace("badge");
   const badgeProps = {
     dot: Boolean,
     max: numericProp,
@@ -4932,8 +4975,8 @@ This will fail in production.`);
     showZero: truthProp,
     position: makeStringProp("top-right")
   };
-  var stdin_default$p = vue.defineComponent({
-    name: name$o,
+  var stdin_default$q = vue.defineComponent({
+    name: name$p,
     props: badgeProps,
     setup(props, {
       slots
@@ -4996,7 +5039,7 @@ This will fail in production.`);
       const renderBadge = () => {
         if (hasContent() || props.dot) {
           return vue.createVNode("div", {
-            "class": bem$o([props.position, {
+            "class": bem$p([props.position, {
               dot: props.dot,
               fixed: !!slots.default
             }]),
@@ -5010,7 +5053,7 @@ This will fail in production.`);
             tag
           } = props;
           return vue.createVNode(tag, {
-            "class": bem$o("wrapper")
+            "class": bem$p("wrapper")
           }, {
             default: () => [slots.default(), renderBadge()]
           });
@@ -5019,11 +5062,11 @@ This will fail in production.`);
       };
     }
   });
-  const Badge = withInstall(stdin_default$p);
+  const Badge = withInstall(stdin_default$q);
   const setGlobalZIndex = (val) => {
   };
-  const [name$n, bem$n] = createNamespace("config-provider");
-  const CONFIG_PROVIDER_KEY = Symbol(name$n);
+  const [name$o, bem$o] = createNamespace("config-provider");
+  const CONFIG_PROVIDER_KEY = Symbol(name$o);
   const configProviderProps = {
     tag: makeStringProp("div"),
     theme: makeStringProp("light"),
@@ -5058,7 +5101,7 @@ This will fail in production.`);
     });
   }
   vue.defineComponent({
-    name: name$n,
+    name: name$o,
     props: configProviderProps,
     setup(props, {
       slots
@@ -5106,7 +5149,7 @@ This will fail in production.`);
         }
       });
       return () => vue.createVNode(props.tag, {
-        "class": bem$n(),
+        "class": bem$o(),
         "style": props.themeVarsScope === "local" ? style.value : void 0
       }, {
         default: () => {
@@ -5116,7 +5159,7 @@ This will fail in production.`);
       });
     }
   });
-  const [name$m, bem$m] = createNamespace("icon");
+  const [name$n, bem$n] = createNamespace("icon");
   const isImage = (name2) => name2 == null ? void 0 : name2.includes("/");
   const iconProps = {
     dot: Boolean,
@@ -5128,14 +5171,14 @@ This will fail in production.`);
     badgeProps: Object,
     classPrefix: String
   };
-  var stdin_default$o = vue.defineComponent({
-    name: name$m,
+  var stdin_default$p = vue.defineComponent({
+    name: name$n,
     props: iconProps,
     setup(props, {
       slots
     }) {
       const config = vue.inject(CONFIG_PROVIDER_KEY, null);
-      const classPrefix = vue.computed(() => props.classPrefix || (config == null ? void 0 : config.iconPrefix) || bem$m());
+      const classPrefix = vue.computed(() => props.classPrefix || (config == null ? void 0 : config.iconPrefix) || bem$n());
       return () => {
         const {
           tag,
@@ -5159,7 +5202,7 @@ This will fail in production.`);
           default: () => {
             var _a;
             return [(_a = slots.default) == null ? void 0 : _a.call(slots), isImageIcon && vue.createVNode("img", {
-              "class": bem$m("image"),
+              "class": bem$n("image"),
               "src": name2
             }, null)];
           }
@@ -5167,13 +5210,13 @@ This will fail in production.`);
       };
     }
   });
-  const Icon = withInstall(stdin_default$o);
-  const [name$l, bem$l] = createNamespace("loading");
+  const Icon = withInstall(stdin_default$p);
+  const [name$m, bem$m] = createNamespace("loading");
   const SpinIcon = Array(12).fill(null).map((_, index) => vue.createVNode("i", {
-    "class": bem$l("line", String(index + 1))
+    "class": bem$m("line", String(index + 1))
   }, null));
   const CircularIcon = vue.createVNode("svg", {
-    "class": bem$l("circular"),
+    "class": bem$m("circular"),
     "viewBox": "25 25 50 50"
   }, [vue.createVNode("circle", {
     "cx": "50",
@@ -5189,8 +5232,8 @@ This will fail in production.`);
     textSize: numericProp,
     textColor: String
   };
-  var stdin_default$n = vue.defineComponent({
-    name: name$l,
+  var stdin_default$o = vue.defineComponent({
+    name: name$m,
     props: loadingProps,
     setup(props, {
       slots
@@ -5201,7 +5244,7 @@ This will fail in production.`);
       const renderIcon = () => {
         const DefaultIcon = props.type === "spinner" ? SpinIcon : CircularIcon;
         return vue.createVNode("span", {
-          "class": bem$l("spinner", props.type),
+          "class": bem$m("spinner", props.type),
           "style": spinnerStyle.value
         }, [slots.icon ? slots.icon() : DefaultIcon]);
       };
@@ -5209,7 +5252,7 @@ This will fail in production.`);
         var _a;
         if (slots.default) {
           return vue.createVNode("span", {
-            "class": bem$l("text"),
+            "class": bem$m("text"),
             "style": {
               fontSize: addUnit(props.textSize),
               color: (_a = props.textColor) != null ? _a : props.color
@@ -5223,7 +5266,7 @@ This will fail in production.`);
           vertical
         } = props;
         return vue.createVNode("div", {
-          "class": bem$l([type, {
+          "class": bem$m([type, {
             vertical
           }]),
           "aria-live": "polite",
@@ -5232,8 +5275,8 @@ This will fail in production.`);
       };
     }
   });
-  const Loading = withInstall(stdin_default$n);
-  const [name$k, bem$k] = createNamespace("button");
+  const Loading = withInstall(stdin_default$o);
+  const [name$l, bem$l] = createNamespace("button");
   const buttonProps = extend({}, routeProps, {
     tag: makeStringProp("button"),
     text: String,
@@ -5255,8 +5298,8 @@ This will fail in production.`);
     loadingType: String,
     iconPosition: makeStringProp("left")
   });
-  var stdin_default$m = vue.defineComponent({
-    name: name$k,
+  var stdin_default$n = vue.defineComponent({
+    name: name$l,
     props: buttonProps,
     emits: ["click"],
     setup(props, {
@@ -5271,7 +5314,7 @@ This will fail in production.`);
         return vue.createVNode(Loading, {
           "size": props.loadingSize,
           "type": props.loadingType,
-          "class": bem$k("loading")
+          "class": bem$l("loading")
         }, null);
       };
       const renderIcon = () => {
@@ -5280,13 +5323,13 @@ This will fail in production.`);
         }
         if (slots.icon) {
           return vue.createVNode("div", {
-            "class": bem$k("icon")
+            "class": bem$l("icon")
           }, [slots.icon()]);
         }
         if (props.icon) {
           return vue.createVNode(Icon, {
             "name": props.icon,
-            "class": bem$k("icon"),
+            "class": bem$l("icon"),
             "classPrefix": props.iconPrefix
           }, null);
         }
@@ -5300,7 +5343,7 @@ This will fail in production.`);
         }
         if (text) {
           return vue.createVNode("span", {
-            "class": bem$k("text")
+            "class": bem$l("text")
           }, [text]);
         }
       };
@@ -5347,7 +5390,7 @@ This will fail in production.`);
           nativeType,
           iconPosition
         } = props;
-        const classes = [bem$k([type, size, {
+        const classes = [bem$l([type, size, {
           plain,
           block,
           round,
@@ -5366,13 +5409,13 @@ This will fail in production.`);
           "onClick": onClick
         }, {
           default: () => [vue.createVNode("div", {
-            "class": bem$k("content")
+            "class": bem$l("content")
           }, [iconPosition === "left" && renderIcon(), renderText(), iconPosition === "right" && renderIcon()])]
         });
       };
     }
   });
-  const Button = withInstall(stdin_default$m);
+  const Button = withInstall(stdin_default$n);
   function getDirection(x, y) {
     if (x > y) {
       return "horizontal";
@@ -5530,7 +5573,7 @@ This will fail in production.`);
     vue.onBeforeUnmount(unobserve);
     onMountedOrActivated(observe);
   }
-  const [name$j, bem$j] = createNamespace("sticky");
+  const [name$k, bem$k] = createNamespace("sticky");
   const stickyProps = {
     zIndex: numericProp,
     position: makeStringProp("top"),
@@ -5538,8 +5581,8 @@ This will fail in production.`);
     offsetTop: makeNumericProp(0),
     offsetBottom: makeNumericProp(0)
   };
-  var stdin_default$l = vue.defineComponent({
-    name: name$j,
+  var stdin_default$m = vue.defineComponent({
+    name: name$k,
     props: stickyProps,
     emits: ["scroll", "change"],
     setup(props, {
@@ -5652,7 +5695,7 @@ This will fail in production.`);
           "ref": root,
           "style": rootStyle.value
         }, [vue.createVNode("div", {
-          "class": bem$j({
+          "class": bem$k({
             fixed: state.fixed && !isReset.value
           }),
           "style": stickyStyle.value
@@ -5660,8 +5703,8 @@ This will fail in production.`);
       };
     }
   });
-  const Sticky = withInstall(stdin_default$l);
-  const [name$i, bem$i] = createNamespace("swipe");
+  const Sticky = withInstall(stdin_default$m);
+  const [name$j, bem$j] = createNamespace("swipe");
   const swipeProps = {
     loop: truthProp,
     width: numericProp,
@@ -5676,9 +5719,9 @@ This will fail in production.`);
     showIndicators: truthProp,
     stopPropagation: truthProp
   };
-  const SWIPE_KEY = Symbol(name$i);
-  var stdin_default$k = vue.defineComponent({
-    name: name$i,
+  const SWIPE_KEY = Symbol(name$j);
+  var stdin_default$l = vue.defineComponent({
+    name: name$j,
     props: swipeProps,
     emits: ["change", "dragStart", "dragEnd"],
     setup(props, {
@@ -5956,7 +5999,7 @@ This will fail in production.`);
         } : void 0;
         return vue.createVNode("i", {
           "style": style,
-          "class": bem$i("indicator", {
+          "class": bem$j("indicator", {
             active
           })
         }, null);
@@ -5970,7 +6013,7 @@ This will fail in production.`);
         }
         if (props.showIndicators && count.value > 1) {
           return vue.createVNode("div", {
-            "class": bem$i("indicators", {
+            "class": bem$j("indicators", {
               vertical: props.vertical
             })
           }, [Array(count.value).fill("").map(renderDot)]);
@@ -6012,11 +6055,11 @@ This will fail in production.`);
         var _a;
         return vue.createVNode("div", {
           "ref": root,
-          "class": bem$i()
+          "class": bem$j()
         }, [vue.createVNode("div", {
           "ref": track,
           "style": trackStyle.value,
-          "class": bem$i("track", {
+          "class": bem$j("track", {
             vertical: props.vertical
           }),
           "onTouchstartPassive": onTouchStart,
@@ -6026,10 +6069,10 @@ This will fail in production.`);
       };
     }
   });
-  const Swipe = withInstall(stdin_default$k);
-  const [name$h, bem$h] = createNamespace("tabs");
-  var stdin_default$j = vue.defineComponent({
-    name: name$h,
+  const Swipe = withInstall(stdin_default$l);
+  const [name$i, bem$i] = createNamespace("tabs");
+  var stdin_default$k = vue.defineComponent({
+    name: name$i,
     props: {
       count: makeRequiredProp(Number),
       inited: Boolean,
@@ -6053,7 +6096,7 @@ This will fail in production.`);
           return vue.createVNode(Swipe, {
             "ref": swipeRef,
             "loop": false,
-            "class": bem$h("track"),
+            "class": bem$i("track"),
             "duration": +props.duration * 1e3,
             "touchable": props.swipeable,
             "lazyRender": props.lazyRender,
@@ -6081,13 +6124,13 @@ This will fail in production.`);
         swipeRef
       });
       return () => vue.createVNode("div", {
-        "class": bem$h("content", {
+        "class": bem$i("content", {
           animated: props.animated || props.swipeable
         })
       }, [renderChildren()]);
     }
   });
-  const [name$g, bem$g] = createNamespace("tabs");
+  const [name$h, bem$h] = createNamespace("tabs");
   const tabsProps = {
     type: makeStringProp("line"),
     color: String,
@@ -6111,9 +6154,9 @@ This will fail in production.`);
     titleActiveColor: String,
     titleInactiveColor: String
   };
-  const TABS_KEY = Symbol(name$g);
-  var stdin_default$i = vue.defineComponent({
-    name: name$g,
+  const TABS_KEY = Symbol(name$h);
+  var stdin_default$j = vue.defineComponent({
+    name: name$h,
     props: tabsProps,
     emits: ["change", "scroll", "rendered", "clickTab", "update:active"],
     setup(props, {
@@ -6311,7 +6354,7 @@ This will fail in production.`);
       const renderLine = () => {
         if (props.type === "line" && children.length) {
           return vue.createVNode("div", {
-            "class": bem$g("line"),
+            "class": bem$h("line"),
             "style": state.lineStyle
           }, null);
         }
@@ -6325,13 +6368,13 @@ This will fail in production.`);
         } = props;
         const Header = [vue.createVNode("div", {
           "ref": sticky ? void 0 : wrapRef,
-          "class": [bem$g("wrap"), {
+          "class": [bem$h("wrap"), {
             [BORDER_TOP_BOTTOM]: type === "line" && border
           }]
         }, [vue.createVNode("div", {
           "ref": navRef,
           "role": "tablist",
-          "class": bem$g("nav", [type, {
+          "class": bem$h("nav", [type, {
             shrink: props.shrink,
             complete: scrollable.value
           }]),
@@ -6404,14 +6447,14 @@ This will fail in production.`);
       });
       return () => vue.createVNode("div", {
         "ref": root,
-        "class": bem$g([props.type])
+        "class": bem$h([props.type])
       }, [props.showHeader ? props.sticky ? vue.createVNode(Sticky, {
         "container": root.value,
         "offsetTop": offsetTopPx.value,
         "onScroll": onStickyScroll
       }, {
         default: () => [renderHeader()]
-      }) : renderHeader() : null, vue.createVNode(stdin_default$j, {
+      }) : renderHeader() : null, vue.createVNode(stdin_default$k, {
         "ref": contentRef,
         "count": children.length,
         "inited": state.inited,
@@ -6430,9 +6473,9 @@ This will fail in production.`);
     }
   });
   const TAB_STATUS_KEY = Symbol();
-  const [name$f, bem$f] = createNamespace("tab");
+  const [name$g, bem$g] = createNamespace("tab");
   const TabTitle = vue.defineComponent({
-    name: name$f,
+    name: name$g,
     props: {
       id: String,
       dot: Boolean,
@@ -6481,7 +6524,7 @@ This will fail in production.`);
       });
       const renderText = () => {
         const Text = vue.createVNode("span", {
-          "class": bem$f("text", {
+          "class": bem$g("text", {
             ellipsis: !props.scrollable
           })
         }, [slots.title ? slots.title() : props.title]);
@@ -6499,7 +6542,7 @@ This will fail in production.`);
       return () => vue.createVNode("div", {
         "id": props.id,
         "role": "tab",
-        "class": [bem$f([props.type, {
+        "class": [bem$g([props.type, {
           grow: props.scrollable && !props.shrink,
           shrink: props.shrink,
           active: props.isActive,
@@ -6514,9 +6557,9 @@ This will fail in production.`);
       }, [renderText()]);
     }
   });
-  const [name$e, bem$e] = createNamespace("swipe-item");
-  var stdin_default$h = vue.defineComponent({
-    name: name$e,
+  const [name$f, bem$f] = createNamespace("swipe-item");
+  var stdin_default$i = vue.defineComponent({
+    name: name$f,
     setup(props, {
       slots
     }) {
@@ -6581,14 +6624,14 @@ This will fail in production.`);
       return () => {
         var _a;
         return vue.createVNode("div", {
-          "class": bem$e(),
+          "class": bem$f(),
           "style": style.value
         }, [shouldRender.value ? (_a = slots.default) == null ? void 0 : _a.call(slots) : null]);
       };
     }
   });
-  const SwipeItem = withInstall(stdin_default$h);
-  const [name$d, bem$d] = createNamespace("tab");
+  const SwipeItem = withInstall(stdin_default$i);
+  const [name$e, bem$e] = createNamespace("tab");
   const tabProps = extend({}, routeProps, {
     dot: Boolean,
     name: numericProp,
@@ -6599,8 +6642,8 @@ This will fail in production.`);
     titleStyle: [String, Object],
     showZeroBadge: truthProp
   });
-  var stdin_default$g = vue.defineComponent({
-    name: name$d,
+  var stdin_default$h = vue.defineComponent({
+    name: name$e,
     props: tabProps,
     setup(props, {
       slots
@@ -6698,7 +6741,7 @@ This will fail in production.`);
           return vue.createVNode(SwipeItem, {
             "id": id,
             "role": "tabpanel",
-            "class": bem$d("panel-wrapper", {
+            "class": bem$e("panel-wrapper", {
               inactive: hasInactiveClass.value
             }),
             "tabindex": active.value ? 0 : -1,
@@ -6709,7 +6752,7 @@ This will fail in production.`);
             default: () => {
               var _a2;
               return [vue.createVNode("div", {
-                "class": bem$d("panel")
+                "class": bem$e("panel")
               }, [(_a2 = slots.default) == null ? void 0 : _a2.call(slots)])];
             }
           });
@@ -6719,7 +6762,7 @@ This will fail in production.`);
         return vue.withDirectives(vue.createVNode("div", {
           "id": id,
           "role": "tabpanel",
-          "class": bem$d("panel"),
+          "class": bem$e("panel"),
           "tabindex": show ? 0 : -1,
           "aria-labelledby": label,
           "data-allow-mismatch": "attribute"
@@ -6727,9 +6770,9 @@ This will fail in production.`);
       };
     }
   });
-  const Tab = withInstall(stdin_default$g);
-  const Tabs = withInstall(stdin_default$i);
-  const [name$c, bem$c] = createNamespace("cell");
+  const Tab = withInstall(stdin_default$h);
+  const Tabs = withInstall(stdin_default$j);
+  const [name$d, bem$d] = createNamespace("cell");
   const cellSharedProps = {
     tag: makeStringProp("div"),
     icon: String,
@@ -6756,8 +6799,8 @@ This will fail in production.`);
     }
   };
   const cellProps = extend({}, cellSharedProps, routeProps);
-  var stdin_default$f = vue.defineComponent({
-    name: name$c,
+  var stdin_default$g = vue.defineComponent({
+    name: name$d,
     props: cellProps,
     setup(props, {
       slots
@@ -6767,7 +6810,7 @@ This will fail in production.`);
         const showLabel = slots.label || isDef(props.label);
         if (showLabel) {
           return vue.createVNode("div", {
-            "class": [bem$c("label"), props.labelClass]
+            "class": [bem$d("label"), props.labelClass]
           }, [slots.label ? slots.label() : props.label]);
         }
       };
@@ -6779,7 +6822,7 @@ This will fail in production.`);
             return;
           }
           return vue.createVNode("div", {
-            "class": [bem$c("title"), props.titleClass],
+            "class": [bem$d("title"), props.titleClass],
             "style": props.titleStyle
           }, [titleSlot || vue.createVNode("span", null, [props.title]), renderLabel()]);
         }
@@ -6789,7 +6832,7 @@ This will fail in production.`);
         const hasValue = slot || isDef(props.value);
         if (hasValue) {
           return vue.createVNode("div", {
-            "class": [bem$c("value"), props.valueClass]
+            "class": [bem$d("value"), props.valueClass]
           }, [slot ? slot() : vue.createVNode("span", null, [props.value])]);
         }
       };
@@ -6800,7 +6843,7 @@ This will fail in production.`);
         if (props.icon) {
           return vue.createVNode(Icon, {
             "name": props.icon,
-            "class": bem$c("left-icon"),
+            "class": bem$d("left-icon"),
             "classPrefix": props.iconPrefix
           }, null);
         }
@@ -6813,7 +6856,7 @@ This will fail in production.`);
           const name2 = props.arrowDirection && props.arrowDirection !== "right" ? `arrow-${props.arrowDirection}` : "arrow";
           return vue.createVNode(Icon, {
             "name": name2,
-            "class": bem$c("right-icon")
+            "class": bem$d("right-icon")
           }, null);
         }
       };
@@ -6838,7 +6881,7 @@ This will fail in production.`);
           classes[size] = !!size;
         }
         return vue.createVNode(tag, {
-          "class": bem$c(classes),
+          "class": bem$d(classes),
           "role": clickable ? "button" : void 0,
           "tabindex": clickable ? 0 : void 0,
           "onClick": route2
@@ -6851,8 +6894,8 @@ This will fail in production.`);
       };
     }
   });
-  const Cell = withInstall(stdin_default$f);
-  const [name$b, bem$b] = createNamespace("form");
+  const Cell = withInstall(stdin_default$g);
+  const [name$c, bem$c] = createNamespace("form");
   const formProps = {
     colon: Boolean,
     disabled: Boolean,
@@ -6873,8 +6916,8 @@ This will fail in production.`);
       default: "onBlur"
     }
   };
-  var stdin_default$e = vue.defineComponent({
-    name: name$b,
+  var stdin_default$f = vue.defineComponent({
+    name: name$c,
     props: formProps,
     emits: ["submit", "failed"],
     setup(props, {
@@ -7006,13 +7049,13 @@ This will fail in production.`);
       return () => {
         var _a;
         return vue.createVNode("form", {
-          "class": bem$b(),
+          "class": bem$c(),
           "onSubmit": onSubmit
         }, [(_a = slots.default) == null ? void 0 : _a.call(slots)]);
       };
     }
   });
-  const Form = withInstall(stdin_default$e);
+  const Form = withInstall(stdin_default$f);
   function isEmptyValue(value) {
     if (Array.isArray(value)) {
       return !value.length;
@@ -7097,7 +7140,7 @@ This will fail in production.`);
   function cutString(str, maxlength) {
     return [...str].slice(0, maxlength).join("");
   }
-  const [name$a, bem$a] = createNamespace("field");
+  const [name$b, bem$b] = createNamespace("field");
   const fieldSharedProps = {
     id: String,
     name: String,
@@ -7153,8 +7196,8 @@ This will fail in production.`);
       default: null
     }
   });
-  var stdin_default$d = vue.defineComponent({
-    name: name$a,
+  var stdin_default$e = vue.defineComponent({
+    name: name$b,
     props: fieldProps,
     emits: ["blur", "focus", "clear", "keypress", "clickInput", "endValidate", "startValidate", "clickLeftIcon", "clickRightIcon", "update:modelValue"],
     setup(props, {
@@ -7441,7 +7484,7 @@ This will fail in production.`);
       const getInputId = () => props.id || `${id}-input`;
       const getValidationStatus = () => state.status;
       const renderInput = () => {
-        const controlClass = bem$a("control", [getProp("inputAlign"), {
+        const controlClass = bem$b("control", [getProp("inputAlign"), {
           error: showError.value,
           custom: !!slots.input,
           "min-height": props.type === "textarea" && !props.autosize
@@ -7489,7 +7532,7 @@ This will fail in production.`);
         const leftIconSlot = slots["left-icon"];
         if (props.leftIcon || leftIconSlot) {
           return vue.createVNode("div", {
-            "class": bem$a("left-icon"),
+            "class": bem$b("left-icon"),
             "onClick": onClickLeftIcon
           }, [leftIconSlot ? leftIconSlot() : vue.createVNode(Icon, {
             "name": props.leftIcon,
@@ -7501,7 +7544,7 @@ This will fail in production.`);
         const rightIconSlot = slots["right-icon"];
         if (props.rightIcon || rightIconSlot) {
           return vue.createVNode("div", {
-            "class": bem$a("right-icon"),
+            "class": bem$b("right-icon"),
             "onClick": onClickRightIcon
           }, [rightIconSlot ? rightIconSlot() : vue.createVNode(Icon, {
             "name": props.rightIcon,
@@ -7513,9 +7556,9 @@ This will fail in production.`);
         if (props.showWordLimit && props.maxlength) {
           const count = getStringLength(getModelValue());
           return vue.createVNode("div", {
-            "class": bem$a("word-limit")
+            "class": bem$b("word-limit")
           }, [vue.createVNode("span", {
-            "class": bem$a("word-num")
+            "class": bem$b("word-num")
           }, [count]), vue.createTextVNode("/"), props.maxlength]);
         }
       };
@@ -7528,7 +7571,7 @@ This will fail in production.`);
           const slot = slots["error-message"];
           const errorMessageAlign = getProp("errorMessageAlign");
           return vue.createVNode("div", {
-            "class": bem$a("error-message", errorMessageAlign)
+            "class": bem$b("error-message", errorMessageAlign)
           }, [slot ? slot({
             message
           }) : message]);
@@ -7557,13 +7600,13 @@ This will fail in production.`);
         }
       };
       const renderFieldBody = () => [vue.createVNode("div", {
-        "class": bem$a("body")
+        "class": bem$b("body")
       }, [renderInput(), showClear.value && vue.createVNode(Icon, {
         "ref": clearIconRef,
         "name": props.clearIcon,
-        "class": bem$a("clear")
+        "class": bem$b("clear")
       }, null), renderRightIcon(), slots.button && vue.createVNode("div", {
-        "class": bem$a("button")
+        "class": bem$b("button")
       }, [slots.button()])]), renderWordLimit(), renderMessage()];
       useExpose({
         blur,
@@ -7607,7 +7650,7 @@ This will fail in production.`);
         };
         return vue.createVNode(Cell, {
           "size": props.size,
-          "class": bem$a({
+          "class": bem$b({
             error: showError.value,
             disabled,
             [`label-${labelAlign}`]: labelAlign
@@ -7617,8 +7660,8 @@ This will fail in production.`);
           "isLink": props.isLink,
           "clickable": props.clickable,
           "titleStyle": labelStyle.value,
-          "valueClass": bem$a("value"),
-          "titleClass": [bem$a("label", [labelAlign, {
+          "valueClass": bem$b("value"),
+          "titleClass": [bem$b("label", [labelAlign, {
             required: showRequiredMark.value
           }]), props.labelClass],
           "arrowDirection": props.arrowDirection
@@ -7631,8 +7674,8 @@ This will fail in production.`);
       };
     }
   });
-  const Field = withInstall(stdin_default$d);
-  const [name$9, bem$9] = createNamespace("switch");
+  const Field = withInstall(stdin_default$e);
+  const [name$a, bem$a] = createNamespace("switch");
   const switchProps = {
     size: numericProp,
     loading: Boolean,
@@ -7649,8 +7692,8 @@ This will fail in production.`);
       default: false
     }
   };
-  var stdin_default$c = vue.defineComponent({
-    name: name$9,
+  var stdin_default$d = vue.defineComponent({
+    name: name$a,
     props: switchProps,
     emits: ["change", "update:modelValue"],
     setup(props, {
@@ -7669,7 +7712,7 @@ This will fail in production.`);
         if (props.loading) {
           const color = isChecked() ? props.activeColor : props.inactiveColor;
           return vue.createVNode(Loading, {
-            "class": bem$9("loading"),
+            "class": bem$a("loading"),
             "color": color
           }, null);
         }
@@ -7694,7 +7737,7 @@ This will fail in production.`);
         };
         return vue.createVNode("div", {
           "role": "switch",
-          "class": bem$9({
+          "class": bem$a({
             on: checked,
             loading,
             disabled
@@ -7704,13 +7747,13 @@ This will fail in production.`);
           "aria-checked": checked,
           "onClick": onClick
         }, [vue.createVNode("div", {
-          "class": bem$9("node")
+          "class": bem$a("node")
         }, [renderLoading()]), (_a = slots.background) == null ? void 0 : _a.call(slots)]);
       };
     }
   });
-  const Switch = withInstall(stdin_default$c);
-  const [name$8, bem$8] = createNamespace("tag");
+  const Switch = withInstall(stdin_default$d);
+  const [name$9, bem$9] = createNamespace("tag");
   const tagProps = {
     size: String,
     mark: Boolean,
@@ -7722,8 +7765,8 @@ This will fail in production.`);
     textColor: String,
     closeable: Boolean
   };
-  var stdin_default$b = vue.defineComponent({
-    name: name$8,
+  var stdin_default$c = vue.defineComponent({
+    name: name$9,
     props: tagProps,
     emits: ["close"],
     setup(props, {
@@ -7766,12 +7809,12 @@ This will fail in production.`);
         }
         const CloseIcon = closeable && vue.createVNode(Icon, {
           "name": "cross",
-          "class": [bem$8("close"), HAPTICS_FEEDBACK],
+          "class": [bem$9("close"), HAPTICS_FEEDBACK],
           "onClick": onClose
         }, null);
         return vue.createVNode("span", {
           "style": getStyle(),
-          "class": bem$8([classes, type])
+          "class": bem$9([classes, type])
         }, [(_a = slots.default) == null ? void 0 : _a.call(slots), CloseIcon]);
       };
       return () => vue.createVNode(vue.Transition, {
@@ -7781,7 +7824,7 @@ This will fail in production.`);
       });
     }
   });
-  const Tag = withInstall(stdin_default$b);
+  const Tag = withInstall(stdin_default$c);
   const hasIntersectionObserver = inBrowser && "IntersectionObserver" in window && "IntersectionObserverEntry" in window && "intersectionRatio" in window.IntersectionObserverEntry.prototype;
   const modeType = {
     event: "event",
@@ -7934,7 +7977,7 @@ This will fail in production.`);
       this.caches.shift();
     }
   }
-  const [name$7, bem$7] = createNamespace("image");
+  const [name$8, bem$8] = createNamespace("image");
   const imageProps = {
     src: String,
     alt: String,
@@ -7955,8 +7998,8 @@ This will fail in production.`);
     crossorigin: String,
     referrerpolicy: String
   };
-  var stdin_default$a = vue.defineComponent({
-    name: name$7,
+  var stdin_default$b = vue.defineComponent({
+    name: name$8,
     props: imageProps,
     emits: ["load", "error"],
     setup(props, {
@@ -8017,13 +8060,13 @@ This will fail in production.`);
       const renderPlaceholder = () => {
         if (loading.value && props.showLoading) {
           return vue.createVNode("div", {
-            "class": bem$7("loading")
-          }, [renderIcon(props.loadingIcon, bem$7("loading-icon"), slots.loading)]);
+            "class": bem$8("loading")
+          }, [renderIcon(props.loadingIcon, bem$8("loading-icon"), slots.loading)]);
         }
         if (error.value && props.showError) {
           return vue.createVNode("div", {
-            "class": bem$7("error")
-          }, [renderIcon(props.errorIcon, bem$7("error-icon"), slots.error)]);
+            "class": bem$8("error")
+          }, [renderIcon(props.errorIcon, bem$8("error-icon"), slots.error)]);
         }
       };
       const renderImage = () => {
@@ -8032,7 +8075,7 @@ This will fail in production.`);
         }
         const attrs = {
           alt: props.alt,
-          class: bem$7("img"),
+          class: bem$8("img"),
           style: {
             objectFit: props.fit,
             objectPosition: props.position
@@ -8092,7 +8135,7 @@ This will fail in production.`);
       return () => {
         var _a;
         return vue.createVNode("div", {
-          "class": bem$7({
+          "class": bem$8({
             round: props.round,
             block: props.block
           }),
@@ -8101,8 +8144,8 @@ This will fail in production.`);
       };
     }
   });
-  const Image$1 = withInstall(stdin_default$a);
-  const [name$6, bem$6] = createNamespace("card");
+  const Image$1 = withInstall(stdin_default$b);
+  const [name$7, bem$7] = createNamespace("card");
   const cardProps = {
     tag: String,
     num: numericProp,
@@ -8116,8 +8159,8 @@ This will fail in production.`);
     thumbLink: String,
     originPrice: numericProp
   };
-  var stdin_default$9 = vue.defineComponent({
-    name: name$6,
+  var stdin_default$a = vue.defineComponent({
+    name: name$7,
     props: cardProps,
     emits: ["clickThumb"],
     setup(props, {
@@ -8130,14 +8173,14 @@ This will fail in production.`);
         }
         if (props.title) {
           return vue.createVNode("div", {
-            "class": [bem$6("title"), "van-multi-ellipsis--l2"]
+            "class": [bem$7("title"), "van-multi-ellipsis--l2"]
           }, [props.title]);
         }
       };
       const renderThumbTag = () => {
         if (slots.tag || props.tag) {
           return vue.createVNode("div", {
-            "class": bem$6("tag")
+            "class": bem$7("tag")
           }, [slots.tag ? slots.tag() : vue.createVNode(Tag, {
             "mark": true,
             "type": "primary"
@@ -8162,7 +8205,7 @@ This will fail in production.`);
         if (slots.thumb || props.thumb) {
           return vue.createVNode("a", {
             "href": props.thumbLink,
-            "class": bem$6("thumb"),
+            "class": bem$7("thumb"),
             "onClick": (event) => emit("clickThumb", event)
           }, [renderThumbImage(), renderThumbTag()]);
         }
@@ -8173,18 +8216,18 @@ This will fail in production.`);
         }
         if (props.desc) {
           return vue.createVNode("div", {
-            "class": [bem$6("desc"), "van-ellipsis"]
+            "class": [bem$7("desc"), "van-ellipsis"]
           }, [props.desc]);
         }
       };
       const renderPriceText = () => {
         const priceArr = props.price.toString().split(".");
         return vue.createVNode("div", null, [vue.createVNode("span", {
-          "class": bem$6("price-currency")
+          "class": bem$7("price-currency")
         }, [props.currency]), vue.createVNode("span", {
-          "class": bem$6("price-integer")
+          "class": bem$7("price-integer")
         }, [priceArr[0]]), priceArr.length > 1 && vue.createVNode(vue.Fragment, null, [vue.createTextVNode("."), vue.createVNode("span", {
-          "class": bem$6("price-decimal")
+          "class": bem$7("price-decimal")
         }, [priceArr[1]])])]);
       };
       return () => {
@@ -8194,41 +8237,41 @@ This will fail in production.`);
         const showOriginPrice = slots["origin-price"] || isDef(props.originPrice);
         const showBottom = showNum || showPrice || showOriginPrice || slots.bottom;
         const Price = showPrice && vue.createVNode("div", {
-          "class": bem$6("price")
+          "class": bem$7("price")
         }, [slots.price ? slots.price() : renderPriceText()]);
         const OriginPrice = showOriginPrice && vue.createVNode("div", {
-          "class": bem$6("origin-price")
+          "class": bem$7("origin-price")
         }, [slots["origin-price"] ? slots["origin-price"]() : `${props.currency} ${props.originPrice}`]);
         const Num = showNum && vue.createVNode("div", {
-          "class": bem$6("num")
+          "class": bem$7("num")
         }, [slots.num ? slots.num() : `x${props.num}`]);
         const Footer = slots.footer && vue.createVNode("div", {
-          "class": bem$6("footer")
+          "class": bem$7("footer")
         }, [slots.footer()]);
         const Bottom = showBottom && vue.createVNode("div", {
-          "class": bem$6("bottom")
+          "class": bem$7("bottom")
         }, [(_a = slots["price-top"]) == null ? void 0 : _a.call(slots), Price, OriginPrice, Num, (_b = slots.bottom) == null ? void 0 : _b.call(slots)]);
         return vue.createVNode("div", {
-          "class": bem$6()
+          "class": bem$7()
         }, [vue.createVNode("div", {
-          "class": bem$6("header")
+          "class": bem$7("header")
         }, [renderThumb(), vue.createVNode("div", {
-          "class": bem$6("content", {
+          "class": bem$7("content", {
             centered: props.centered
           })
         }, [vue.createVNode("div", null, [renderTitle(), renderDesc(), (_c = slots.tags) == null ? void 0 : _c.call(slots)]), Bottom])]), Footer]);
       };
     }
   });
-  const Card = withInstall(stdin_default$9);
-  const [name$5, bem$5] = createNamespace("cell-group");
+  const Card = withInstall(stdin_default$a);
+  const [name$6, bem$6] = createNamespace("cell-group");
   const cellGroupProps = {
     title: String,
     inset: Boolean,
     border: truthProp
   };
-  var stdin_default$8 = vue.defineComponent({
-    name: name$5,
+  var stdin_default$9 = vue.defineComponent({
+    name: name$6,
     inheritAttrs: false,
     props: cellGroupProps,
     setup(props, {
@@ -8238,7 +8281,7 @@ This will fail in production.`);
       const renderGroup = () => {
         var _a;
         return vue.createVNode("div", vue.mergeProps({
-          "class": [bem$5({
+          "class": [bem$6({
             inset: props.inset
           }), {
             [BORDER_TOP_BOTTOM]: props.border && !props.inset
@@ -8246,7 +8289,7 @@ This will fail in production.`);
         }, attrs, useScopeId()), [(_a = slots.default) == null ? void 0 : _a.call(slots)]);
       };
       const renderTitle = () => vue.createVNode("div", {
-        "class": bem$5("title", {
+        "class": bem$6("title", {
           inset: props.inset
         })
       }, [slots.title ? slots.title() : props.title]);
@@ -8258,9 +8301,9 @@ This will fail in production.`);
       };
     }
   });
-  const CellGroup = withInstall(stdin_default$8);
-  const [name$4, bem$4] = createNamespace("row");
-  const ROW_KEY = Symbol(name$4);
+  const CellGroup = withInstall(stdin_default$9);
+  const [name$5, bem$5] = createNamespace("row");
+  const ROW_KEY = Symbol(name$5);
   const rowProps = {
     tag: makeStringProp("div"),
     wrap: truthProp,
@@ -8271,8 +8314,8 @@ This will fail in production.`);
     },
     justify: String
   };
-  var stdin_default$7 = vue.defineComponent({
-    name: name$4,
+  var stdin_default$8 = vue.defineComponent({
+    name: name$5,
     props: rowProps,
     setup(props, {
       slots
@@ -8359,7 +8402,7 @@ This will fail in production.`);
           justify
         } = props;
         return vue.createVNode(tag, {
-          "class": bem$4({
+          "class": bem$5({
             [`align-${align}`]: align,
             [`justify-${justify}`]: justify,
             nowrap: !wrap
@@ -8373,14 +8416,14 @@ This will fail in production.`);
       };
     }
   });
-  const [name$3, bem$3] = createNamespace("col");
+  const [name$4, bem$4] = createNamespace("col");
   const colProps = {
     tag: makeStringProp("div"),
     span: makeNumericProp(0),
     offset: numericProp
   };
-  var stdin_default$6 = vue.defineComponent({
-    name: name$3,
+  var stdin_default$7 = vue.defineComponent({
+    name: name$4,
     props: colProps,
     setup(props, {
       slots
@@ -8423,7 +8466,7 @@ This will fail in production.`);
         } = props;
         return vue.createVNode(tag, {
           "style": style.value,
-          "class": bem$3({
+          "class": bem$4({
             [span]: span,
             [`offset-${offset}`]: offset
           })
@@ -8436,8 +8479,193 @@ This will fail in production.`);
       };
     }
   });
-  const Col = withInstall(stdin_default$6);
-  const Row = withInstall(stdin_default$7);
+  const Col = withInstall(stdin_default$7);
+  const [name$3, bem$3, t$1] = createNamespace("pull-refresh");
+  const DEFAULT_HEAD_HEIGHT = 50;
+  const TEXT_STATUS = ["pulling", "loosing", "success"];
+  const pullRefreshProps = {
+    disabled: Boolean,
+    modelValue: Boolean,
+    headHeight: makeNumericProp(DEFAULT_HEAD_HEIGHT),
+    successText: String,
+    pullingText: String,
+    loosingText: String,
+    loadingText: String,
+    pullDistance: numericProp,
+    successDuration: makeNumericProp(500),
+    animationDuration: makeNumericProp(300)
+  };
+  var stdin_default$6 = vue.defineComponent({
+    name: name$3,
+    props: pullRefreshProps,
+    emits: ["change", "refresh", "update:modelValue"],
+    setup(props, {
+      emit,
+      slots
+    }) {
+      let reachTop;
+      const root = vue.ref();
+      const track = vue.ref();
+      const scrollParent = useScrollParent(root);
+      const state = vue.reactive({
+        status: "normal",
+        distance: 0,
+        duration: 0
+      });
+      const touch = useTouch();
+      const getHeadStyle = () => {
+        if (props.headHeight !== DEFAULT_HEAD_HEIGHT) {
+          return {
+            height: `${props.headHeight}px`
+          };
+        }
+      };
+      const isTouchable = () => state.status !== "loading" && state.status !== "success" && !props.disabled;
+      const ease = (distance) => {
+        const pullDistance = +(props.pullDistance || props.headHeight);
+        if (distance > pullDistance) {
+          if (distance < pullDistance * 2) {
+            distance = pullDistance + (distance - pullDistance) / 2;
+          } else {
+            distance = pullDistance * 1.5 + (distance - pullDistance * 2) / 4;
+          }
+        }
+        return Math.round(distance);
+      };
+      const setStatus = (distance, isLoading) => {
+        const pullDistance = +(props.pullDistance || props.headHeight);
+        state.distance = distance;
+        if (isLoading) {
+          state.status = "loading";
+        } else if (distance === 0) {
+          state.status = "normal";
+        } else if (distance < pullDistance) {
+          state.status = "pulling";
+        } else {
+          state.status = "loosing";
+        }
+        emit("change", {
+          status: state.status,
+          distance
+        });
+      };
+      const getStatusText = () => {
+        const {
+          status
+        } = state;
+        if (status === "normal") {
+          return "";
+        }
+        return props[`${status}Text`] || t$1(status);
+      };
+      const renderStatus = () => {
+        const {
+          status,
+          distance
+        } = state;
+        if (slots[status]) {
+          return slots[status]({
+            distance
+          });
+        }
+        const nodes = [];
+        if (TEXT_STATUS.includes(status)) {
+          nodes.push(vue.createVNode("div", {
+            "class": bem$3("text")
+          }, [getStatusText()]));
+        }
+        if (status === "loading") {
+          nodes.push(vue.createVNode(Loading, {
+            "class": bem$3("loading")
+          }, {
+            default: getStatusText
+          }));
+        }
+        return nodes;
+      };
+      const showSuccessTip = () => {
+        state.status = "success";
+        setTimeout(() => {
+          setStatus(0);
+        }, +props.successDuration);
+      };
+      const checkPosition = (event) => {
+        reachTop = getScrollTop(scrollParent.value) === 0;
+        if (reachTop) {
+          state.duration = 0;
+          touch.start(event);
+        }
+      };
+      const onTouchStart = (event) => {
+        if (isTouchable()) {
+          checkPosition(event);
+        }
+      };
+      const onTouchMove = (event) => {
+        if (isTouchable()) {
+          if (!reachTop) {
+            checkPosition(event);
+          }
+          const {
+            deltaY
+          } = touch;
+          touch.move(event);
+          if (reachTop && deltaY.value >= 0 && touch.isVertical()) {
+            preventDefault(event);
+            setStatus(ease(deltaY.value));
+          }
+        }
+      };
+      const onTouchEnd = () => {
+        if (reachTop && touch.deltaY.value && isTouchable()) {
+          state.duration = +props.animationDuration;
+          if (state.status === "loosing") {
+            setStatus(+props.headHeight, true);
+            emit("update:modelValue", true);
+            vue.nextTick(() => emit("refresh"));
+          } else {
+            setStatus(0);
+          }
+        }
+      };
+      vue.watch(() => props.modelValue, (value) => {
+        state.duration = +props.animationDuration;
+        if (value) {
+          setStatus(+props.headHeight, true);
+        } else if (slots.success || props.successText) {
+          showSuccessTip();
+        } else {
+          setStatus(0, false);
+        }
+      });
+      useEventListener("touchmove", onTouchMove, {
+        target: track
+      });
+      return () => {
+        var _a;
+        const trackStyle = {
+          transitionDuration: `${state.duration}ms`,
+          transform: state.distance ? `translate3d(0,${state.distance}px, 0)` : ""
+        };
+        return vue.createVNode("div", {
+          "ref": root,
+          "class": bem$3()
+        }, [vue.createVNode("div", {
+          "ref": track,
+          "class": bem$3("track"),
+          "style": trackStyle,
+          "onTouchstartPassive": onTouchStart,
+          "onTouchend": onTouchEnd,
+          "onTouchcancel": onTouchEnd
+        }, [vue.createVNode("div", {
+          "class": bem$3("head"),
+          "style": getHeadStyle()
+        }, [renderStatus()]), (_a = slots.default) == null ? void 0 : _a.call(slots)])]);
+      };
+    }
+  });
+  const PullRefresh = withInstall(stdin_default$6);
+  const Row = withInstall(stdin_default$8);
   const [name$2, bem$2, t] = createNamespace("search");
   const searchProps = extend({}, fieldSharedProps, {
     label: String,
@@ -8861,7 +9089,7 @@ This will fail in production.`);
      * try load image and  render it
      * @return
      */
-    load(onFinish = noop$1) {
+    load(onFinish = noop) {
       if (this.attempt > this.options.attempt - 1 && this.state.error) {
         if (!this.options.silent) {
           formatAppLog(
@@ -9560,7 +9788,7 @@ This will fail in production.`);
         const rect = useRect(this.$el);
         return rect.top < window.innerHeight * lazyManager.options.preLoad && rect.bottom > 0 && rect.left < window.innerWidth * lazyManager.options.preLoad && rect.right > 0;
       },
-      load(onFinish = noop$1) {
+      load(onFinish = noop) {
         if (this.state.attempt > this.options.attempt - 1 && this.state.error) {
           if (!lazyManager.options.silent) {
             formatAppLog(
@@ -9617,2632 +9845,6 @@ This will fail in production.`);
       });
     }
   };
-  function getDevtoolsGlobalHook() {
-    return getTarget().__VUE_DEVTOOLS_GLOBAL_HOOK__;
-  }
-  function getTarget() {
-    return typeof navigator !== "undefined" && typeof window !== "undefined" ? window : typeof globalThis !== "undefined" ? globalThis : {};
-  }
-  const isProxyAvailable = typeof Proxy === "function";
-  const HOOK_SETUP = "devtools-plugin:setup";
-  const HOOK_PLUGIN_SETTINGS_SET = "plugin:settings:set";
-  let supported;
-  let perf;
-  function isPerformanceSupported() {
-    var _a;
-    if (supported !== void 0) {
-      return supported;
-    }
-    if (typeof window !== "undefined" && window.performance) {
-      supported = true;
-      perf = window.performance;
-    } else if (typeof globalThis !== "undefined" && ((_a = globalThis.perf_hooks) === null || _a === void 0 ? void 0 : _a.performance)) {
-      supported = true;
-      perf = globalThis.perf_hooks.performance;
-    } else {
-      supported = false;
-    }
-    return supported;
-  }
-  function now() {
-    return isPerformanceSupported() ? perf.now() : Date.now();
-  }
-  class ApiProxy {
-    constructor(plugin, hook) {
-      this.target = null;
-      this.targetQueue = [];
-      this.onQueue = [];
-      this.plugin = plugin;
-      this.hook = hook;
-      const defaultSettings = {};
-      if (plugin.settings) {
-        for (const id in plugin.settings) {
-          const item = plugin.settings[id];
-          defaultSettings[id] = item.defaultValue;
-        }
-      }
-      const localSettingsSaveId = `__vue-devtools-plugin-settings__${plugin.id}`;
-      let currentSettings = Object.assign({}, defaultSettings);
-      try {
-        const raw = localStorage.getItem(localSettingsSaveId);
-        const data = JSON.parse(raw);
-        Object.assign(currentSettings, data);
-      } catch (e) {
-      }
-      this.fallbacks = {
-        getSettings() {
-          return currentSettings;
-        },
-        setSettings(value) {
-          try {
-            localStorage.setItem(localSettingsSaveId, JSON.stringify(value));
-          } catch (e) {
-          }
-          currentSettings = value;
-        },
-        now() {
-          return now();
-        }
-      };
-      if (hook) {
-        hook.on(HOOK_PLUGIN_SETTINGS_SET, (pluginId, value) => {
-          if (pluginId === this.plugin.id) {
-            this.fallbacks.setSettings(value);
-          }
-        });
-      }
-      this.proxiedOn = new Proxy({}, {
-        get: (_target, prop) => {
-          if (this.target) {
-            return this.target.on[prop];
-          } else {
-            return (...args) => {
-              this.onQueue.push({
-                method: prop,
-                args
-              });
-            };
-          }
-        }
-      });
-      this.proxiedTarget = new Proxy({}, {
-        get: (_target, prop) => {
-          if (this.target) {
-            return this.target[prop];
-          } else if (prop === "on") {
-            return this.proxiedOn;
-          } else if (Object.keys(this.fallbacks).includes(prop)) {
-            return (...args) => {
-              this.targetQueue.push({
-                method: prop,
-                args,
-                resolve: () => {
-                }
-              });
-              return this.fallbacks[prop](...args);
-            };
-          } else {
-            return (...args) => {
-              return new Promise((resolve) => {
-                this.targetQueue.push({
-                  method: prop,
-                  args,
-                  resolve
-                });
-              });
-            };
-          }
-        }
-      });
-    }
-    async setRealTarget(target) {
-      this.target = target;
-      for (const item of this.onQueue) {
-        this.target.on[item.method](...item.args);
-      }
-      for (const item of this.targetQueue) {
-        item.resolve(await this.target[item.method](...item.args));
-      }
-    }
-  }
-  function setupDevtoolsPlugin(pluginDescriptor, setupFn) {
-    const descriptor = pluginDescriptor;
-    const target = getTarget();
-    const hook = getDevtoolsGlobalHook();
-    const enableProxy = isProxyAvailable && descriptor.enableEarlyProxy;
-    if (hook && (target.__VUE_DEVTOOLS_PLUGIN_API_AVAILABLE__ || !enableProxy)) {
-      hook.emit(HOOK_SETUP, pluginDescriptor, setupFn);
-    } else {
-      const proxy = enableProxy ? new ApiProxy(descriptor, hook) : null;
-      const list = target.__VUE_DEVTOOLS_PLUGINS__ = target.__VUE_DEVTOOLS_PLUGINS__ || [];
-      list.push({
-        pluginDescriptor: descriptor,
-        setupFn,
-        proxy
-      });
-      if (proxy) {
-        setupFn(proxy.proxiedTarget);
-      }
-    }
-  }
-  /*!
-    * vue-router v4.3.0
-    * (c) 2024 Eduardo San Martin Morote
-    * @license MIT
-    */
-  const isBrowser = typeof document !== "undefined";
-  function isESModule(obj) {
-    return obj.__esModule || obj[Symbol.toStringTag] === "Module";
-  }
-  const assign = Object.assign;
-  function applyToParams(fn, params) {
-    const newParams = {};
-    for (const key in params) {
-      const value = params[key];
-      newParams[key] = isArray(value) ? value.map(fn) : fn(value);
-    }
-    return newParams;
-  }
-  const noop = () => {
-  };
-  const isArray = Array.isArray;
-  function warn(msg) {
-    const args = Array.from(arguments).slice(1);
-    console.warn.apply(console, ["[Vue Router warn]: " + msg].concat(args));
-  }
-  const HASH_RE = /#/g;
-  const AMPERSAND_RE = /&/g;
-  const SLASH_RE = /\//g;
-  const EQUAL_RE = /=/g;
-  const IM_RE = /\?/g;
-  const PLUS_RE = /\+/g;
-  const ENC_BRACKET_OPEN_RE = /%5B/g;
-  const ENC_BRACKET_CLOSE_RE = /%5D/g;
-  const ENC_CARET_RE = /%5E/g;
-  const ENC_BACKTICK_RE = /%60/g;
-  const ENC_CURLY_OPEN_RE = /%7B/g;
-  const ENC_PIPE_RE = /%7C/g;
-  const ENC_CURLY_CLOSE_RE = /%7D/g;
-  const ENC_SPACE_RE = /%20/g;
-  function commonEncode(text) {
-    return encodeURI("" + text).replace(ENC_PIPE_RE, "|").replace(ENC_BRACKET_OPEN_RE, "[").replace(ENC_BRACKET_CLOSE_RE, "]");
-  }
-  function encodeHash(text) {
-    return commonEncode(text).replace(ENC_CURLY_OPEN_RE, "{").replace(ENC_CURLY_CLOSE_RE, "}").replace(ENC_CARET_RE, "^");
-  }
-  function encodeQueryValue(text) {
-    return commonEncode(text).replace(PLUS_RE, "%2B").replace(ENC_SPACE_RE, "+").replace(HASH_RE, "%23").replace(AMPERSAND_RE, "%26").replace(ENC_BACKTICK_RE, "`").replace(ENC_CURLY_OPEN_RE, "{").replace(ENC_CURLY_CLOSE_RE, "}").replace(ENC_CARET_RE, "^");
-  }
-  function encodeQueryKey(text) {
-    return encodeQueryValue(text).replace(EQUAL_RE, "%3D");
-  }
-  function encodePath(text) {
-    return commonEncode(text).replace(HASH_RE, "%23").replace(IM_RE, "%3F");
-  }
-  function encodeParam(text) {
-    return text == null ? "" : encodePath(text).replace(SLASH_RE, "%2F");
-  }
-  function decode(text) {
-    try {
-      return decodeURIComponent("" + text);
-    } catch (err) {
-      warn(`Error decoding "${text}". Using original value`);
-    }
-    return "" + text;
-  }
-  const TRAILING_SLASH_RE = /\/$/;
-  const removeTrailingSlash = (path) => path.replace(TRAILING_SLASH_RE, "");
-  function parseURL(parseQuery2, location2, currentLocation = "/") {
-    let path, query = {}, searchString = "", hash = "";
-    const hashPos = location2.indexOf("#");
-    let searchPos = location2.indexOf("?");
-    if (hashPos < searchPos && hashPos >= 0) {
-      searchPos = -1;
-    }
-    if (searchPos > -1) {
-      path = location2.slice(0, searchPos);
-      searchString = location2.slice(searchPos + 1, hashPos > -1 ? hashPos : location2.length);
-      query = parseQuery2(searchString);
-    }
-    if (hashPos > -1) {
-      path = path || location2.slice(0, hashPos);
-      hash = location2.slice(hashPos, location2.length);
-    }
-    path = resolveRelativePath(path != null ? path : location2, currentLocation);
-    return {
-      fullPath: path + (searchString && "?") + searchString + hash,
-      path,
-      query,
-      hash: decode(hash)
-    };
-  }
-  function stringifyURL(stringifyQuery2, location2) {
-    const query = location2.query ? stringifyQuery2(location2.query) : "";
-    return location2.path + (query && "?") + query + (location2.hash || "");
-  }
-  function stripBase(pathname, base) {
-    if (!base || !pathname.toLowerCase().startsWith(base.toLowerCase()))
-      return pathname;
-    return pathname.slice(base.length) || "/";
-  }
-  function isSameRouteLocation(stringifyQuery2, a, b) {
-    const aLastIndex = a.matched.length - 1;
-    const bLastIndex = b.matched.length - 1;
-    return aLastIndex > -1 && aLastIndex === bLastIndex && isSameRouteRecord(a.matched[aLastIndex], b.matched[bLastIndex]) && isSameRouteLocationParams(a.params, b.params) && stringifyQuery2(a.query) === stringifyQuery2(b.query) && a.hash === b.hash;
-  }
-  function isSameRouteRecord(a, b) {
-    return (a.aliasOf || a) === (b.aliasOf || b);
-  }
-  function isSameRouteLocationParams(a, b) {
-    if (Object.keys(a).length !== Object.keys(b).length)
-      return false;
-    for (const key in a) {
-      if (!isSameRouteLocationParamsValue(a[key], b[key]))
-        return false;
-    }
-    return true;
-  }
-  function isSameRouteLocationParamsValue(a, b) {
-    return isArray(a) ? isEquivalentArray(a, b) : isArray(b) ? isEquivalentArray(b, a) : a === b;
-  }
-  function isEquivalentArray(a, b) {
-    return isArray(b) ? a.length === b.length && a.every((value, i) => value === b[i]) : a.length === 1 && a[0] === b;
-  }
-  function resolveRelativePath(to, from) {
-    if (to.startsWith("/"))
-      return to;
-    if (!from.startsWith("/")) {
-      warn(`Cannot resolve a relative location without an absolute path. Trying to resolve "${to}" from "${from}". It should look like "/${from}".`);
-      return to;
-    }
-    if (!to)
-      return from;
-    const fromSegments = from.split("/");
-    const toSegments = to.split("/");
-    const lastToSegment = toSegments[toSegments.length - 1];
-    if (lastToSegment === ".." || lastToSegment === ".") {
-      toSegments.push("");
-    }
-    let position = fromSegments.length - 1;
-    let toPosition;
-    let segment;
-    for (toPosition = 0; toPosition < toSegments.length; toPosition++) {
-      segment = toSegments[toPosition];
-      if (segment === ".")
-        continue;
-      if (segment === "..") {
-        if (position > 1)
-          position--;
-      } else
-        break;
-    }
-    return fromSegments.slice(0, position).join("/") + "/" + toSegments.slice(toPosition).join("/");
-  }
-  var NavigationType;
-  (function(NavigationType2) {
-    NavigationType2["pop"] = "pop";
-    NavigationType2["push"] = "push";
-  })(NavigationType || (NavigationType = {}));
-  var NavigationDirection;
-  (function(NavigationDirection2) {
-    NavigationDirection2["back"] = "back";
-    NavigationDirection2["forward"] = "forward";
-    NavigationDirection2["unknown"] = "";
-  })(NavigationDirection || (NavigationDirection = {}));
-  function normalizeBase(base) {
-    if (!base) {
-      if (isBrowser) {
-        const baseEl = document.querySelector("base");
-        base = baseEl && baseEl.getAttribute("href") || "/";
-        base = base.replace(/^\w+:\/\/[^\/]+/, "");
-      } else {
-        base = "/";
-      }
-    }
-    if (base[0] !== "/" && base[0] !== "#")
-      base = "/" + base;
-    return removeTrailingSlash(base);
-  }
-  const BEFORE_HASH_RE = /^[^#]+#/;
-  function createHref(base, location2) {
-    return base.replace(BEFORE_HASH_RE, "#") + location2;
-  }
-  function getElementPosition(el, offset) {
-    const docRect = document.documentElement.getBoundingClientRect();
-    const elRect = el.getBoundingClientRect();
-    return {
-      behavior: offset.behavior,
-      left: elRect.left - docRect.left - (offset.left || 0),
-      top: elRect.top - docRect.top - (offset.top || 0)
-    };
-  }
-  const computeScrollPosition = () => ({
-    left: window.scrollX,
-    top: window.scrollY
-  });
-  function scrollToPosition(position) {
-    let scrollToOptions;
-    if ("el" in position) {
-      const positionEl = position.el;
-      const isIdSelector = typeof positionEl === "string" && positionEl.startsWith("#");
-      if (typeof position.el === "string") {
-        if (!isIdSelector || !document.getElementById(position.el.slice(1))) {
-          try {
-            const foundEl = document.querySelector(position.el);
-            if (isIdSelector && foundEl) {
-              warn(`The selector "${position.el}" should be passed as "el: document.querySelector('${position.el}')" because it starts with "#".`);
-              return;
-            }
-          } catch (err) {
-            warn(`The selector "${position.el}" is invalid. If you are using an id selector, make sure to escape it. You can find more information about escaping characters in selectors at https://mathiasbynens.be/notes/css-escapes or use CSS.escape (https://developer.mozilla.org/en-US/docs/Web/API/CSS/escape).`);
-            return;
-          }
-        }
-      }
-      const el = typeof positionEl === "string" ? isIdSelector ? document.getElementById(positionEl.slice(1)) : document.querySelector(positionEl) : positionEl;
-      if (!el) {
-        warn(`Couldn't find element using selector "${position.el}" returned by scrollBehavior.`);
-        return;
-      }
-      scrollToOptions = getElementPosition(el, position);
-    } else {
-      scrollToOptions = position;
-    }
-    if ("scrollBehavior" in document.documentElement.style)
-      window.scrollTo(scrollToOptions);
-    else {
-      window.scrollTo(scrollToOptions.left != null ? scrollToOptions.left : window.scrollX, scrollToOptions.top != null ? scrollToOptions.top : window.scrollY);
-    }
-  }
-  function getScrollKey(path, delta) {
-    const position = history.state ? history.state.position - delta : -1;
-    return position + path;
-  }
-  const scrollPositions = /* @__PURE__ */ new Map();
-  function saveScrollPosition(key, scrollPosition) {
-    scrollPositions.set(key, scrollPosition);
-  }
-  function getSavedScrollPosition(key) {
-    const scroll = scrollPositions.get(key);
-    scrollPositions.delete(key);
-    return scroll;
-  }
-  let createBaseLocation = () => location.protocol + "//" + location.host;
-  function createCurrentLocation(base, location2) {
-    const { pathname, search, hash } = location2;
-    const hashPos = base.indexOf("#");
-    if (hashPos > -1) {
-      let slicePos = hash.includes(base.slice(hashPos)) ? base.slice(hashPos).length : 1;
-      let pathFromHash = hash.slice(slicePos);
-      if (pathFromHash[0] !== "/")
-        pathFromHash = "/" + pathFromHash;
-      return stripBase(pathFromHash, "");
-    }
-    const path = stripBase(pathname, base);
-    return path + search + hash;
-  }
-  function useHistoryListeners(base, historyState, currentLocation, replace) {
-    let listeners = [];
-    let teardowns = [];
-    let pauseState = null;
-    const popStateHandler = ({ state }) => {
-      const to = createCurrentLocation(base, location);
-      const from = currentLocation.value;
-      const fromState = historyState.value;
-      let delta = 0;
-      if (state) {
-        currentLocation.value = to;
-        historyState.value = state;
-        if (pauseState && pauseState === from) {
-          pauseState = null;
-          return;
-        }
-        delta = fromState ? state.position - fromState.position : 0;
-      } else {
-        replace(to);
-      }
-      listeners.forEach((listener) => {
-        listener(currentLocation.value, from, {
-          delta,
-          type: NavigationType.pop,
-          direction: delta ? delta > 0 ? NavigationDirection.forward : NavigationDirection.back : NavigationDirection.unknown
-        });
-      });
-    };
-    function pauseListeners() {
-      pauseState = currentLocation.value;
-    }
-    function listen(callback) {
-      listeners.push(callback);
-      const teardown = () => {
-        const index = listeners.indexOf(callback);
-        if (index > -1)
-          listeners.splice(index, 1);
-      };
-      teardowns.push(teardown);
-      return teardown;
-    }
-    function beforeUnloadListener() {
-      const { history: history2 } = window;
-      if (!history2.state)
-        return;
-      history2.replaceState(assign({}, history2.state, { scroll: computeScrollPosition() }), "");
-    }
-    function destroy() {
-      for (const teardown of teardowns)
-        teardown();
-      teardowns = [];
-      window.removeEventListener("popstate", popStateHandler);
-      window.removeEventListener("beforeunload", beforeUnloadListener);
-    }
-    window.addEventListener("popstate", popStateHandler);
-    window.addEventListener("beforeunload", beforeUnloadListener, {
-      passive: true
-    });
-    return {
-      pauseListeners,
-      listen,
-      destroy
-    };
-  }
-  function buildState(back, current2, forward, replaced = false, computeScroll = false) {
-    return {
-      back,
-      current: current2,
-      forward,
-      replaced,
-      position: window.history.length,
-      scroll: computeScroll ? computeScrollPosition() : null
-    };
-  }
-  function useHistoryStateNavigation(base) {
-    const { history: history2, location: location2 } = window;
-    const currentLocation = {
-      value: createCurrentLocation(base, location2)
-    };
-    const historyState = { value: history2.state };
-    if (!historyState.value) {
-      changeLocation(currentLocation.value, {
-        back: null,
-        current: currentLocation.value,
-        forward: null,
-        // the length is off by one, we need to decrease it
-        position: history2.length - 1,
-        replaced: true,
-        // don't add a scroll as the user may have an anchor, and we want
-        // scrollBehavior to be triggered without a saved position
-        scroll: null
-      }, true);
-    }
-    function changeLocation(to, state, replace2) {
-      const hashIndex = base.indexOf("#");
-      const url = hashIndex > -1 ? (location2.host && document.querySelector("base") ? base : base.slice(hashIndex)) + to : createBaseLocation() + base + to;
-      try {
-        history2[replace2 ? "replaceState" : "pushState"](state, "", url);
-        historyState.value = state;
-      } catch (err) {
-        {
-          warn("Error with push/replace State", err);
-        }
-        location2[replace2 ? "replace" : "assign"](url);
-      }
-    }
-    function replace(to, data) {
-      const state = assign({}, history2.state, buildState(
-        historyState.value.back,
-        // keep back and forward entries but override current position
-        to,
-        historyState.value.forward,
-        true
-      ), data, { position: historyState.value.position });
-      changeLocation(to, state, true);
-      currentLocation.value = to;
-    }
-    function push(to, data) {
-      const currentState = assign(
-        {},
-        // use current history state to gracefully handle a wrong call to
-        // history.replaceState
-        // https://github.com/vuejs/router/issues/366
-        historyState.value,
-        history2.state,
-        {
-          forward: to,
-          scroll: computeScrollPosition()
-        }
-      );
-      if (!history2.state) {
-        warn(`history.state seems to have been manually replaced without preserving the necessary values. Make sure to preserve existing history state if you are manually calling history.replaceState:
-
-history.replaceState(history.state, '', url)
-
-You can find more information at https://next.router.vuejs.org/guide/migration/#usage-of-history-state.`);
-      }
-      changeLocation(currentState.current, currentState, true);
-      const state = assign({}, buildState(currentLocation.value, to, null), { position: currentState.position + 1 }, data);
-      changeLocation(to, state, false);
-      currentLocation.value = to;
-    }
-    return {
-      location: currentLocation,
-      state: historyState,
-      push,
-      replace
-    };
-  }
-  function createWebHistory(base) {
-    base = normalizeBase(base);
-    const historyNavigation = useHistoryStateNavigation(base);
-    const historyListeners = useHistoryListeners(base, historyNavigation.state, historyNavigation.location, historyNavigation.replace);
-    function go(delta, triggerListeners = true) {
-      if (!triggerListeners)
-        historyListeners.pauseListeners();
-      history.go(delta);
-    }
-    const routerHistory = assign({
-      // it's overridden right after
-      location: "",
-      base,
-      go,
-      createHref: createHref.bind(null, base)
-    }, historyNavigation, historyListeners);
-    Object.defineProperty(routerHistory, "location", {
-      enumerable: true,
-      get: () => historyNavigation.location.value
-    });
-    Object.defineProperty(routerHistory, "state", {
-      enumerable: true,
-      get: () => historyNavigation.state.value
-    });
-    return routerHistory;
-  }
-  function isRouteLocation(route2) {
-    return typeof route2 === "string" || route2 && typeof route2 === "object";
-  }
-  function isRouteName(name2) {
-    return typeof name2 === "string" || typeof name2 === "symbol";
-  }
-  const START_LOCATION_NORMALIZED = {
-    path: "/",
-    name: void 0,
-    params: {},
-    query: {},
-    hash: "",
-    fullPath: "/",
-    matched: [],
-    meta: {},
-    redirectedFrom: void 0
-  };
-  const NavigationFailureSymbol = Symbol("navigation failure");
-  var NavigationFailureType;
-  (function(NavigationFailureType2) {
-    NavigationFailureType2[NavigationFailureType2["aborted"] = 4] = "aborted";
-    NavigationFailureType2[NavigationFailureType2["cancelled"] = 8] = "cancelled";
-    NavigationFailureType2[NavigationFailureType2["duplicated"] = 16] = "duplicated";
-  })(NavigationFailureType || (NavigationFailureType = {}));
-  const ErrorTypeMessages = {
-    [
-      1
-      /* ErrorTypes.MATCHER_NOT_FOUND */
-    ]({ location: location2, currentLocation }) {
-      return `No match for
- ${JSON.stringify(location2)}${currentLocation ? "\nwhile being at\n" + JSON.stringify(currentLocation) : ""}`;
-    },
-    [
-      2
-      /* ErrorTypes.NAVIGATION_GUARD_REDIRECT */
-    ]({ from, to }) {
-      return `Redirected from "${from.fullPath}" to "${stringifyRoute(to)}" via a navigation guard.`;
-    },
-    [
-      4
-      /* ErrorTypes.NAVIGATION_ABORTED */
-    ]({ from, to }) {
-      return `Navigation aborted from "${from.fullPath}" to "${to.fullPath}" via a navigation guard.`;
-    },
-    [
-      8
-      /* ErrorTypes.NAVIGATION_CANCELLED */
-    ]({ from, to }) {
-      return `Navigation cancelled from "${from.fullPath}" to "${to.fullPath}" with a new navigation.`;
-    },
-    [
-      16
-      /* ErrorTypes.NAVIGATION_DUPLICATED */
-    ]({ from, to }) {
-      return `Avoided redundant navigation to current location: "${from.fullPath}".`;
-    }
-  };
-  function createRouterError(type, params) {
-    {
-      return assign(new Error(ErrorTypeMessages[type](params)), {
-        type,
-        [NavigationFailureSymbol]: true
-      }, params);
-    }
-  }
-  function isNavigationFailure(error, type) {
-    return error instanceof Error && NavigationFailureSymbol in error && (type == null || !!(error.type & type));
-  }
-  const propertiesToLog = ["params", "query", "hash"];
-  function stringifyRoute(to) {
-    if (typeof to === "string")
-      return to;
-    if (to.path != null)
-      return to.path;
-    const location2 = {};
-    for (const key of propertiesToLog) {
-      if (key in to)
-        location2[key] = to[key];
-    }
-    return JSON.stringify(location2, null, 2);
-  }
-  const BASE_PARAM_PATTERN = "[^/]+?";
-  const BASE_PATH_PARSER_OPTIONS = {
-    sensitive: false,
-    strict: false,
-    start: true,
-    end: true
-  };
-  const REGEX_CHARS_RE = /[.+*?^${}()[\]/\\]/g;
-  function tokensToParser(segments, extraOptions) {
-    const options = assign({}, BASE_PATH_PARSER_OPTIONS, extraOptions);
-    const score = [];
-    let pattern = options.start ? "^" : "";
-    const keys = [];
-    for (const segment of segments) {
-      const segmentScores = segment.length ? [] : [
-        90
-        /* PathScore.Root */
-      ];
-      if (options.strict && !segment.length)
-        pattern += "/";
-      for (let tokenIndex = 0; tokenIndex < segment.length; tokenIndex++) {
-        const token = segment[tokenIndex];
-        let subSegmentScore = 40 + (options.sensitive ? 0.25 : 0);
-        if (token.type === 0) {
-          if (!tokenIndex)
-            pattern += "/";
-          pattern += token.value.replace(REGEX_CHARS_RE, "\\$&");
-          subSegmentScore += 40;
-        } else if (token.type === 1) {
-          const { value, repeatable, optional, regexp } = token;
-          keys.push({
-            name: value,
-            repeatable,
-            optional
-          });
-          const re2 = regexp ? regexp : BASE_PARAM_PATTERN;
-          if (re2 !== BASE_PARAM_PATTERN) {
-            subSegmentScore += 10;
-            try {
-              new RegExp(`(${re2})`);
-            } catch (err) {
-              throw new Error(`Invalid custom RegExp for param "${value}" (${re2}): ` + err.message);
-            }
-          }
-          let subPattern = repeatable ? `((?:${re2})(?:/(?:${re2}))*)` : `(${re2})`;
-          if (!tokenIndex)
-            subPattern = // avoid an optional / if there are more segments e.g. /:p?-static
-            // or /:p?-:p2
-            optional && segment.length < 2 ? `(?:/${subPattern})` : "/" + subPattern;
-          if (optional)
-            subPattern += "?";
-          pattern += subPattern;
-          subSegmentScore += 20;
-          if (optional)
-            subSegmentScore += -8;
-          if (repeatable)
-            subSegmentScore += -20;
-          if (re2 === ".*")
-            subSegmentScore += -50;
-        }
-        segmentScores.push(subSegmentScore);
-      }
-      score.push(segmentScores);
-    }
-    if (options.strict && options.end) {
-      const i = score.length - 1;
-      score[i][score[i].length - 1] += 0.7000000000000001;
-    }
-    if (!options.strict)
-      pattern += "/?";
-    if (options.end)
-      pattern += "$";
-    else if (options.strict)
-      pattern += "(?:/|$)";
-    const re = new RegExp(pattern, options.sensitive ? "" : "i");
-    function parse(path) {
-      const match = path.match(re);
-      const params = {};
-      if (!match)
-        return null;
-      for (let i = 1; i < match.length; i++) {
-        const value = match[i] || "";
-        const key = keys[i - 1];
-        params[key.name] = value && key.repeatable ? value.split("/") : value;
-      }
-      return params;
-    }
-    function stringify(params) {
-      let path = "";
-      let avoidDuplicatedSlash = false;
-      for (const segment of segments) {
-        if (!avoidDuplicatedSlash || !path.endsWith("/"))
-          path += "/";
-        avoidDuplicatedSlash = false;
-        for (const token of segment) {
-          if (token.type === 0) {
-            path += token.value;
-          } else if (token.type === 1) {
-            const { value, repeatable, optional } = token;
-            const param = value in params ? params[value] : "";
-            if (isArray(param) && !repeatable) {
-              throw new Error(`Provided param "${value}" is an array but it is not repeatable (* or + modifiers)`);
-            }
-            const text = isArray(param) ? param.join("/") : param;
-            if (!text) {
-              if (optional) {
-                if (segment.length < 2) {
-                  if (path.endsWith("/"))
-                    path = path.slice(0, -1);
-                  else
-                    avoidDuplicatedSlash = true;
-                }
-              } else
-                throw new Error(`Missing required param "${value}"`);
-            }
-            path += text;
-          }
-        }
-      }
-      return path || "/";
-    }
-    return {
-      re,
-      score,
-      keys,
-      parse,
-      stringify
-    };
-  }
-  function compareScoreArray(a, b) {
-    let i = 0;
-    while (i < a.length && i < b.length) {
-      const diff = b[i] - a[i];
-      if (diff)
-        return diff;
-      i++;
-    }
-    if (a.length < b.length) {
-      return a.length === 1 && a[0] === 40 + 40 ? -1 : 1;
-    } else if (a.length > b.length) {
-      return b.length === 1 && b[0] === 40 + 40 ? 1 : -1;
-    }
-    return 0;
-  }
-  function comparePathParserScore(a, b) {
-    let i = 0;
-    const aScore = a.score;
-    const bScore = b.score;
-    while (i < aScore.length && i < bScore.length) {
-      const comp = compareScoreArray(aScore[i], bScore[i]);
-      if (comp)
-        return comp;
-      i++;
-    }
-    if (Math.abs(bScore.length - aScore.length) === 1) {
-      if (isLastScoreNegative(aScore))
-        return 1;
-      if (isLastScoreNegative(bScore))
-        return -1;
-    }
-    return bScore.length - aScore.length;
-  }
-  function isLastScoreNegative(score) {
-    const last = score[score.length - 1];
-    return score.length > 0 && last[last.length - 1] < 0;
-  }
-  const ROOT_TOKEN = {
-    type: 0,
-    value: ""
-  };
-  const VALID_PARAM_RE = /[a-zA-Z0-9_]/;
-  function tokenizePath(path) {
-    if (!path)
-      return [[]];
-    if (path === "/")
-      return [[ROOT_TOKEN]];
-    if (!path.startsWith("/")) {
-      throw new Error(`Route paths should start with a "/": "${path}" should be "/${path}".`);
-    }
-    function crash(message) {
-      throw new Error(`ERR (${state})/"${buffer}": ${message}`);
-    }
-    let state = 0;
-    let previousState = state;
-    const tokens = [];
-    let segment;
-    function finalizeSegment() {
-      if (segment)
-        tokens.push(segment);
-      segment = [];
-    }
-    let i = 0;
-    let char;
-    let buffer = "";
-    let customRe = "";
-    function consumeBuffer() {
-      if (!buffer)
-        return;
-      if (state === 0) {
-        segment.push({
-          type: 0,
-          value: buffer
-        });
-      } else if (state === 1 || state === 2 || state === 3) {
-        if (segment.length > 1 && (char === "*" || char === "+"))
-          crash(`A repeatable param (${buffer}) must be alone in its segment. eg: '/:ids+.`);
-        segment.push({
-          type: 1,
-          value: buffer,
-          regexp: customRe,
-          repeatable: char === "*" || char === "+",
-          optional: char === "*" || char === "?"
-        });
-      } else {
-        crash("Invalid state to consume buffer");
-      }
-      buffer = "";
-    }
-    function addCharToBuffer() {
-      buffer += char;
-    }
-    while (i < path.length) {
-      char = path[i++];
-      if (char === "\\" && state !== 2) {
-        previousState = state;
-        state = 4;
-        continue;
-      }
-      switch (state) {
-        case 0:
-          if (char === "/") {
-            if (buffer) {
-              consumeBuffer();
-            }
-            finalizeSegment();
-          } else if (char === ":") {
-            consumeBuffer();
-            state = 1;
-          } else {
-            addCharToBuffer();
-          }
-          break;
-        case 4:
-          addCharToBuffer();
-          state = previousState;
-          break;
-        case 1:
-          if (char === "(") {
-            state = 2;
-          } else if (VALID_PARAM_RE.test(char)) {
-            addCharToBuffer();
-          } else {
-            consumeBuffer();
-            state = 0;
-            if (char !== "*" && char !== "?" && char !== "+")
-              i--;
-          }
-          break;
-        case 2:
-          if (char === ")") {
-            if (customRe[customRe.length - 1] == "\\")
-              customRe = customRe.slice(0, -1) + char;
-            else
-              state = 3;
-          } else {
-            customRe += char;
-          }
-          break;
-        case 3:
-          consumeBuffer();
-          state = 0;
-          if (char !== "*" && char !== "?" && char !== "+")
-            i--;
-          customRe = "";
-          break;
-        default:
-          crash("Unknown state");
-          break;
-      }
-    }
-    if (state === 2)
-      crash(`Unfinished custom RegExp for param "${buffer}"`);
-    consumeBuffer();
-    finalizeSegment();
-    return tokens;
-  }
-  function createRouteRecordMatcher(record, parent, options) {
-    const parser = tokensToParser(tokenizePath(record.path), options);
-    {
-      const existingKeys = /* @__PURE__ */ new Set();
-      for (const key of parser.keys) {
-        if (existingKeys.has(key.name))
-          warn(`Found duplicated params with name "${key.name}" for path "${record.path}". Only the last one will be available on "$route.params".`);
-        existingKeys.add(key.name);
-      }
-    }
-    const matcher = assign(parser, {
-      record,
-      parent,
-      // these needs to be populated by the parent
-      children: [],
-      alias: []
-    });
-    if (parent) {
-      if (!matcher.record.aliasOf === !parent.record.aliasOf)
-        parent.children.push(matcher);
-    }
-    return matcher;
-  }
-  function createRouterMatcher(routes2, globalOptions) {
-    const matchers = [];
-    const matcherMap = /* @__PURE__ */ new Map();
-    globalOptions = mergeOptions({ strict: false, end: true, sensitive: false }, globalOptions);
-    function getRecordMatcher(name2) {
-      return matcherMap.get(name2);
-    }
-    function addRoute(record, parent, originalRecord) {
-      const isRootAdd = !originalRecord;
-      const mainNormalizedRecord = normalizeRouteRecord(record);
-      {
-        checkChildMissingNameWithEmptyPath(mainNormalizedRecord, parent);
-      }
-      mainNormalizedRecord.aliasOf = originalRecord && originalRecord.record;
-      const options = mergeOptions(globalOptions, record);
-      const normalizedRecords = [
-        mainNormalizedRecord
-      ];
-      if ("alias" in record) {
-        const aliases = typeof record.alias === "string" ? [record.alias] : record.alias;
-        for (const alias of aliases) {
-          normalizedRecords.push(assign({}, mainNormalizedRecord, {
-            // this allows us to hold a copy of the `components` option
-            // so that async components cache is hold on the original record
-            components: originalRecord ? originalRecord.record.components : mainNormalizedRecord.components,
-            path: alias,
-            // we might be the child of an alias
-            aliasOf: originalRecord ? originalRecord.record : mainNormalizedRecord
-            // the aliases are always of the same kind as the original since they
-            // are defined on the same record
-          }));
-        }
-      }
-      let matcher;
-      let originalMatcher;
-      for (const normalizedRecord of normalizedRecords) {
-        const { path } = normalizedRecord;
-        if (parent && path[0] !== "/") {
-          const parentPath = parent.record.path;
-          const connectingSlash = parentPath[parentPath.length - 1] === "/" ? "" : "/";
-          normalizedRecord.path = parent.record.path + (path && connectingSlash + path);
-        }
-        if (normalizedRecord.path === "*") {
-          throw new Error('Catch all routes ("*") must now be defined using a param with a custom regexp.\nSee more at https://next.router.vuejs.org/guide/migration/#removed-star-or-catch-all-routes.');
-        }
-        matcher = createRouteRecordMatcher(normalizedRecord, parent, options);
-        if (parent && path[0] === "/")
-          checkMissingParamsInAbsolutePath(matcher, parent);
-        if (originalRecord) {
-          originalRecord.alias.push(matcher);
-          {
-            checkSameParams(originalRecord, matcher);
-          }
-        } else {
-          originalMatcher = originalMatcher || matcher;
-          if (originalMatcher !== matcher)
-            originalMatcher.alias.push(matcher);
-          if (isRootAdd && record.name && !isAliasRecord(matcher))
-            removeRoute(record.name);
-        }
-        if (mainNormalizedRecord.children) {
-          const children = mainNormalizedRecord.children;
-          for (let i = 0; i < children.length; i++) {
-            addRoute(children[i], matcher, originalRecord && originalRecord.children[i]);
-          }
-        }
-        originalRecord = originalRecord || matcher;
-        if (matcher.record.components && Object.keys(matcher.record.components).length || matcher.record.name || matcher.record.redirect) {
-          insertMatcher(matcher);
-        }
-      }
-      return originalMatcher ? () => {
-        removeRoute(originalMatcher);
-      } : noop;
-    }
-    function removeRoute(matcherRef) {
-      if (isRouteName(matcherRef)) {
-        const matcher = matcherMap.get(matcherRef);
-        if (matcher) {
-          matcherMap.delete(matcherRef);
-          matchers.splice(matchers.indexOf(matcher), 1);
-          matcher.children.forEach(removeRoute);
-          matcher.alias.forEach(removeRoute);
-        }
-      } else {
-        const index = matchers.indexOf(matcherRef);
-        if (index > -1) {
-          matchers.splice(index, 1);
-          if (matcherRef.record.name)
-            matcherMap.delete(matcherRef.record.name);
-          matcherRef.children.forEach(removeRoute);
-          matcherRef.alias.forEach(removeRoute);
-        }
-      }
-    }
-    function getRoutes() {
-      return matchers;
-    }
-    function insertMatcher(matcher) {
-      let i = 0;
-      while (i < matchers.length && comparePathParserScore(matcher, matchers[i]) >= 0 && // Adding children with empty path should still appear before the parent
-      // https://github.com/vuejs/router/issues/1124
-      (matcher.record.path !== matchers[i].record.path || !isRecordChildOf(matcher, matchers[i])))
-        i++;
-      matchers.splice(i, 0, matcher);
-      if (matcher.record.name && !isAliasRecord(matcher))
-        matcherMap.set(matcher.record.name, matcher);
-    }
-    function resolve(location2, currentLocation) {
-      let matcher;
-      let params = {};
-      let path;
-      let name2;
-      if ("name" in location2 && location2.name) {
-        matcher = matcherMap.get(location2.name);
-        if (!matcher)
-          throw createRouterError(1, {
-            location: location2
-          });
-        {
-          const invalidParams = Object.keys(location2.params || {}).filter((paramName) => !matcher.keys.find((k) => k.name === paramName));
-          if (invalidParams.length) {
-            warn(`Discarded invalid param(s) "${invalidParams.join('", "')}" when navigating. See https://github.com/vuejs/router/blob/main/packages/router/CHANGELOG.md#414-2022-08-22 for more details.`);
-          }
-        }
-        name2 = matcher.record.name;
-        params = assign(
-          // paramsFromLocation is a new object
-          paramsFromLocation(
-            currentLocation.params,
-            // only keep params that exist in the resolved location
-            // only keep optional params coming from a parent record
-            matcher.keys.filter((k) => !k.optional).concat(matcher.parent ? matcher.parent.keys.filter((k) => k.optional) : []).map((k) => k.name)
-          ),
-          // discard any existing params in the current location that do not exist here
-          // #1497 this ensures better active/exact matching
-          location2.params && paramsFromLocation(location2.params, matcher.keys.map((k) => k.name))
-        );
-        path = matcher.stringify(params);
-      } else if (location2.path != null) {
-        path = location2.path;
-        if (!path.startsWith("/")) {
-          warn(`The Matcher cannot resolve relative paths but received "${path}". Unless you directly called \`matcher.resolve("${path}")\`, this is probably a bug in vue-router. Please open an issue at https://github.com/vuejs/router/issues/new/choose.`);
-        }
-        matcher = matchers.find((m) => m.re.test(path));
-        if (matcher) {
-          params = matcher.parse(path);
-          name2 = matcher.record.name;
-        }
-      } else {
-        matcher = currentLocation.name ? matcherMap.get(currentLocation.name) : matchers.find((m) => m.re.test(currentLocation.path));
-        if (!matcher)
-          throw createRouterError(1, {
-            location: location2,
-            currentLocation
-          });
-        name2 = matcher.record.name;
-        params = assign({}, currentLocation.params, location2.params);
-        path = matcher.stringify(params);
-      }
-      const matched = [];
-      let parentMatcher = matcher;
-      while (parentMatcher) {
-        matched.unshift(parentMatcher.record);
-        parentMatcher = parentMatcher.parent;
-      }
-      return {
-        name: name2,
-        path,
-        params,
-        matched,
-        meta: mergeMetaFields(matched)
-      };
-    }
-    routes2.forEach((route2) => addRoute(route2));
-    return { addRoute, resolve, removeRoute, getRoutes, getRecordMatcher };
-  }
-  function paramsFromLocation(params, keys) {
-    const newParams = {};
-    for (const key of keys) {
-      if (key in params)
-        newParams[key] = params[key];
-    }
-    return newParams;
-  }
-  function normalizeRouteRecord(record) {
-    return {
-      path: record.path,
-      redirect: record.redirect,
-      name: record.name,
-      meta: record.meta || {},
-      aliasOf: void 0,
-      beforeEnter: record.beforeEnter,
-      props: normalizeRecordProps(record),
-      children: record.children || [],
-      instances: {},
-      leaveGuards: /* @__PURE__ */ new Set(),
-      updateGuards: /* @__PURE__ */ new Set(),
-      enterCallbacks: {},
-      components: "components" in record ? record.components || null : record.component && { default: record.component }
-    };
-  }
-  function normalizeRecordProps(record) {
-    const propsObject = {};
-    const props = record.props || false;
-    if ("component" in record) {
-      propsObject.default = props;
-    } else {
-      for (const name2 in record.components)
-        propsObject[name2] = typeof props === "object" ? props[name2] : props;
-    }
-    return propsObject;
-  }
-  function isAliasRecord(record) {
-    while (record) {
-      if (record.record.aliasOf)
-        return true;
-      record = record.parent;
-    }
-    return false;
-  }
-  function mergeMetaFields(matched) {
-    return matched.reduce((meta, record) => assign(meta, record.meta), {});
-  }
-  function mergeOptions(defaults2, partialOptions) {
-    const options = {};
-    for (const key in defaults2) {
-      options[key] = key in partialOptions ? partialOptions[key] : defaults2[key];
-    }
-    return options;
-  }
-  function isSameParam(a, b) {
-    return a.name === b.name && a.optional === b.optional && a.repeatable === b.repeatable;
-  }
-  function checkSameParams(a, b) {
-    for (const key of a.keys) {
-      if (!key.optional && !b.keys.find(isSameParam.bind(null, key)))
-        return warn(`Alias "${b.record.path}" and the original record: "${a.record.path}" must have the exact same param named "${key.name}"`);
-    }
-    for (const key of b.keys) {
-      if (!key.optional && !a.keys.find(isSameParam.bind(null, key)))
-        return warn(`Alias "${b.record.path}" and the original record: "${a.record.path}" must have the exact same param named "${key.name}"`);
-    }
-  }
-  function checkChildMissingNameWithEmptyPath(mainNormalizedRecord, parent) {
-    if (parent && parent.record.name && !mainNormalizedRecord.name && !mainNormalizedRecord.path) {
-      warn(`The route named "${String(parent.record.name)}" has a child without a name and an empty path. Using that name won't render the empty path child so you probably want to move the name to the child instead. If this is intentional, add a name to the child route to remove the warning.`);
-    }
-  }
-  function checkMissingParamsInAbsolutePath(record, parent) {
-    for (const key of parent.keys) {
-      if (!record.keys.find(isSameParam.bind(null, key)))
-        return warn(`Absolute path "${record.record.path}" must have the exact same param named "${key.name}" as its parent "${parent.record.path}".`);
-    }
-  }
-  function isRecordChildOf(record, parent) {
-    return parent.children.some((child) => child === record || isRecordChildOf(record, child));
-  }
-  function parseQuery(search) {
-    const query = {};
-    if (search === "" || search === "?")
-      return query;
-    const hasLeadingIM = search[0] === "?";
-    const searchParams = (hasLeadingIM ? search.slice(1) : search).split("&");
-    for (let i = 0; i < searchParams.length; ++i) {
-      const searchParam = searchParams[i].replace(PLUS_RE, " ");
-      const eqPos = searchParam.indexOf("=");
-      const key = decode(eqPos < 0 ? searchParam : searchParam.slice(0, eqPos));
-      const value = eqPos < 0 ? null : decode(searchParam.slice(eqPos + 1));
-      if (key in query) {
-        let currentValue = query[key];
-        if (!isArray(currentValue)) {
-          currentValue = query[key] = [currentValue];
-        }
-        currentValue.push(value);
-      } else {
-        query[key] = value;
-      }
-    }
-    return query;
-  }
-  function stringifyQuery(query) {
-    let search = "";
-    for (let key in query) {
-      const value = query[key];
-      key = encodeQueryKey(key);
-      if (value == null) {
-        if (value !== void 0) {
-          search += (search.length ? "&" : "") + key;
-        }
-        continue;
-      }
-      const values = isArray(value) ? value.map((v) => v && encodeQueryValue(v)) : [value && encodeQueryValue(value)];
-      values.forEach((value2) => {
-        if (value2 !== void 0) {
-          search += (search.length ? "&" : "") + key;
-          if (value2 != null)
-            search += "=" + value2;
-        }
-      });
-    }
-    return search;
-  }
-  function normalizeQuery(query) {
-    const normalizedQuery = {};
-    for (const key in query) {
-      const value = query[key];
-      if (value !== void 0) {
-        normalizedQuery[key] = isArray(value) ? value.map((v) => v == null ? null : "" + v) : value == null ? value : "" + value;
-      }
-    }
-    return normalizedQuery;
-  }
-  const matchedRouteKey = Symbol("router view location matched");
-  const viewDepthKey = Symbol("router view depth");
-  const routerKey = Symbol("router");
-  const routeLocationKey = Symbol("route location");
-  const routerViewLocationKey = Symbol("router view location");
-  function useCallbacks() {
-    let handlers = [];
-    function add(handler) {
-      handlers.push(handler);
-      return () => {
-        const i = handlers.indexOf(handler);
-        if (i > -1)
-          handlers.splice(i, 1);
-      };
-    }
-    function reset() {
-      handlers = [];
-    }
-    return {
-      add,
-      list: () => handlers.slice(),
-      reset
-    };
-  }
-  function guardToPromiseFn(guard, to, from, record, name2, runWithContext = (fn) => fn()) {
-    const enterCallbackArray = record && // name is defined if record is because of the function overload
-    (record.enterCallbacks[name2] = record.enterCallbacks[name2] || []);
-    return () => new Promise((resolve, reject) => {
-      const next = (valid) => {
-        if (valid === false) {
-          reject(createRouterError(4, {
-            from,
-            to
-          }));
-        } else if (valid instanceof Error) {
-          reject(valid);
-        } else if (isRouteLocation(valid)) {
-          reject(createRouterError(2, {
-            from: to,
-            to: valid
-          }));
-        } else {
-          if (enterCallbackArray && // since enterCallbackArray is truthy, both record and name also are
-          record.enterCallbacks[name2] === enterCallbackArray && typeof valid === "function") {
-            enterCallbackArray.push(valid);
-          }
-          resolve();
-        }
-      };
-      const guardReturn = runWithContext(() => guard.call(record && record.instances[name2], to, from, canOnlyBeCalledOnce(next, to, from)));
-      let guardCall = Promise.resolve(guardReturn);
-      if (guard.length < 3)
-        guardCall = guardCall.then(next);
-      if (guard.length > 2) {
-        const message = `The "next" callback was never called inside of ${guard.name ? '"' + guard.name + '"' : ""}:
-${guard.toString()}
-. If you are returning a value instead of calling "next", make sure to remove the "next" parameter from your function.`;
-        if (typeof guardReturn === "object" && "then" in guardReturn) {
-          guardCall = guardCall.then((resolvedValue) => {
-            if (!next._called) {
-              warn(message);
-              return Promise.reject(new Error("Invalid navigation guard"));
-            }
-            return resolvedValue;
-          });
-        } else if (guardReturn !== void 0) {
-          if (!next._called) {
-            warn(message);
-            reject(new Error("Invalid navigation guard"));
-            return;
-          }
-        }
-      }
-      guardCall.catch((err) => reject(err));
-    });
-  }
-  function canOnlyBeCalledOnce(next, to, from) {
-    let called = 0;
-    return function() {
-      if (called++ === 1)
-        warn(`The "next" callback was called more than once in one navigation guard when going from "${from.fullPath}" to "${to.fullPath}". It should be called exactly one time in each navigation guard. This will fail in production.`);
-      next._called = true;
-      if (called === 1)
-        next.apply(null, arguments);
-    };
-  }
-  function extractComponentsGuards(matched, guardType, to, from, runWithContext = (fn) => fn()) {
-    const guards = [];
-    for (const record of matched) {
-      if (!record.components && !record.children.length) {
-        warn(`Record with path "${record.path}" is either missing a "component(s)" or "children" property.`);
-      }
-      for (const name2 in record.components) {
-        let rawComponent = record.components[name2];
-        {
-          if (!rawComponent || typeof rawComponent !== "object" && typeof rawComponent !== "function") {
-            warn(`Component "${name2}" in record with path "${record.path}" is not a valid component. Received "${String(rawComponent)}".`);
-            throw new Error("Invalid route component");
-          } else if ("then" in rawComponent) {
-            warn(`Component "${name2}" in record with path "${record.path}" is a Promise instead of a function that returns a Promise. Did you write "import('./MyPage.vue')" instead of "() => import('./MyPage.vue')" ? This will break in production if not fixed.`);
-            const promise = rawComponent;
-            rawComponent = () => promise;
-          } else if (rawComponent.__asyncLoader && // warn only once per component
-          !rawComponent.__warnedDefineAsync) {
-            rawComponent.__warnedDefineAsync = true;
-            warn(`Component "${name2}" in record with path "${record.path}" is defined using "defineAsyncComponent()". Write "() => import('./MyPage.vue')" instead of "defineAsyncComponent(() => import('./MyPage.vue'))".`);
-          }
-        }
-        if (guardType !== "beforeRouteEnter" && !record.instances[name2])
-          continue;
-        if (isRouteComponent(rawComponent)) {
-          const options = rawComponent.__vccOpts || rawComponent;
-          const guard = options[guardType];
-          guard && guards.push(guardToPromiseFn(guard, to, from, record, name2, runWithContext));
-        } else {
-          let componentPromise = rawComponent();
-          if (!("catch" in componentPromise)) {
-            warn(`Component "${name2}" in record with path "${record.path}" is a function that does not return a Promise. If you were passing a functional component, make sure to add a "displayName" to the component. This will break in production if not fixed.`);
-            componentPromise = Promise.resolve(componentPromise);
-          }
-          guards.push(() => componentPromise.then((resolved) => {
-            if (!resolved)
-              return Promise.reject(new Error(`Couldn't resolve component "${name2}" at "${record.path}"`));
-            const resolvedComponent = isESModule(resolved) ? resolved.default : resolved;
-            record.components[name2] = resolvedComponent;
-            const options = resolvedComponent.__vccOpts || resolvedComponent;
-            const guard = options[guardType];
-            return guard && guardToPromiseFn(guard, to, from, record, name2, runWithContext)();
-          }));
-        }
-      }
-    }
-    return guards;
-  }
-  function isRouteComponent(component) {
-    return typeof component === "object" || "displayName" in component || "props" in component || "__vccOpts" in component;
-  }
-  function useLink(props) {
-    const router2 = vue.inject(routerKey);
-    const currentRoute = vue.inject(routeLocationKey);
-    const route2 = vue.computed(() => router2.resolve(vue.unref(props.to)));
-    const activeRecordIndex = vue.computed(() => {
-      const { matched } = route2.value;
-      const { length } = matched;
-      const routeMatched = matched[length - 1];
-      const currentMatched = currentRoute.matched;
-      if (!routeMatched || !currentMatched.length)
-        return -1;
-      const index = currentMatched.findIndex(isSameRouteRecord.bind(null, routeMatched));
-      if (index > -1)
-        return index;
-      const parentRecordPath = getOriginalPath(matched[length - 2]);
-      return (
-        // we are dealing with nested routes
-        length > 1 && // if the parent and matched route have the same path, this link is
-        // referring to the empty child. Or we currently are on a different
-        // child of the same parent
-        getOriginalPath(routeMatched) === parentRecordPath && // avoid comparing the child with its parent
-        currentMatched[currentMatched.length - 1].path !== parentRecordPath ? currentMatched.findIndex(isSameRouteRecord.bind(null, matched[length - 2])) : index
-      );
-    });
-    const isActive = vue.computed(() => activeRecordIndex.value > -1 && includesParams(currentRoute.params, route2.value.params));
-    const isExactActive = vue.computed(() => activeRecordIndex.value > -1 && activeRecordIndex.value === currentRoute.matched.length - 1 && isSameRouteLocationParams(currentRoute.params, route2.value.params));
-    function navigate(e = {}) {
-      if (guardEvent(e)) {
-        return router2[vue.unref(props.replace) ? "replace" : "push"](
-          vue.unref(props.to)
-          // avoid uncaught errors are they are logged anyway
-        ).catch(noop);
-      }
-      return Promise.resolve();
-    }
-    if (isBrowser) {
-      const instance = vue.getCurrentInstance();
-      if (instance) {
-        const linkContextDevtools = {
-          route: route2.value,
-          isActive: isActive.value,
-          isExactActive: isExactActive.value
-        };
-        instance.__vrl_devtools = instance.__vrl_devtools || [];
-        instance.__vrl_devtools.push(linkContextDevtools);
-        vue.watchEffect(() => {
-          linkContextDevtools.route = route2.value;
-          linkContextDevtools.isActive = isActive.value;
-          linkContextDevtools.isExactActive = isExactActive.value;
-        }, { flush: "post" });
-      }
-    }
-    return {
-      route: route2,
-      href: vue.computed(() => route2.value.href),
-      isActive,
-      isExactActive,
-      navigate
-    };
-  }
-  const RouterLinkImpl = /* @__PURE__ */ vue.defineComponent({
-    name: "RouterLink",
-    compatConfig: { MODE: 3 },
-    props: {
-      to: {
-        type: [String, Object],
-        required: true
-      },
-      replace: Boolean,
-      activeClass: String,
-      // inactiveClass: String,
-      exactActiveClass: String,
-      custom: Boolean,
-      ariaCurrentValue: {
-        type: String,
-        default: "page"
-      }
-    },
-    useLink,
-    setup(props, { slots }) {
-      const link = vue.reactive(useLink(props));
-      const { options } = vue.inject(routerKey);
-      const elClass = vue.computed(() => ({
-        [getLinkClass(props.activeClass, options.linkActiveClass, "router-link-active")]: link.isActive,
-        // [getLinkClass(
-        //   props.inactiveClass,
-        //   options.linkInactiveClass,
-        //   'router-link-inactive'
-        // )]: !link.isExactActive,
-        [getLinkClass(props.exactActiveClass, options.linkExactActiveClass, "router-link-exact-active")]: link.isExactActive
-      }));
-      return () => {
-        const children = slots.default && slots.default(link);
-        return props.custom ? children : vue.h("a", {
-          "aria-current": link.isExactActive ? props.ariaCurrentValue : null,
-          href: link.href,
-          // this would override user added attrs but Vue will still add
-          // the listener, so we end up triggering both
-          onClick: link.navigate,
-          class: elClass.value
-        }, children);
-      };
-    }
-  });
-  const RouterLink = RouterLinkImpl;
-  function guardEvent(e) {
-    if (e.metaKey || e.altKey || e.ctrlKey || e.shiftKey)
-      return;
-    if (e.defaultPrevented)
-      return;
-    if (e.button !== void 0 && e.button !== 0)
-      return;
-    if (e.currentTarget && e.currentTarget.getAttribute) {
-      const target = e.currentTarget.getAttribute("target");
-      if (/\b_blank\b/i.test(target))
-        return;
-    }
-    if (e.preventDefault)
-      e.preventDefault();
-    return true;
-  }
-  function includesParams(outer, inner) {
-    for (const key in inner) {
-      const innerValue = inner[key];
-      const outerValue = outer[key];
-      if (typeof innerValue === "string") {
-        if (innerValue !== outerValue)
-          return false;
-      } else {
-        if (!isArray(outerValue) || outerValue.length !== innerValue.length || innerValue.some((value, i) => value !== outerValue[i]))
-          return false;
-      }
-    }
-    return true;
-  }
-  function getOriginalPath(record) {
-    return record ? record.aliasOf ? record.aliasOf.path : record.path : "";
-  }
-  const getLinkClass = (propClass, globalClass, defaultClass) => propClass != null ? propClass : globalClass != null ? globalClass : defaultClass;
-  const RouterViewImpl = /* @__PURE__ */ vue.defineComponent({
-    name: "RouterView",
-    // #674 we manually inherit them
-    inheritAttrs: false,
-    props: {
-      name: {
-        type: String,
-        default: "default"
-      },
-      route: Object
-    },
-    // Better compat for @vue/compat users
-    // https://github.com/vuejs/router/issues/1315
-    compatConfig: { MODE: 3 },
-    setup(props, { attrs, slots }) {
-      warnDeprecatedUsage();
-      const injectedRoute = vue.inject(routerViewLocationKey);
-      const routeToDisplay = vue.computed(() => props.route || injectedRoute.value);
-      const injectedDepth = vue.inject(viewDepthKey, 0);
-      const depth = vue.computed(() => {
-        let initialDepth = vue.unref(injectedDepth);
-        const { matched } = routeToDisplay.value;
-        let matchedRoute;
-        while ((matchedRoute = matched[initialDepth]) && !matchedRoute.components) {
-          initialDepth++;
-        }
-        return initialDepth;
-      });
-      const matchedRouteRef = vue.computed(() => routeToDisplay.value.matched[depth.value]);
-      vue.provide(viewDepthKey, vue.computed(() => depth.value + 1));
-      vue.provide(matchedRouteKey, matchedRouteRef);
-      vue.provide(routerViewLocationKey, routeToDisplay);
-      const viewRef = vue.ref();
-      vue.watch(() => [viewRef.value, matchedRouteRef.value, props.name], ([instance, to, name2], [oldInstance, from, oldName]) => {
-        if (to) {
-          to.instances[name2] = instance;
-          if (from && from !== to && instance && instance === oldInstance) {
-            if (!to.leaveGuards.size) {
-              to.leaveGuards = from.leaveGuards;
-            }
-            if (!to.updateGuards.size) {
-              to.updateGuards = from.updateGuards;
-            }
-          }
-        }
-        if (instance && to && // if there is no instance but to and from are the same this might be
-        // the first visit
-        (!from || !isSameRouteRecord(to, from) || !oldInstance)) {
-          (to.enterCallbacks[name2] || []).forEach((callback) => callback(instance));
-        }
-      }, { flush: "post" });
-      return () => {
-        const route2 = routeToDisplay.value;
-        const currentName = props.name;
-        const matchedRoute = matchedRouteRef.value;
-        const ViewComponent = matchedRoute && matchedRoute.components[currentName];
-        if (!ViewComponent) {
-          return normalizeSlot(slots.default, { Component: ViewComponent, route: route2 });
-        }
-        const routePropsOption = matchedRoute.props[currentName];
-        const routeProps2 = routePropsOption ? routePropsOption === true ? route2.params : typeof routePropsOption === "function" ? routePropsOption(route2) : routePropsOption : null;
-        const onVnodeUnmounted = (vnode) => {
-          if (vnode.component.isUnmounted) {
-            matchedRoute.instances[currentName] = null;
-          }
-        };
-        const component = vue.h(ViewComponent, assign({}, routeProps2, attrs, {
-          onVnodeUnmounted,
-          ref: viewRef
-        }));
-        if (isBrowser && component.ref) {
-          const info = {
-            depth: depth.value,
-            name: matchedRoute.name,
-            path: matchedRoute.path,
-            meta: matchedRoute.meta
-          };
-          const internalInstances = isArray(component.ref) ? component.ref.map((r) => r.i) : [component.ref.i];
-          internalInstances.forEach((instance) => {
-            instance.__vrv_devtools = info;
-          });
-        }
-        return (
-          // pass the vnode to the slot as a prop.
-          // h and <component :is="..."> both accept vnodes
-          normalizeSlot(slots.default, { Component: component, route: route2 }) || component
-        );
-      };
-    }
-  });
-  function normalizeSlot(slot, data) {
-    if (!slot)
-      return null;
-    const slotContent = slot(data);
-    return slotContent.length === 1 ? slotContent[0] : slotContent;
-  }
-  const RouterView = RouterViewImpl;
-  function warnDeprecatedUsage() {
-    const instance = vue.getCurrentInstance();
-    const parentName = instance.parent && instance.parent.type.name;
-    const parentSubTreeType = instance.parent && instance.parent.subTree && instance.parent.subTree.type;
-    if (parentName && (parentName === "KeepAlive" || parentName.includes("Transition")) && typeof parentSubTreeType === "object" && parentSubTreeType.name === "RouterView") {
-      const comp = parentName === "KeepAlive" ? "keep-alive" : "transition";
-      warn(`<router-view> can no longer be used directly inside <transition> or <keep-alive>.
-Use slot props instead:
-
-<router-view v-slot="{ Component }">
-  <${comp}>
-    <component :is="Component" />
-  </${comp}>
-</router-view>`);
-    }
-  }
-  function formatRouteLocation(routeLocation, tooltip) {
-    const copy = assign({}, routeLocation, {
-      // remove variables that can contain vue instances
-      matched: routeLocation.matched.map((matched) => omit(matched, ["instances", "children", "aliasOf"]))
-    });
-    return {
-      _custom: {
-        type: null,
-        readOnly: true,
-        display: routeLocation.fullPath,
-        tooltip,
-        value: copy
-      }
-    };
-  }
-  function formatDisplay(display) {
-    return {
-      _custom: {
-        display
-      }
-    };
-  }
-  let routerId = 0;
-  function addDevtools(app, router2, matcher) {
-    if (router2.__hasDevtools)
-      return;
-    router2.__hasDevtools = true;
-    const id = routerId++;
-    setupDevtoolsPlugin({
-      id: "org.vuejs.router" + (id ? "." + id : ""),
-      label: "Vue Router",
-      packageName: "vue-router",
-      homepage: "https://router.vuejs.org",
-      logo: "https://router.vuejs.org/logo.png",
-      componentStateTypes: ["Routing"],
-      app
-    }, (api) => {
-      if (typeof api.now !== "function") {
-        console.warn("[Vue Router]: You seem to be using an outdated version of Vue Devtools. Are you still using the Beta release instead of the stable one? You can find the links at https://devtools.vuejs.org/guide/installation.html.");
-      }
-      api.on.inspectComponent((payload, ctx) => {
-        if (payload.instanceData) {
-          payload.instanceData.state.push({
-            type: "Routing",
-            key: "$route",
-            editable: false,
-            value: formatRouteLocation(router2.currentRoute.value, "Current Route")
-          });
-        }
-      });
-      api.on.visitComponentTree(({ treeNode: node, componentInstance }) => {
-        if (componentInstance.__vrv_devtools) {
-          const info = componentInstance.__vrv_devtools;
-          node.tags.push({
-            label: (info.name ? `${info.name.toString()}: ` : "") + info.path,
-            textColor: 0,
-            tooltip: "This component is rendered by &lt;router-view&gt;",
-            backgroundColor: PINK_500
-          });
-        }
-        if (isArray(componentInstance.__vrl_devtools)) {
-          componentInstance.__devtoolsApi = api;
-          componentInstance.__vrl_devtools.forEach((devtoolsData) => {
-            let backgroundColor = ORANGE_400;
-            let tooltip = "";
-            if (devtoolsData.isExactActive) {
-              backgroundColor = LIME_500;
-              tooltip = "This is exactly active";
-            } else if (devtoolsData.isActive) {
-              backgroundColor = BLUE_600;
-              tooltip = "This link is active";
-            }
-            node.tags.push({
-              label: devtoolsData.route.path,
-              textColor: 0,
-              tooltip,
-              backgroundColor
-            });
-          });
-        }
-      });
-      vue.watch(router2.currentRoute, () => {
-        refreshRoutesView();
-        api.notifyComponentUpdate();
-        api.sendInspectorTree(routerInspectorId);
-        api.sendInspectorState(routerInspectorId);
-      });
-      const navigationsLayerId = "router:navigations:" + id;
-      api.addTimelineLayer({
-        id: navigationsLayerId,
-        label: `Router${id ? " " + id : ""} Navigations`,
-        color: 4237508
-      });
-      router2.onError((error, to) => {
-        api.addTimelineEvent({
-          layerId: navigationsLayerId,
-          event: {
-            title: "Error during Navigation",
-            subtitle: to.fullPath,
-            logType: "error",
-            time: api.now(),
-            data: { error },
-            groupId: to.meta.__navigationId
-          }
-        });
-      });
-      let navigationId = 0;
-      router2.beforeEach((to, from) => {
-        const data = {
-          guard: formatDisplay("beforeEach"),
-          from: formatRouteLocation(from, "Current Location during this navigation"),
-          to: formatRouteLocation(to, "Target location")
-        };
-        Object.defineProperty(to.meta, "__navigationId", {
-          value: navigationId++
-        });
-        api.addTimelineEvent({
-          layerId: navigationsLayerId,
-          event: {
-            time: api.now(),
-            title: "Start of navigation",
-            subtitle: to.fullPath,
-            data,
-            groupId: to.meta.__navigationId
-          }
-        });
-      });
-      router2.afterEach((to, from, failure) => {
-        const data = {
-          guard: formatDisplay("afterEach")
-        };
-        if (failure) {
-          data.failure = {
-            _custom: {
-              type: Error,
-              readOnly: true,
-              display: failure ? failure.message : "",
-              tooltip: "Navigation Failure",
-              value: failure
-            }
-          };
-          data.status = formatDisplay("❌");
-        } else {
-          data.status = formatDisplay("✅");
-        }
-        data.from = formatRouteLocation(from, "Current Location during this navigation");
-        data.to = formatRouteLocation(to, "Target location");
-        api.addTimelineEvent({
-          layerId: navigationsLayerId,
-          event: {
-            title: "End of navigation",
-            subtitle: to.fullPath,
-            time: api.now(),
-            data,
-            logType: failure ? "warning" : "default",
-            groupId: to.meta.__navigationId
-          }
-        });
-      });
-      const routerInspectorId = "router-inspector:" + id;
-      api.addInspector({
-        id: routerInspectorId,
-        label: "Routes" + (id ? " " + id : ""),
-        icon: "book",
-        treeFilterPlaceholder: "Search routes"
-      });
-      function refreshRoutesView() {
-        if (!activeRoutesPayload)
-          return;
-        const payload = activeRoutesPayload;
-        let routes2 = matcher.getRoutes().filter((route2) => !route2.parent || // these routes have a parent with no component which will not appear in the view
-        // therefore we still need to include them
-        !route2.parent.record.components);
-        routes2.forEach(resetMatchStateOnRouteRecord);
-        if (payload.filter) {
-          routes2 = routes2.filter((route2) => (
-            // save matches state based on the payload
-            isRouteMatching(route2, payload.filter.toLowerCase())
-          ));
-        }
-        routes2.forEach((route2) => markRouteRecordActive(route2, router2.currentRoute.value));
-        payload.rootNodes = routes2.map(formatRouteRecordForInspector);
-      }
-      let activeRoutesPayload;
-      api.on.getInspectorTree((payload) => {
-        activeRoutesPayload = payload;
-        if (payload.app === app && payload.inspectorId === routerInspectorId) {
-          refreshRoutesView();
-        }
-      });
-      api.on.getInspectorState((payload) => {
-        if (payload.app === app && payload.inspectorId === routerInspectorId) {
-          const routes2 = matcher.getRoutes();
-          const route2 = routes2.find((route22) => route22.record.__vd_id === payload.nodeId);
-          if (route2) {
-            payload.state = {
-              options: formatRouteRecordMatcherForStateInspector(route2)
-            };
-          }
-        }
-      });
-      api.sendInspectorTree(routerInspectorId);
-      api.sendInspectorState(routerInspectorId);
-    });
-  }
-  function modifierForKey(key) {
-    if (key.optional) {
-      return key.repeatable ? "*" : "?";
-    } else {
-      return key.repeatable ? "+" : "";
-    }
-  }
-  function formatRouteRecordMatcherForStateInspector(route2) {
-    const { record } = route2;
-    const fields = [
-      { editable: false, key: "path", value: record.path }
-    ];
-    if (record.name != null) {
-      fields.push({
-        editable: false,
-        key: "name",
-        value: record.name
-      });
-    }
-    fields.push({ editable: false, key: "regexp", value: route2.re });
-    if (route2.keys.length) {
-      fields.push({
-        editable: false,
-        key: "keys",
-        value: {
-          _custom: {
-            type: null,
-            readOnly: true,
-            display: route2.keys.map((key) => `${key.name}${modifierForKey(key)}`).join(" "),
-            tooltip: "Param keys",
-            value: route2.keys
-          }
-        }
-      });
-    }
-    if (record.redirect != null) {
-      fields.push({
-        editable: false,
-        key: "redirect",
-        value: record.redirect
-      });
-    }
-    if (route2.alias.length) {
-      fields.push({
-        editable: false,
-        key: "aliases",
-        value: route2.alias.map((alias) => alias.record.path)
-      });
-    }
-    if (Object.keys(route2.record.meta).length) {
-      fields.push({
-        editable: false,
-        key: "meta",
-        value: route2.record.meta
-      });
-    }
-    fields.push({
-      key: "score",
-      editable: false,
-      value: {
-        _custom: {
-          type: null,
-          readOnly: true,
-          display: route2.score.map((score) => score.join(", ")).join(" | "),
-          tooltip: "Score used to sort routes",
-          value: route2.score
-        }
-      }
-    });
-    return fields;
-  }
-  const PINK_500 = 15485081;
-  const BLUE_600 = 2450411;
-  const LIME_500 = 8702998;
-  const CYAN_400 = 2282478;
-  const ORANGE_400 = 16486972;
-  const DARK = 6710886;
-  function formatRouteRecordForInspector(route2) {
-    const tags = [];
-    const { record } = route2;
-    if (record.name != null) {
-      tags.push({
-        label: String(record.name),
-        textColor: 0,
-        backgroundColor: CYAN_400
-      });
-    }
-    if (record.aliasOf) {
-      tags.push({
-        label: "alias",
-        textColor: 0,
-        backgroundColor: ORANGE_400
-      });
-    }
-    if (route2.__vd_match) {
-      tags.push({
-        label: "matches",
-        textColor: 0,
-        backgroundColor: PINK_500
-      });
-    }
-    if (route2.__vd_exactActive) {
-      tags.push({
-        label: "exact",
-        textColor: 0,
-        backgroundColor: LIME_500
-      });
-    }
-    if (route2.__vd_active) {
-      tags.push({
-        label: "active",
-        textColor: 0,
-        backgroundColor: BLUE_600
-      });
-    }
-    if (record.redirect) {
-      tags.push({
-        label: typeof record.redirect === "string" ? `redirect: ${record.redirect}` : "redirects",
-        textColor: 16777215,
-        backgroundColor: DARK
-      });
-    }
-    let id = record.__vd_id;
-    if (id == null) {
-      id = String(routeRecordId++);
-      record.__vd_id = id;
-    }
-    return {
-      id,
-      label: record.path,
-      tags,
-      children: route2.children.map(formatRouteRecordForInspector)
-    };
-  }
-  let routeRecordId = 0;
-  const EXTRACT_REGEXP_RE = /^\/(.*)\/([a-z]*)$/;
-  function markRouteRecordActive(route2, currentRoute) {
-    const isExactActive = currentRoute.matched.length && isSameRouteRecord(currentRoute.matched[currentRoute.matched.length - 1], route2.record);
-    route2.__vd_exactActive = route2.__vd_active = isExactActive;
-    if (!isExactActive) {
-      route2.__vd_active = currentRoute.matched.some((match) => isSameRouteRecord(match, route2.record));
-    }
-    route2.children.forEach((childRoute) => markRouteRecordActive(childRoute, currentRoute));
-  }
-  function resetMatchStateOnRouteRecord(route2) {
-    route2.__vd_match = false;
-    route2.children.forEach(resetMatchStateOnRouteRecord);
-  }
-  function isRouteMatching(route2, filter) {
-    const found = String(route2.re).match(EXTRACT_REGEXP_RE);
-    route2.__vd_match = false;
-    if (!found || found.length < 3) {
-      return false;
-    }
-    const nonEndingRE = new RegExp(found[1].replace(/\$$/, ""), found[2]);
-    if (nonEndingRE.test(filter)) {
-      route2.children.forEach((child) => isRouteMatching(child, filter));
-      if (route2.record.path !== "/" || filter === "/") {
-        route2.__vd_match = route2.re.test(filter);
-        return true;
-      }
-      return false;
-    }
-    const path = route2.record.path.toLowerCase();
-    const decodedPath = decode(path);
-    if (!filter.startsWith("/") && (decodedPath.includes(filter) || path.includes(filter)))
-      return true;
-    if (decodedPath.startsWith(filter) || path.startsWith(filter))
-      return true;
-    if (route2.record.name && String(route2.record.name).includes(filter))
-      return true;
-    return route2.children.some((child) => isRouteMatching(child, filter));
-  }
-  function omit(obj, keys) {
-    const ret = {};
-    for (const key in obj) {
-      if (!keys.includes(key)) {
-        ret[key] = obj[key];
-      }
-    }
-    return ret;
-  }
-  function createRouter(options) {
-    const matcher = createRouterMatcher(options.routes, options);
-    const parseQuery$1 = options.parseQuery || parseQuery;
-    const stringifyQuery$1 = options.stringifyQuery || stringifyQuery;
-    const routerHistory = options.history;
-    if (!routerHistory)
-      throw new Error('Provide the "history" option when calling "createRouter()": https://next.router.vuejs.org/api/#history.');
-    const beforeGuards = useCallbacks();
-    const beforeResolveGuards = useCallbacks();
-    const afterGuards = useCallbacks();
-    const currentRoute = vue.shallowRef(START_LOCATION_NORMALIZED);
-    let pendingLocation = START_LOCATION_NORMALIZED;
-    if (isBrowser && options.scrollBehavior && "scrollRestoration" in history) {
-      history.scrollRestoration = "manual";
-    }
-    const normalizeParams = applyToParams.bind(null, (paramValue) => "" + paramValue);
-    const encodeParams = applyToParams.bind(null, encodeParam);
-    const decodeParams = (
-      // @ts-expect-error: intentionally avoid the type check
-      applyToParams.bind(null, decode)
-    );
-    function addRoute(parentOrRoute, route2) {
-      let parent;
-      let record;
-      if (isRouteName(parentOrRoute)) {
-        parent = matcher.getRecordMatcher(parentOrRoute);
-        record = route2;
-      } else {
-        record = parentOrRoute;
-      }
-      return matcher.addRoute(record, parent);
-    }
-    function removeRoute(name2) {
-      const recordMatcher = matcher.getRecordMatcher(name2);
-      if (recordMatcher) {
-        matcher.removeRoute(recordMatcher);
-      } else {
-        warn(`Cannot remove non-existent route "${String(name2)}"`);
-      }
-    }
-    function getRoutes() {
-      return matcher.getRoutes().map((routeMatcher) => routeMatcher.record);
-    }
-    function hasRoute(name2) {
-      return !!matcher.getRecordMatcher(name2);
-    }
-    function resolve(rawLocation, currentLocation) {
-      currentLocation = assign({}, currentLocation || currentRoute.value);
-      if (typeof rawLocation === "string") {
-        const locationNormalized = parseURL(parseQuery$1, rawLocation, currentLocation.path);
-        const matchedRoute2 = matcher.resolve({ path: locationNormalized.path }, currentLocation);
-        const href2 = routerHistory.createHref(locationNormalized.fullPath);
-        {
-          if (href2.startsWith("//"))
-            warn(`Location "${rawLocation}" resolved to "${href2}". A resolved location cannot start with multiple slashes.`);
-          else if (!matchedRoute2.matched.length) {
-            warn(`No match found for location with path "${rawLocation}"`);
-          }
-        }
-        return assign(locationNormalized, matchedRoute2, {
-          params: decodeParams(matchedRoute2.params),
-          hash: decode(locationNormalized.hash),
-          redirectedFrom: void 0,
-          href: href2
-        });
-      }
-      let matcherLocation;
-      if (rawLocation.path != null) {
-        if ("params" in rawLocation && !("name" in rawLocation) && // @ts-expect-error: the type is never
-        Object.keys(rawLocation.params).length) {
-          warn(`Path "${rawLocation.path}" was passed with params but they will be ignored. Use a named route alongside params instead.`);
-        }
-        matcherLocation = assign({}, rawLocation, {
-          path: parseURL(parseQuery$1, rawLocation.path, currentLocation.path).path
-        });
-      } else {
-        const targetParams = assign({}, rawLocation.params);
-        for (const key in targetParams) {
-          if (targetParams[key] == null) {
-            delete targetParams[key];
-          }
-        }
-        matcherLocation = assign({}, rawLocation, {
-          params: encodeParams(targetParams)
-        });
-        currentLocation.params = encodeParams(currentLocation.params);
-      }
-      const matchedRoute = matcher.resolve(matcherLocation, currentLocation);
-      const hash = rawLocation.hash || "";
-      if (hash && !hash.startsWith("#")) {
-        warn(`A \`hash\` should always start with the character "#". Replace "${hash}" with "#${hash}".`);
-      }
-      matchedRoute.params = normalizeParams(decodeParams(matchedRoute.params));
-      const fullPath = stringifyURL(stringifyQuery$1, assign({}, rawLocation, {
-        hash: encodeHash(hash),
-        path: matchedRoute.path
-      }));
-      const href = routerHistory.createHref(fullPath);
-      {
-        if (href.startsWith("//")) {
-          warn(`Location "${rawLocation}" resolved to "${href}". A resolved location cannot start with multiple slashes.`);
-        } else if (!matchedRoute.matched.length) {
-          warn(`No match found for location with path "${rawLocation.path != null ? rawLocation.path : rawLocation}"`);
-        }
-      }
-      return assign({
-        fullPath,
-        // keep the hash encoded so fullPath is effectively path + encodedQuery +
-        // hash
-        hash,
-        query: (
-          // if the user is using a custom query lib like qs, we might have
-          // nested objects, so we keep the query as is, meaning it can contain
-          // numbers at `$route.query`, but at the point, the user will have to
-          // use their own type anyway.
-          // https://github.com/vuejs/router/issues/328#issuecomment-649481567
-          stringifyQuery$1 === stringifyQuery ? normalizeQuery(rawLocation.query) : rawLocation.query || {}
-        )
-      }, matchedRoute, {
-        redirectedFrom: void 0,
-        href
-      });
-    }
-    function locationAsObject(to) {
-      return typeof to === "string" ? parseURL(parseQuery$1, to, currentRoute.value.path) : assign({}, to);
-    }
-    function checkCanceledNavigation(to, from) {
-      if (pendingLocation !== to) {
-        return createRouterError(8, {
-          from,
-          to
-        });
-      }
-    }
-    function push(to) {
-      return pushWithRedirect(to);
-    }
-    function replace(to) {
-      return push(assign(locationAsObject(to), { replace: true }));
-    }
-    function handleRedirectRecord(to) {
-      const lastMatched = to.matched[to.matched.length - 1];
-      if (lastMatched && lastMatched.redirect) {
-        const { redirect } = lastMatched;
-        let newTargetLocation = typeof redirect === "function" ? redirect(to) : redirect;
-        if (typeof newTargetLocation === "string") {
-          newTargetLocation = newTargetLocation.includes("?") || newTargetLocation.includes("#") ? newTargetLocation = locationAsObject(newTargetLocation) : (
-            // force empty params
-            { path: newTargetLocation }
-          );
-          newTargetLocation.params = {};
-        }
-        if (newTargetLocation.path == null && !("name" in newTargetLocation)) {
-          warn(`Invalid redirect found:
-${JSON.stringify(newTargetLocation, null, 2)}
- when navigating to "${to.fullPath}". A redirect must contain a name or path. This will break in production.`);
-          throw new Error("Invalid redirect");
-        }
-        return assign({
-          query: to.query,
-          hash: to.hash,
-          // avoid transferring params if the redirect has a path
-          params: newTargetLocation.path != null ? {} : to.params
-        }, newTargetLocation);
-      }
-    }
-    function pushWithRedirect(to, redirectedFrom) {
-      const targetLocation = pendingLocation = resolve(to);
-      const from = currentRoute.value;
-      const data = to.state;
-      const force = to.force;
-      const replace2 = to.replace === true;
-      const shouldRedirect = handleRedirectRecord(targetLocation);
-      if (shouldRedirect)
-        return pushWithRedirect(
-          assign(locationAsObject(shouldRedirect), {
-            state: typeof shouldRedirect === "object" ? assign({}, data, shouldRedirect.state) : data,
-            force,
-            replace: replace2
-          }),
-          // keep original redirectedFrom if it exists
-          redirectedFrom || targetLocation
-        );
-      const toLocation = targetLocation;
-      toLocation.redirectedFrom = redirectedFrom;
-      let failure;
-      if (!force && isSameRouteLocation(stringifyQuery$1, from, targetLocation)) {
-        failure = createRouterError(16, { to: toLocation, from });
-        handleScroll(
-          from,
-          from,
-          // this is a push, the only way for it to be triggered from a
-          // history.listen is with a redirect, which makes it become a push
-          true,
-          // This cannot be the first navigation because the initial location
-          // cannot be manually navigated to
-          false
-        );
-      }
-      return (failure ? Promise.resolve(failure) : navigate(toLocation, from)).catch((error) => isNavigationFailure(error) ? (
-        // navigation redirects still mark the router as ready
-        isNavigationFailure(
-          error,
-          2
-          /* ErrorTypes.NAVIGATION_GUARD_REDIRECT */
-        ) ? error : markAsReady(error)
-      ) : (
-        // reject any unknown error
-        triggerError(error, toLocation, from)
-      )).then((failure2) => {
-        if (failure2) {
-          if (isNavigationFailure(
-            failure2,
-            2
-            /* ErrorTypes.NAVIGATION_GUARD_REDIRECT */
-          )) {
-            if (
-              // we are redirecting to the same location we were already at
-              isSameRouteLocation(stringifyQuery$1, resolve(failure2.to), toLocation) && // and we have done it a couple of times
-              redirectedFrom && // @ts-expect-error: added only in dev
-              (redirectedFrom._count = redirectedFrom._count ? (
-                // @ts-expect-error
-                redirectedFrom._count + 1
-              ) : 1) > 30
-            ) {
-              warn(`Detected a possibly infinite redirection in a navigation guard when going from "${from.fullPath}" to "${toLocation.fullPath}". Aborting to avoid a Stack Overflow.
- Are you always returning a new location within a navigation guard? That would lead to this error. Only return when redirecting or aborting, that should fix this. This might break in production if not fixed.`);
-              return Promise.reject(new Error("Infinite redirect in navigation guard"));
-            }
-            return pushWithRedirect(
-              // keep options
-              assign({
-                // preserve an existing replacement but allow the redirect to override it
-                replace: replace2
-              }, locationAsObject(failure2.to), {
-                state: typeof failure2.to === "object" ? assign({}, data, failure2.to.state) : data,
-                force
-              }),
-              // preserve the original redirectedFrom if any
-              redirectedFrom || toLocation
-            );
-          }
-        } else {
-          failure2 = finalizeNavigation(toLocation, from, true, replace2, data);
-        }
-        triggerAfterEach(toLocation, from, failure2);
-        return failure2;
-      });
-    }
-    function checkCanceledNavigationAndReject(to, from) {
-      const error = checkCanceledNavigation(to, from);
-      return error ? Promise.reject(error) : Promise.resolve();
-    }
-    function runWithContext(fn) {
-      const app = installedApps.values().next().value;
-      return app && typeof app.runWithContext === "function" ? app.runWithContext(fn) : fn();
-    }
-    function navigate(to, from) {
-      let guards;
-      const [leavingRecords, updatingRecords, enteringRecords] = extractChangingRecords(to, from);
-      guards = extractComponentsGuards(leavingRecords.reverse(), "beforeRouteLeave", to, from);
-      for (const record of leavingRecords) {
-        record.leaveGuards.forEach((guard) => {
-          guards.push(guardToPromiseFn(guard, to, from));
-        });
-      }
-      const canceledNavigationCheck = checkCanceledNavigationAndReject.bind(null, to, from);
-      guards.push(canceledNavigationCheck);
-      return runGuardQueue(guards).then(() => {
-        guards = [];
-        for (const guard of beforeGuards.list()) {
-          guards.push(guardToPromiseFn(guard, to, from));
-        }
-        guards.push(canceledNavigationCheck);
-        return runGuardQueue(guards);
-      }).then(() => {
-        guards = extractComponentsGuards(updatingRecords, "beforeRouteUpdate", to, from);
-        for (const record of updatingRecords) {
-          record.updateGuards.forEach((guard) => {
-            guards.push(guardToPromiseFn(guard, to, from));
-          });
-        }
-        guards.push(canceledNavigationCheck);
-        return runGuardQueue(guards);
-      }).then(() => {
-        guards = [];
-        for (const record of enteringRecords) {
-          if (record.beforeEnter) {
-            if (isArray(record.beforeEnter)) {
-              for (const beforeEnter of record.beforeEnter)
-                guards.push(guardToPromiseFn(beforeEnter, to, from));
-            } else {
-              guards.push(guardToPromiseFn(record.beforeEnter, to, from));
-            }
-          }
-        }
-        guards.push(canceledNavigationCheck);
-        return runGuardQueue(guards);
-      }).then(() => {
-        to.matched.forEach((record) => record.enterCallbacks = {});
-        guards = extractComponentsGuards(enteringRecords, "beforeRouteEnter", to, from, runWithContext);
-        guards.push(canceledNavigationCheck);
-        return runGuardQueue(guards);
-      }).then(() => {
-        guards = [];
-        for (const guard of beforeResolveGuards.list()) {
-          guards.push(guardToPromiseFn(guard, to, from));
-        }
-        guards.push(canceledNavigationCheck);
-        return runGuardQueue(guards);
-      }).catch((err) => isNavigationFailure(
-        err,
-        8
-        /* ErrorTypes.NAVIGATION_CANCELLED */
-      ) ? err : Promise.reject(err));
-    }
-    function triggerAfterEach(to, from, failure) {
-      afterGuards.list().forEach((guard) => runWithContext(() => guard(to, from, failure)));
-    }
-    function finalizeNavigation(toLocation, from, isPush, replace2, data) {
-      const error = checkCanceledNavigation(toLocation, from);
-      if (error)
-        return error;
-      const isFirstNavigation = from === START_LOCATION_NORMALIZED;
-      const state = !isBrowser ? {} : history.state;
-      if (isPush) {
-        if (replace2 || isFirstNavigation)
-          routerHistory.replace(toLocation.fullPath, assign({
-            scroll: isFirstNavigation && state && state.scroll
-          }, data));
-        else
-          routerHistory.push(toLocation.fullPath, data);
-      }
-      currentRoute.value = toLocation;
-      handleScroll(toLocation, from, isPush, isFirstNavigation);
-      markAsReady();
-    }
-    let removeHistoryListener;
-    function setupListeners() {
-      if (removeHistoryListener)
-        return;
-      removeHistoryListener = routerHistory.listen((to, _from, info) => {
-        if (!router2.listening)
-          return;
-        const toLocation = resolve(to);
-        const shouldRedirect = handleRedirectRecord(toLocation);
-        if (shouldRedirect) {
-          pushWithRedirect(assign(shouldRedirect, { replace: true }), toLocation).catch(noop);
-          return;
-        }
-        pendingLocation = toLocation;
-        const from = currentRoute.value;
-        if (isBrowser) {
-          saveScrollPosition(getScrollKey(from.fullPath, info.delta), computeScrollPosition());
-        }
-        navigate(toLocation, from).catch((error) => {
-          if (isNavigationFailure(
-            error,
-            4 | 8
-            /* ErrorTypes.NAVIGATION_CANCELLED */
-          )) {
-            return error;
-          }
-          if (isNavigationFailure(
-            error,
-            2
-            /* ErrorTypes.NAVIGATION_GUARD_REDIRECT */
-          )) {
-            pushWithRedirect(
-              error.to,
-              toLocation
-              // avoid an uncaught rejection, let push call triggerError
-            ).then((failure) => {
-              if (isNavigationFailure(
-                failure,
-                4 | 16
-                /* ErrorTypes.NAVIGATION_DUPLICATED */
-              ) && !info.delta && info.type === NavigationType.pop) {
-                routerHistory.go(-1, false);
-              }
-            }).catch(noop);
-            return Promise.reject();
-          }
-          if (info.delta) {
-            routerHistory.go(-info.delta, false);
-          }
-          return triggerError(error, toLocation, from);
-        }).then((failure) => {
-          failure = failure || finalizeNavigation(
-            // after navigation, all matched components are resolved
-            toLocation,
-            from,
-            false
-          );
-          if (failure) {
-            if (info.delta && // a new navigation has been triggered, so we do not want to revert, that will change the current history
-            // entry while a different route is displayed
-            !isNavigationFailure(
-              failure,
-              8
-              /* ErrorTypes.NAVIGATION_CANCELLED */
-            )) {
-              routerHistory.go(-info.delta, false);
-            } else if (info.type === NavigationType.pop && isNavigationFailure(
-              failure,
-              4 | 16
-              /* ErrorTypes.NAVIGATION_DUPLICATED */
-            )) {
-              routerHistory.go(-1, false);
-            }
-          }
-          triggerAfterEach(toLocation, from, failure);
-        }).catch(noop);
-      });
-    }
-    let readyHandlers = useCallbacks();
-    let errorListeners = useCallbacks();
-    let ready;
-    function triggerError(error, to, from) {
-      markAsReady(error);
-      const list = errorListeners.list();
-      if (list.length) {
-        list.forEach((handler) => handler(error, to, from));
-      } else {
-        {
-          warn("uncaught error during route navigation:");
-        }
-        console.error(error);
-      }
-      return Promise.reject(error);
-    }
-    function isReady() {
-      if (ready && currentRoute.value !== START_LOCATION_NORMALIZED)
-        return Promise.resolve();
-      return new Promise((resolve2, reject) => {
-        readyHandlers.add([resolve2, reject]);
-      });
-    }
-    function markAsReady(err) {
-      if (!ready) {
-        ready = !err;
-        setupListeners();
-        readyHandlers.list().forEach(([resolve2, reject]) => err ? reject(err) : resolve2());
-        readyHandlers.reset();
-      }
-      return err;
-    }
-    function handleScroll(to, from, isPush, isFirstNavigation) {
-      const { scrollBehavior } = options;
-      if (!isBrowser || !scrollBehavior)
-        return Promise.resolve();
-      const scrollPosition = !isPush && getSavedScrollPosition(getScrollKey(to.fullPath, 0)) || (isFirstNavigation || !isPush) && history.state && history.state.scroll || null;
-      return vue.nextTick().then(() => scrollBehavior(to, from, scrollPosition)).then((position) => position && scrollToPosition(position)).catch((err) => triggerError(err, to, from));
-    }
-    const go = (delta) => routerHistory.go(delta);
-    let started;
-    const installedApps = /* @__PURE__ */ new Set();
-    const router2 = {
-      currentRoute,
-      listening: true,
-      addRoute,
-      removeRoute,
-      hasRoute,
-      getRoutes,
-      resolve,
-      options,
-      push,
-      replace,
-      go,
-      back: () => go(-1),
-      forward: () => go(1),
-      beforeEach: beforeGuards.add,
-      beforeResolve: beforeResolveGuards.add,
-      afterEach: afterGuards.add,
-      onError: errorListeners.add,
-      isReady,
-      install(app) {
-        const router22 = this;
-        app.component("RouterLink", RouterLink);
-        app.component("RouterView", RouterView);
-        app.config.globalProperties.$router = router22;
-        Object.defineProperty(app.config.globalProperties, "$route", {
-          enumerable: true,
-          get: () => vue.unref(currentRoute)
-        });
-        if (isBrowser && // used for the initial navigation client side to avoid pushing
-        // multiple times when the router is used in multiple apps
-        !started && currentRoute.value === START_LOCATION_NORMALIZED) {
-          started = true;
-          push(routerHistory.location).catch((err) => {
-            warn("Unexpected error when starting the router:", err);
-          });
-        }
-        const reactiveRoute = {};
-        for (const key in START_LOCATION_NORMALIZED) {
-          Object.defineProperty(reactiveRoute, key, {
-            get: () => currentRoute.value[key],
-            enumerable: true
-          });
-        }
-        app.provide(routerKey, router22);
-        app.provide(routeLocationKey, vue.shallowReactive(reactiveRoute));
-        app.provide(routerViewLocationKey, currentRoute);
-        const unmountApp = app.unmount;
-        installedApps.add(app);
-        app.unmount = function() {
-          installedApps.delete(app);
-          if (installedApps.size < 1) {
-            pendingLocation = START_LOCATION_NORMALIZED;
-            removeHistoryListener && removeHistoryListener();
-            removeHistoryListener = null;
-            currentRoute.value = START_LOCATION_NORMALIZED;
-            started = false;
-            ready = false;
-          }
-          unmountApp();
-        };
-        if (isBrowser) {
-          addDevtools(app, router22, matcher);
-        }
-      }
-    };
-    function runGuardQueue(guards) {
-      return guards.reduce((promise, guard) => promise.then(() => runWithContext(guard)), Promise.resolve());
-    }
-    return router2;
-  }
-  function extractChangingRecords(to, from) {
-    const leavingRecords = [];
-    const updatingRecords = [];
-    const enteringRecords = [];
-    const len = Math.max(from.matched.length, to.matched.length);
-    for (let i = 0; i < len; i++) {
-      const recordFrom = from.matched[i];
-      if (recordFrom) {
-        if (to.matched.find((record) => isSameRouteRecord(record, recordFrom)))
-          updatingRecords.push(recordFrom);
-        else
-          leavingRecords.push(recordFrom);
-      }
-      const recordTo = to.matched[i];
-      if (recordTo) {
-        if (!from.matched.find((record) => isSameRouteRecord(record, recordTo))) {
-          enteringRecords.push(recordTo);
-        }
-      }
-    }
-    return [leavingRecords, updatingRecords, enteringRecords];
-  }
-  const routes = [
-    {
-      path: "/",
-      name: "Index",
-      component: Index
-    },
-    {
-      path: "/Login",
-      name: "Login",
-      component: Login
-      // component: () =>
-      //   import( "../pages/login/login.vue")
-    }
-  ];
-  [...routes];
-  const router = createRouter({
-    history: createWebHistory(),
-    routes
-  });
   const pageUrl = "../login/login";
   const _sfc_main = {
     __name: "tabBottom",
@@ -12255,9 +9857,7 @@ ${JSON.stringify(newTargetLocation, null, 2)}
           url: "../login/login"
         });
       };
-      const __returned__ = { active, pageUrl, goto, ref: vue.ref, get router() {
-        return router;
-      } };
+      const __returned__ = { active, pageUrl, goto, ref: vue.ref };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
@@ -12335,7 +9935,9 @@ ${JSON.stringify(newTargetLocation, null, 2)}
     app.use(TabbarItem);
     app.use(Card);
     app.use(Lazyload);
+    app.use(PullRefresh);
     app.use(pinia);
+    app.use(useStore());
     app.component("TabBottom", tabBottom);
     return {
       app

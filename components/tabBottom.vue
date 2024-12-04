@@ -9,7 +9,7 @@
 
 <script setup>
 	import { ref } from 'vue';
-	import router from '../router/index.js'
+
     const active = ref('Login');
 	const pageUrl = '../login/login'
 	const goto =(lvalue)=>{

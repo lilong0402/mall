@@ -4,7 +4,8 @@
 		"path": "pages/index/index",
 		// "path": "pages/login/login",
 		"style": {
-			"navigationBarTitleText": "uni-app"
+			"navigationBarTitleText": "uni-app",
+			"onReachBottomDistance": 50
 		}},
 		{
 			"path": "pages/login/login",

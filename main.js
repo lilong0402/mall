@@ -11,7 +11,7 @@ import './index.css'
 import {createPinia} from 'pinia'
 import tabBottom from './components/tabBottom'
 import {useStore} from './store/index.js';
-// import router from './router'
+
 
 export function createApp() {
   const app = createSSRApp(App)

@@ -70,15 +70,20 @@
 				</van-row>
 			</van-col>
 		</van-row>
-		<van-row>
-			<van-col v-for="commodity in commodityList" v-lazy="commodity" span='11' class="mx-1 mt-2">
-				<commodity />
-			</van-col>
-		</van-row>
-		<van-pull-refresh v-model="loading" @refresh="onRefresh">
-		  <p>刷新次数: {{ count }}</p>
-		</van-pull-refresh>
-		<view>
+		
+		<scroll-view @scrolltolower="handelLower" style="height: 70vh;" scroll-y="true">
+			<view>
+				<van-row>
+					<van-col v-for="commodity in commodityList" v-lazy="commodity" span='11' class="mx-1 mt-2">
+						<commodity />
+					</van-col>
+				</van-row>	
+			</view>
+			<view class="mb-4">{{isBottom?'没有更多数据了~~':'下拉加载更多~~'}}</view>
+		</scroll-view>
+
+
+		<view >
 			<TabBottom></TabBottom>
 		</view>
 	</view>
@@ -94,10 +99,11 @@
 	const loading = ref(false)
 	const param=reactive({
 		//设置页码
-		currentPage: 0,
+		currentPage: 1, 
 		//设置每页显示数量
-		pageSize : 5
+		pageSize : 10
 	})
+	const isBottom = ref(false)
 	const store = useStore()
 
 	// 用于处理搜索后的操作
@@ -105,37 +111,43 @@
 		console.log(val)
 	};
 	
-	const onRefresh = ()=>{
-		setTimeout(() => {
-			showToast('刷新成功');
-		    loading.value = false;
-		    count.value++;
-		}, 1000);
-		getAllCommodity()
-	} 
-	
-	const getAllCommodity = ()=>{
-		if (store.IsIndexOne == 0)
-			param.currentPage = 0 ;
-		else 
-			param.currentPage = commodityList.length / param.pageSize + 1
+	const getAllCommodity = () =>{
+		console.log(param)
 		var x
-		axios.get(store.BASEURL+"shopping/selectAllCommodity?currentpage="+param.currentPage+"&pageSize="+param.pageSize)
+		axios.get(store.BASEURL+"shopping/selectAllCommodity",{
+			params:{
+				"currentPage":param.currentPage,
+				"pageSize":param.pageSize,
+			}
+		})
 		.then(response => {
 			const data = response.data.data;
-			console.log(data[0])
-			for(x in data) {
-			    commodityList.value.push(x)
+			console.log(data.length)
+			if(data.length == 0){
+				isBottom.value = true
+			}else{
+				for(x in data) {
+				    commodityList.value.push(x)
+				}
 			}
 			console.log(commodityList)
 		})
+	}
+	const handelLower= () =>{
+		console.log(!isBottom.value)
+		if(!isBottom.value){
+			console.log("滚动到底部操作");
+			param.currentPage  = param.currentPage + 1
+			getAllCommodity();			
+		}else 
+			console.log("无数据了");
 	}
 	/**
 	 * 通过onMounted实现预加载
 	 */
 	onMounted(()=>{
 		getAllCommodity();
-		store.IsIndexOne = 1
+		// store.IsIndexOne = 1
 	})
 </script>
 
