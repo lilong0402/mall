@@ -14,4 +14,6 @@ import java.util.List;
 public interface ShoppingService extends IService<ShoppingInformation> {
 
     List<ShoppingInformation> getShoppingInformation(int currentPage, int pageSize);
+
+    Integer addShoppingCard(Long userId,Long shoppingId);
 }

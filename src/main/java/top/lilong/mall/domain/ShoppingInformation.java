@@ -30,6 +30,7 @@ public class ShoppingInformation {
     private String shoppingName;
     private String shoppingNote;
     private Integer shoppingState;
+    private Integer shoppingNumber;
     private Long shoppingClicking;
     private Double shoppingPrice;
     private Timestamp createTime;
