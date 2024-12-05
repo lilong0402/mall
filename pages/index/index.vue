@@ -74,15 +74,14 @@
 		<scroll-view @scrolltolower="handelLower" style="height: 70vh;" scroll-y="true">
 			<view>
 				<van-row>
-					<van-col v-for="commodity in commodityList" v-lazy="commodity" span='11' class="mx-1 mt-2">
-						<commodity />
+					<van-col v-for="commodity in commodityList" v-lazy="commodity" span='11' class="mx-1 mt-2" >
+						{{console.log(commodity)}}
+						<commodity :commodity = "commodity" v-if="commodity" ></commodity>
 					</van-col>
 				</van-row>	
 			</view>
 			<view class="mb-4">{{isBottom?'没有更多数据了~~':'下拉加载更多~~'}}</view>
 		</scroll-view>
-
-
 		<view >
 			<TabBottom></TabBottom>
 		</view>
@@ -92,7 +91,7 @@
 <script setup>
 	import axios from 'axios';
 	import commodity from '../../components/commodity.vue'
-	import {onMounted, ref, reactive} from 'vue'
+	import {onBeforeMount , ref, reactive} from 'vue'
 	import { useStore } from '../../store';
 	const commodityList = ref([])
 	const value = ref('')
@@ -105,7 +104,6 @@
 	})
 	const isBottom = ref(false)
 	const store = useStore()
-
 	// 用于处理搜索后的操作
 	const onSearch = (val) => {
 		console.log(val)
@@ -122,15 +120,14 @@
 		})
 		.then(response => {
 			const data = response.data.data;
-			console.log(data.length)
+			console.log(data)
 			if(data.length == 0){
 				isBottom.value = true
 			}else{
 				for(x in data) {
-				    commodityList.value.push(x)
+				    commodityList.value.push(data[x])
 				}
 			}
-			console.log(commodityList)
 		})
 	}
 	const handelLower= () =>{
@@ -144,8 +141,8 @@
 	}
 	/**
 	 * 通过onMounted实现预加载
-	 */
-	onMounted(()=>{
+	 */ 
+	onBeforeMount (()=>{
 		getAllCommodity();
 		// store.IsIndexOne = 1
 	})
