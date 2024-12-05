@@ -1,5 +1,5 @@
 <template>
-	<view class="card">
+	<view class="card" @click ="detailPage(commodity)" >
 	  <img src="../static/commodity/mobile.jpg" class="card-img-top" alt="...">
 	  <view class="mx-1">
 		<view class="font_size_16 ">{{commodity.shoppingName}}</view>
@@ -9,15 +9,21 @@
 </template>
 
 <script setup>
-import {defineProps } from 'vue'
+	import {defineProps } from 'vue'
+	import { useStore } from '../store';
+
 	const props = defineProps ({
 		commodity: {
 			type: Object,
 			required: true,
 		}
 	})
-	  // created(()=>{
-	  //   console.log("Received commodity:", this.commodity);
-	  // })
- 
+	const detailPage = (commodityId)=>{
+		const store = useStore();
+		store.commodity = props.commodity
+		uni.navigateTo({
+		            url: '/pages/detail/commodityDetail'
+		        })
+	}
+	
 </script>

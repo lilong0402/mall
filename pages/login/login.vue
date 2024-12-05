@@ -55,12 +55,14 @@ import { useStore } from '../../store';
 	const checked = ref('')
 	const store = useStore()
 	const onSubmit = (values) => {
+
 		console.log(userName.value)
 		axios.post(store.BASEURL+"user/login",{
 			"username" : userName.value,
 			"password" : userPassword.value
 		}).then(Response => {
 			console.log(Response.data);
+			store.userId = Response.data.id
 		}, error => {
 			console.log('错误',error.message);
 		})

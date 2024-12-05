@@ -12,6 +12,12 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
+		},
+		{
+			"path": "pages/detail/commodityDetail",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
 		}
 		
 	],
