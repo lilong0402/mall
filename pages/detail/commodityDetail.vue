@@ -34,11 +34,12 @@
 	import {defineProps } from 'vue'
 	import { useStore } from '../../store';
 	import { showDialog } from 'vant';
+	import axios from 'axios';
 	const store = useStore()
 	const commodity = store.commodity
 	
 	const addshoppingcard =()=>{
-		axios.get(store.BASEURL+"/shopping/addShoppingCard",{
+		axios.get(store.BASEURL+"shopping/addShoppingCard",{
 			userId: store.userId,
 			shoppingId:commodity.id
 		}).then(Response => {

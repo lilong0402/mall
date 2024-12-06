@@ -1,19 +1,19 @@
 {
-  "hash": "3b868f9d",
+  "hash": "95ae32bd",
   "configHash": "25ce6fbe",
-  "lockfileHash": "c7c375bf",
-  "browserHash": "4ff669ba",
+  "lockfileHash": "23a46f39",
+  "browserHash": "6c908798",
   "optimized": {
-    "axios": {
-      "src": "../../../../../node_modules/axios/index.js",
-      "file": "axios.js",
-      "fileHash": "2dc67e3f",
-      "needsInterop": false
-    },
     "vant": {
       "src": "../../../../../node_modules/vant/es/index.mjs",
       "file": "vant.js",
-      "fileHash": "b13453ff",
+      "fileHash": "ed9e6ef6",
+      "needsInterop": false
+    },
+    "axios": {
+      "src": "../../../../../node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "aeb14c5c",
       "needsInterop": false
     }
   },

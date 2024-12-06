@@ -7,7 +7,8 @@ export const useStore = defineStore('mall', {
 	    BASEURL: "http://localhost:8080/",
 		commodity: {
 			type: Object
-		}
+		},
+		userId:1
 	  }
 	}
 })
