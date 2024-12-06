@@ -32,7 +32,7 @@ public class User {
     private String userName;
     private String userPassword;
     private String userAvatar;
-    private int sex;
+    private Integer sex;
     private Timestamp userBirth;
     private Timestamp createTime;
     private Timestamp deleteTime;

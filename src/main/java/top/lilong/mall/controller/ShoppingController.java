@@ -26,6 +26,7 @@ public class ShoppingController {
         return ResultData.success(shoppingService.getShoppingInformation(pageVO.getCurrentPage(), pageVO.getPageSize()));
     }
 
+    @RequestMapping("/addShoppingCard")
     public ResultData<Card> addShoppingCard(CardVO cardVO){
 
         Integer card = shoppingService.addShoppingCard(cardVO.getUserId(), cardVO.getShoppingId());
