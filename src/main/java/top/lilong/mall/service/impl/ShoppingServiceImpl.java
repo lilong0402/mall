@@ -52,7 +52,10 @@ public class ShoppingServiceImpl extends ServiceImpl<ShoppingMapper, ShoppingInf
      */
     @Override
     public Integer addShoppingCard(Long userId,Long shoppingId) {
-        if (userId == null || shoppingId == null)  return  0 ;
+
+        Card card = cardMapper.selectOne(new QueryWrapper<Card>().eq("user_id", userId).eq("shopping_id", shoppingId));
+
+        if (userId == null || shoppingId == null || card != null)  return  0 ;
         User user = userMapper.selectById(userId);
         userMapper.selectById(userId);
         if (user == null)  return  0 ;
