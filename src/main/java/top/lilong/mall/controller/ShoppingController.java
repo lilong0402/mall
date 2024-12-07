@@ -1,7 +1,10 @@
 package top.lilong.mall.controller;
 
 
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import top.lilong.mall.VO.CardVO;
@@ -26,11 +29,11 @@ public class ShoppingController {
         return ResultData.success(shoppingService.getShoppingInformation(pageVO.getCurrentPage(), pageVO.getPageSize()));
     }
 
-    @RequestMapping("/addShoppingCard")
-    public ResultData<Card> addShoppingCard(CardVO cardVO){
+    @PostMapping("/addShoppingCard")
+    public ResultData<Card> addShoppingCard(@Valid @RequestBody CardVO card){
 
-        Integer card = shoppingService.addShoppingCard(cardVO.getUserId(), cardVO.getShoppingId());
-        if (card == null) return ResultData.fail("加入失败");
+        Integer cardres = shoppingService.addShoppingCard(card.getUserId(), card.getShoppingId());
+        if (cardres == 0 || cardres ==1) return ResultData.fail("加入失败");
         return ResultData.success("加入成功");
     }
 }

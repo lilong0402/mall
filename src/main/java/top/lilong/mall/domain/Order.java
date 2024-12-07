@@ -24,6 +24,8 @@ public class Order {
     private Long shoppingId;
     private Long userId;
     private Double orderPrice;
+    private Integer payStyle;
+    private String  commodityLogistics;
     private Date createTime;
     private Date updateTime;
     private Date deleteTime;
