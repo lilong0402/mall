@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import top.lilong.mall.VO.PaymentVO;
-import top.lilong.mall.domain.Order;
+import top.lilong.mall.domain.OrderMall;
 import top.lilong.mall.domain.ShoppingInformation;
 import top.lilong.mall.mapper.OrderMapper;
 import top.lilong.mall.mapper.ShoppingMapper;
@@ -13,6 +13,7 @@ import top.lilong.mall.mapper.SysLogMapper;
 import top.lilong.mall.mapper.UserMapper;
 import top.lilong.mall.service.OrderService;
 
+import java.sql.Wrapper;
 import java.util.Date;
 
 /**
@@ -21,7 +22,7 @@ import java.util.Date;
  * @version 1.0
  */
 @Service
-public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements OrderService {
+public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderMall> implements OrderService {
 
     @Autowired
     private ShoppingMapper shoppingMapper;
@@ -47,17 +48,20 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         Integer shoppingNumber = shopping.getShoppingNumber();
         //计算运费
         //减库存
-        if (shoppingNumber >0){
-            shopping.setShoppingNumber(shopping.getShoppingNumber()-1);
-            sysLogMapper.insert(userMapper.selectById(paymentVO.getUserId()).getUserName(),"用去了"+shopping.getShoppingName()+"商品的一个库存","库存减一");
+        if (shoppingNumber ==0){
+            sysLogMapper.insert(userMapper.selectById(paymentVO.getUserId()).getUserName(),"试图下单"+shopping.getShoppingName()+"商品，但以无库存","下单失败无库存");
+            return 14;
         }
+        shopping.setShoppingNumber(shoppingNumber - 1);
+        shoppingMapper.updateById(shopping);
+        sysLogMapper.insert(userMapper.selectById(paymentVO.getUserId()).getUserName(),"用去了"+shopping.getShoppingName()+"商品的一个库存","库存减一");
         //生成订单
         addOrder2(paymentVO,shopping);
         return 13;
     }
 
     private synchronized void addOrder2(PaymentVO paymentVO,ShoppingInformation shopping) {
-        orderMapper.insert(Order.builder().orderState(1211)
+        OrderMall orderMall = OrderMall.builder().orderState(1211)
                 .orderPrice(shopping.getShoppingPrice() * paymentVO.getDiscount())
                 .orderAccount((new Date()).toString())
                 .commodityLogistics(paymentVO.getLogistics())
@@ -66,7 +70,9 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
                 .shoppingId(paymentVO.getShoppingId())
                 .commodityLogistics(paymentVO.getLogistics())
                 .createTime(new Date())
-                .build());
+                .build();
+        log.warn(orderMall.toString());
+        orderMapper.insertOrder(orderMall);
         sysLogMapper.insert(userMapper.selectById(paymentVO.getUserId()).getUserName(),"生成"+shopping.getShoppingName()+"商品订单","生成订单");
     }
 }

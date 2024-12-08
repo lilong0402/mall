@@ -20,8 +20,8 @@ import java.util.Date;
 @AllArgsConstructor
 @Builder
 @NoArgsConstructor
-@TableName("order")
-public class Order {
+@TableName("`mall_order`")
+public class OrderMall {
     @TableId(type = IdType.AUTO)
     private Long id;
     private Integer orderState;
