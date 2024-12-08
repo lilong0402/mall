@@ -82,6 +82,7 @@
 			</view>
 			<view class="mb-4">{{isBottom?'没有更多数据了~~':'下拉加载更多~~'}}</view>
 		</scroll-view>
+
 		<view >
 			<TabBottom></TabBottom>
 		</view>
@@ -103,6 +104,7 @@
 		pageSize : 10
 	})
 	const isBottom = ref(false)
+	
 	const store = useStore()
 	// 用于处理搜索后的操作
 	const onSearch = (val) => {

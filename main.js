@@ -4,7 +4,8 @@
 // #ifdef VUE3
 import { createSSRApp } from 'vue'
 import App from './App.vue'
-import {Button, Search, Image as VanImage, Form, Field, CellGroup,Switch, Tab, Tabs, Tabbar, TabbarItem, Col, Row, Card, Lazyload , PullRefresh, Swipe, SwipeItem ,Dialog } from 'vant'
+import {Button, Search, Image as VanImage, Form, Field, CellGroup,Switch, Tab, Tabs, Tabbar, TabbarItem, Col, Row, Card, Lazyload , PullRefresh, Swipe, SwipeItem ,Dialog, Popup ,RadioGroup, Radio ,Stepper } from 'vant'
+
 import 'bootstrap/dist/css/bootstrap.css'
 import 'vant/lib/index.css'
 import './index.css'
@@ -36,6 +37,10 @@ export function createApp() {
   app.use(Swipe)
   app.use(SwipeItem)
   app.use(Dialog)
+  app.use(Popup)
+  app.use(Radio)
+  app.use(RadioGroup)
+  app.use(Stepper)
   
   app.use(pinia)
   app.use(useStore())
