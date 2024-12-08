@@ -15,10 +15,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @NoArgsConstructor
-public class PayMentVO {
+public class PaymentVO {
     private Long userId;
     private Long shoppingId;
     private Integer payStyle;
     private Integer commodityNum;
     private String commodityName;
+    private Float discount;
+    private String Logistics;
 }

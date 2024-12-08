@@ -2,6 +2,7 @@ package top.lilong.mall.service;
 
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import top.lilong.mall.VO.PaymentVO;
 import top.lilong.mall.domain.Order;
 
 /**
@@ -10,4 +11,7 @@ import top.lilong.mall.domain.Order;
  * @version 1.0
  */
 public interface OrderService extends IService<Order> {
+
+    Integer addOrder(PaymentVO paymentVO);
+
 }
