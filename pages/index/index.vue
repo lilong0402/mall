@@ -76,7 +76,7 @@
 				<van-row>
 					<van-col v-for="commodity in commodityList" v-lazy="commodity" span='11' class="mx-1 mt-2" >
 						{{console.log(commodity)}}
-						<commodity :commodity = "commodity" v-if="commodity" ></commodity>
+						<commodity :commodity = "commodity" v-if="commodity" @click="clickNum(commodity.id)" ></commodity>
 					</van-col>
 				</van-row>	
 			</view>
@@ -140,6 +140,12 @@
 			getAllCommodity();			
 		}else 
 			console.log("无数据了");
+	}
+	const clickNum = (id) => {
+		console.log(id)
+		axios.post(store.BASEURL + "redis/setAndTime",{
+			"commodityKey" : id
+		})
 	}
 	/**
 	 * 通过onMounted实现预加载

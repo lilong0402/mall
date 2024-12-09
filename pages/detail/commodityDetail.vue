@@ -107,12 +107,14 @@
 	const immediatePayment= () => {
 		axios.post(store.BASEURL+"order/addOrder",payment)
 		.then(response => {
-			
 			showDialog({
 				message: response.data.data
 			})
-		}).error
+		})
 	}
+
+
+	
 </script>
 
 <style>
