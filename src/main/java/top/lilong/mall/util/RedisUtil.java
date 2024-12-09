@@ -1,6 +1,7 @@
 package top.lilong.mall.util;
 
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
@@ -14,6 +15,7 @@ import java.util.concurrent.TimeUnit;
  * * @date 2024/12/9
  * @version 1.0
  */
+@Slf4j
 @Component
 public class RedisUtil {
         @Autowired
@@ -30,6 +32,18 @@ public class RedisUtil {
         // 设置键值对
         public void set(String key, Object value) {
             redisTemplate.opsForValue().set(key, value);
+        }
+        // 设置点击增加
+        public void set(String key) {
+            Long clickNum =0L;
+            if (hasKey(key)) {
+                clickNum = (Long)redisTemplate.opsForValue().get(key);
+
+            }
+            log.info("redis key 值为" + clickNum);
+            redisTemplate.opsForValue().set(key,clickNum+1,1860);
+            log.info("redis 点击量加一成功");
+
         }
 
         // 设置键值对并指定过期时间

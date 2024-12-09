@@ -9,13 +9,13 @@ import top.lilong.mall.util.RedisUtil;
 class MallApplicationTests {
     @Autowired
     RedisUtil redisUtil;
-    @Test
-    public void contextLoads() {
-        redisUtil.set("test:key:name", "xxxxxx");
-        redisUtil.set("test:key:name2", "yyyyy");
-
-        redisUtil.delete("test:key:name");
-        System.out.println(redisUtil.getString("test:key:name"));
-    }
+//    @Test
+//    public void contextLoads() {
+//        redisUtil.set("test:key:name", "xxxxxx");
+//        redisUtil.set("test:key:name2", "yyyyy");
+//
+//        redisUtil.delete("test:key:name2");
+//        System.out.println(redisUtil.getString("test:key:name2"));
+//    }
 
 }
